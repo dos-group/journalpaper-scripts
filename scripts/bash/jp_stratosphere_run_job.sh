@@ -32,6 +32,7 @@ fi
 
 # set log file path
 logFile=${EXP_LOG_BASE_DIR}/${EXP_ID}/exec-time
+mkdir -p ${EXP_LOG_BASE_DIR}/${EXP_ID}
 
 # start job
 echo "Starting to execute job: $JOB_STRING"
@@ -44,10 +45,12 @@ if [[ $? == 0 ]]
 then
   endTS=`date +%s`
   (( jobDuration=$endTS - $startTS ))
-  echo "$EXP_ID \"$JOB_STRING\" $jobDuration" >> $logFile
+  line=`printf "%-50s%-30s\n" $EXP_ID $jobDuration`
+  echo "$line" \"$JOB_STRING\" >> $logFile
   echo "Job executed in $jobDuration seconds."
 else
-  echo "$EXP_ID \"$JOB_STRING\" execution_failed" >> $logFile
+  line=`printf "%-50s%-30s\n" $EXP_ID -1`
+  echo "$line" \"$JOB_STRING\" >> $logFile
   echo "Job execution failed!"
 fi
 

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # load currently active configuration
-. /home/alexander/etc/journalpaper-scripts/scripts/bash/conf/alexander/jp_configure.sh
+. /home/alexander/etc/journalpaper-scripts/scripts/bash/conf/alexander-sl510/jp_configure.sh

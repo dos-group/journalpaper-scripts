@@ -13,13 +13,11 @@ DGEN_HOME=/home/alexander/etc/datagen
 # path to the experiment jobs
 JOBS_HOME=/home/alexander/etc/journalpaper-scripts/jobs
 # list of all available slaves, top N slaves will be used for dop N
-ALL_SLAVES=/home/alexander/etc/journalpaper-scripts/scripts/bash/conf/alexander/all_slaves
+ALL_SLAVES=/home/alexander/etc/journalpaper-scripts/scripts/bash/conf/poodle-9/all_slaves
 # list of all current slaves
-CUR_SLAVES=/home/alexander/etc/journalpaper-scripts/scripts/bash/conf/alexander/cur_slaves
+CUR_SLAVES=/home/alexander/etc/journalpaper-scripts/scripts/bash/conf/poodle-9/cur_slaves
 # number of repetition runs
 NUM_REPETITION_RUNS=1
-# receiver tasks per node
-RECEIVER_NODES_PER_SLAVE=4
 
 ################ HDFS
 

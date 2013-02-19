@@ -26,6 +26,7 @@ fi
 
 # remove log files
 rm ${STRATOSPHERE_LOG}/nephele-${USER}-*.log*
+rm ${STRATOSPHERE_LOG}/nephele-${USER}-*.out*
 echo "Stratosphere log files removed"
 
 # adapt number of tasktrackers
@@ -58,4 +59,3 @@ then
 fi
 
 echo "All TaskManagers connected. Nephele ready for use."
-
