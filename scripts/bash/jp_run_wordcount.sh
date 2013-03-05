@@ -16,40 +16,44 @@ SCALING_FACTOR=$((1 * ${NODE_COUNT}))
 WC_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/gutenberg-sf001/gutenberg.txt
 WC_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}
 
+# deploy systems
+./jp_hadoop_deploy.sh
+./jp_stratosphere_deploy.sh
+
 # adapt number of slaves
-./jp_adapt_slave_cnt.sh $NUM_SLAVES
-
+#./jp_adapt_slave_cnt.sh $NUM_SLAVES
+#
 # format and start HDFS
-./jp_hdfs_format_start_wait.sh
-if [[ $? != 0 ]]
-then  
-  exit $?
-fi
-
+#./jp_hdfs_format_start_wait.sh
+#if [[ $? != 0 ]]
+#then  
+#  exit $?
+#fi
+#
 # start hadoop_mr
-./jp_hadoop_mr_start_wait.sh
-if [[ $? != 0 ]]
-then  
-  exit $?
-fi
-
+#./jp_hadoop_mr_start_wait.sh
+#if [[ $? != 0 ]]
+#then  
+#  exit $?
+#fi
+#
 # generate wordcount input data
-./jp_load_data_wordcount.sh ${SCALING_FACTOR} ${NODE_COUNT} gutenberg-sf001
-if [[ $? != 0 ]]
-then  
-  exit $?
-fi
-
+#./jp_load_data_wordcount.sh ${SCALING_FACTOR} ${NODE_COUNT} gutenberg-sf001
+#if [[ $? != 0 ]]
+#then  
+#  exit $?
+#fi
+#
 # stop hadoop_mr
-./jp_hadoop_mr_stop.sh
-
+#./jp_hadoop_mr_stop.sh
+#
 # repeat Hadoop runs
-execIdPrefix=`printf "wc-hdp_mapr-dop%04d" ${NODE_COUNT}`
-./jp_run_repeated.sh HDP $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-hadoop.jar ${WC_IN} ${WC_OUT}"
-
+#execIdPrefix=`printf "wc-hdp_mapr-dop%04d" ${NODE_COUNT}`
+#./jp_run_repeated.sh HDP $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-hadoop.jar ${WC_IN} ${WC_OUT}"
+#
 # repeat Stratosphere runs
-execIdPrefix=`printf "wc-str_pact-dop%04d" ${NODE_COUNT}`
-./jp_run_repeated.sh STR $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact.jar -a ${NODE_COUNT} ${WC_IN} ${WC_OUT}"
-
+#execIdPrefix=`printf "wc-str_pact-dop%04d" ${NODE_COUNT}`
+#./jp_run_repeated.sh STR $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact.jar -a ${NODE_COUNT} ${WC_IN} ${WC_OUT}"
+#
 # stop HDFS
-./jp_hdfs_clean_stop.sh
+#./jp_hdfs_clean_stop.sh
