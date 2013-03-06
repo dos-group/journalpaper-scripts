@@ -17,7 +17,7 @@ ALL_SLAVES=${JP_SCRIPTS_HOME}/scripts/bash/conf/cloud-7/all_slaves
 # list of all current slaves
 CUR_SLAVES=${JP_SCRIPTS_HOME}/scripts/bash/conf/cloud-7/cur_slaves
 # number of repetition runs
-NUM_REPETITION_RUNS=1
+NUM_REPETITION_RUNS=3
 # user that runs the experiments
 EXP_USER=aalexandrov
 # user group for the experiments
