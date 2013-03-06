@@ -1,37 +1,38 @@
 #!/bin/bash
 
-# Starts a Hadoop MR job to generate the data for
-# tera sort tasks.
+# Starts a Hadoop MR job to generate the data for word count tasks.
 # Parameters:
-# 1) data size in MB per configured slave
+# 1) scaling factor (sf = 1 ~ 1GB data)
+# 2) node count
+# 3) dataset ID
 #
 # Author: Fabian Hueske (fabian.hueske@tu-berlin.de)
+# Author: Alexander Alexandrov (alexander.alexandrov@tu-berlin.de)
 
-mbPerSlave=$1
+SCALING_FACTOR=$1
+NODE_COUNT=$2
+DATASET_ID=$3
 
-if [[ $mbPerSlave == '' ]]
+if [[ $SCALING_FACTOR == '' ]]
 then
-  echo "You need to specify data volume (MB) per slave. Canceling..."
+  echo "You need to specify scaling factor per slave. Canceling..."
+  exit 1
+fi
+
+if ! [[ "$NODE_COUNT" =~ ^[0-9]+$ ]] ; then
+  echo "You need to specify DOP. Canceling..."
+  exit 1
+fi
+
+if [[ $DATASET_ID == '' ]]
+then
+  echo "You need to specify dataset ID. Canceling..."
   exit 1
 fi
 
 # load configuration
 . ./jp_configure.sh
 
-if [ ! -f ${CUR_SLAVES} ] 
-then
-  echo "Current slaves file ${CUR_SLAVES} does not exist. Canceling..."
-  exit 1
-fi
-
-# get number of tasktrackers
-SLAVECNT=`cat ${CUR_SLAVES} | wc -l`
-
-mapSlots=$((${HADOOPMR_MAP_SLOTS_PER_SLAVE} * ${SLAVECNT}))
-
-mbPerCluster=$(( $mbPerSlave * $SLAVECNT ))
-lineCnt=$(( ($mbPerCluster * 1024 * 1024) / 100 ))
-
 # generate wc data
-${HADOOPMR_BIN}/hadoop jar ${HADOOPMR_HOME}/hadoop-*examples*.jar teragen -Dmapred.map.tasks=${mapSlots} -Ddfs.block.size=268435456 ${lineCnt} $TS_HDFS_PATH
+${HADOOPMR_BIN}/hadoop jar ${TS_GEN_HOME}/bin/tera-gen-driver-jobs.jar ${TS_GEN_HOME} -s${SCALING_FACTOR} -N${NODE_COUNT} -m${DATASET_ID} -o${HDFS_INPUT_PATH} -xrecord
 echo "TeraSort data generated"

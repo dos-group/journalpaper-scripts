@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# synced directories
+source_dir=`pwd`/.
+dest_dir=/share/journalpaper/experiments
+
+#ssh options
+ssh_host=localhost
+ssh_user=dima
+
+rsync -a -v -r -e "ssh -l ${ssh_user}" --exclude-from "${source_dir}/deploy.excludes" ${source_dir} ${ssh_host}:${dest_dir}

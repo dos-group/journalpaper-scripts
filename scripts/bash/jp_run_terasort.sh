@@ -13,9 +13,9 @@ fi
 
 NODE_COUNT=$((${HADOOPMR_MAP_SLOTS_PER_SLAVE} * ${NUM_SLAVES}))
 SCALING_FACTOR=$((1 * ${NODE_COUNT}))
-DGEN_ID=`printf "wordcount-%04d" ${SCALING_FACTOR}`
-WC_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/${DGEN_ID}/gutenberg.txt
-WC_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}
+DGEN_ID=`printf "terasort-%04d" ${SCALING_FACTOR}`
+TS_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/${DGEN_ID}/terasort.txt
+TS_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}
 
 # deploy systems
 ./jp_hadoop_deploy.sh
@@ -39,7 +39,7 @@ then
 fi
 
 # generate wordcount input data
-./jp_load_data_wordcount.sh ${SCALING_FACTOR} ${NODE_COUNT} ${DGEN_ID}
+./jp_load_data_terasort.sh ${SCALING_FACTOR} ${NODE_COUNT} ${DGEN_ID}
 if [[ $? != 0 ]]
 then  
   exit $?
@@ -50,11 +50,11 @@ fi
 
 # repeat Hadoop runs
 execIdPrefix=`printf "wc-hdp_mapr-dop%04d" ${NODE_COUNT}`
-./jp_run_repeated.sh HDP $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-hadoop.jar ${WC_IN} ${WC_OUT}"
+./jp_run_repeated.sh HDP $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-hadoop.jar ${TS_IN} ${TS_OUT}"
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "wc-str_pact-dop%04d" ${NODE_COUNT}`
-./jp_run_repeated.sh STR $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact.jar -a ${NODE_COUNT} ${WC_IN} ${WC_OUT}"
+./jp_run_repeated.sh STR $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-pact.jar -a ${NODE_COUNT} ${TS_IN} ${TS_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh
