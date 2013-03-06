@@ -2,11 +2,11 @@
 
 # common environment variables
 PWD=`pwd`
-JP_SCRIPTS_HOME=`dirname $PWD`
-JP_SCRIPTS_HOME=`dirname $JP_SCRIPTS_HOME`
+JP_SCRIPT_DIR=`dirname $PWD`
+JP_SCRIPT_DIR=`dirname $JP_SCRIPT_DIR`
 
 # load currently active configuration
-configFile=${JP_SCRIPTS_HOME}/scripts/bash/conf/${HOSTNAME}/jp_configure.sh
+configFile=${JP_SCRIPT_DIR}/script/bash/conf/${HOSTNAME}/jp_configure.sh
 if [ ! -f $configFile ]; then
   echo "Missing config file '${configFile}'. Canceling..."
   exit 1

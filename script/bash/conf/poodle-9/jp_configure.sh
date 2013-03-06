@@ -9,13 +9,13 @@
 # path to the various Myriad data generators (wordcount-gen, tera-gen)
 DGEN_HOME=/home/alexander/etc/datagen
 # path to experiments log file folder
-EXP_LOG_BASE_DIR=${JP_SCRIPTS_HOME}/log
+EXP_LOG_BASE_DIR=${JP_SCRIPT_DIR}/log
 # path to the experiment jobs
-JOBS_HOME=${JP_SCRIPTS_HOME}/jobs
+JOBS_HOME=${JP_SCRIPT_DIR}/jobs
 # list of all available slaves, top N slaves will be used for dop N
-ALL_SLAVES=${JP_SCRIPTS_HOME}/scripts/bash/conf/poodle-9/all_slaves
+ALL_SLAVES=${JP_SCRIPT_DIR}/script/bash/conf/poodle-9/all_slaves
 # list of all current slaves
-CUR_SLAVES=${JP_SCRIPTS_HOME}/scripts/bash/conf/poodle-9/cur_slaves
+CUR_SLAVES=${JP_SCRIPT_DIR}/script/bash/conf/poodle-9/cur_slaves
 # number of repetition runs
 NUM_REPETITION_RUNS=1
 # user that runs the experiments

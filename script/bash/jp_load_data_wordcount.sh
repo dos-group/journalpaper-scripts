@@ -34,5 +34,5 @@ fi
 . ./jp_configure.sh
 
 # generate wc data
-${HADOOPMR_BIN}/hadoop jar ${WC_GEN_HOME}/bin/wordcount-gen-driver-jobs.jar ${WC_GEN_HOME} -s${SCALING_FACTOR} -N${NODE_COUNT} -m${DATASET_ID} -o${HDFS_INPUT_PATH} -xtoken
+${HADOOPMR_BIN}/hadoop jar ${WC_GEN_HOME}/bin/wordcount-gen-driver-jobs.jar ${WC_GEN_HOME} -s${SCALING_FACTOR} -N${NODE_COUNT} -m${DATASET_ID} -o${HDFS_INPUT_PATH} -xlineitem,orders,custom
 echo "WordCount data generated"

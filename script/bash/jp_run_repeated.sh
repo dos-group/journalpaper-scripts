@@ -11,9 +11,12 @@ EXEC_SYSTEM=$1
 EXEC_ID_PREF=$2
 JOB_STRING=$3
 
-if [[ $EXEC_SYSTEM != 'HDP'  && $EXEC_SYSTEM != 'STR' ]]
+if [[ "(HDP(MAPR|HIVE)|STR(PACT|MTOR)" =~ $EXEC_SYSTEM ]]
 then
-  echo "You need to specify an system to execute (HDP, STR). Canceling..."
+    system="${BASH_REMATCH[1]}"
+    echo "${BASH_REMATCH[1]}" # concatenate strings
+else
+  echo "You need to specify an system to execute (HDP_MAPR, HDP_HIVE, STR_PACT, STR_MTOR). Canceling..."
   exit 1
 fi
 
@@ -43,8 +46,8 @@ then
 fi
 
 # Start run loop
-for (( i=1; i<=${NUM_REPETITION_RUNS}; i++ ))
-do
+for (( i=1; i<=${NUM_REPETITION_RUNS}; i++ )); do
+	
   EXP_ID=`printf "%s-run%02d" ${EXEC_ID_PREF} ${i}`
 
   # create log dirs

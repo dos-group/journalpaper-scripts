@@ -18,8 +18,8 @@ WC_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/${DGEN_ID}/gutenberg.txt
 WC_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}
 
 # deploy systems
-#./jp_hadoop_deploy.sh
-#./jp_stratosphere_deploy.sh
+./jp_deploy_sut.sh ${HADOOPMR_TAR} ${HADOOPMR_HOME}
+./jp_deploy_sut.sh ${STRATOSPHERE_TAR} ${STRATOSPHERE_HOME}
 
 # adapt number of slaves
 ./jp_adapt_slave_cnt.sh $NUM_SLAVES
