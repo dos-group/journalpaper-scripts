@@ -9,3 +9,8 @@
 
 # shut down HadoopMR
 ${HADOOPMR_BIN}/stop-mapred.sh
+
+# make sure that there are no ghost JVMs 
+for slave in $(cat ${HDFS_CONF}/slaves); do
+  ssh ${slave} "jps | grep 'Child' | grep -v 'Jps' | tr -s ' ' | cut -d ' ' -f 1 | xargs -I{} kill {}"; 
+done

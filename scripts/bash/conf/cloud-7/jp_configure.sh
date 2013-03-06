@@ -64,9 +64,9 @@ HDFS_STARTUP_CHECK_TIMEOUT=180
 # interval in seconds to check whether HDFS is ready
 HDFS_STARTUP_CHECK_INTERVAL=5
 # directory where all datanodes store their data
-HDFS_DATA_DIR=/data/hdfs/data
+HDFS_DATA_DIR=/data/hdfs-0.20_varscale/data
 # direactory where the namenode stores its data 
-HDFS_NAME_DIR=/data/hdfs/name
+HDFS_NAME_DIR=/share/journalpaper/systems/hadoop-1.0.4/namenode
 # HDFS address
 HDFS_ADDRESS=hdfs://cloud-7:45010
 

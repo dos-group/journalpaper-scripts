@@ -32,6 +32,12 @@ cp ${CUR_SLAVES} ${HDFS_CONF}/slaves
 echo "Number of datanodes adapted"
 SLAVECNT=`cat ${CUR_SLAVES} | wc -l`
 
+# remove old data dirs
+#for datanode in $(cat ${HDFS_CONF}/slaves); do
+#  echo "Removing HDFS data folder on node ${datanode}"
+#  ssh ${datanode} "rm -Rf ${HDFS_DATA_DIR}; mkdir ${HDFS_DATA_DIR}; mkdir ${HDFS_DATA_DIR}/current;"
+#done
+
 # format namenode
 echo "Formatting HDFS"
 echo "Y" | ${HDFS_BIN}/hadoop namenode -format

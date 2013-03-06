@@ -18,8 +18,8 @@ TS_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/${DGEN_ID}/terasort.txt
 TS_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}
 
 # deploy systems
-./jp_hadoop_deploy.sh
-./jp_stratosphere_deploy.sh
+#./jp_hadoop_deploy.sh
+#./jp_stratosphere_deploy.sh
 
 # adapt number of slaves
 ./jp_adapt_slave_cnt.sh $NUM_SLAVES
@@ -49,11 +49,11 @@ fi
 ./jp_hadoop_mr_stop.sh
 
 # repeat Hadoop runs
-execIdPrefix=`printf "wc-hdp_mapr-dop%04d" ${NODE_COUNT}`
+execIdPrefix=`printf "ts-hdp_mapr-dop%04d" ${NODE_COUNT}`
 ./jp_run_repeated.sh HDP $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-hadoop.jar ${TS_IN} ${TS_OUT}"
 
 # repeat Stratosphere runs
-execIdPrefix=`printf "wc-str_pact-dop%04d" ${NODE_COUNT}`
+execIdPrefix=`printf "ts-str_pact-dop%04d" ${NODE_COUNT}`
 ./jp_run_repeated.sh STR $execIdPrefix "${JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-pact.jar -a ${NODE_COUNT} ${TS_IN} ${TS_OUT}"
 
 # stop HDFS
