@@ -26,7 +26,7 @@ if [[ $? != 0 ]]; then
    exit $?
 fi
 
-# generate wordcount input data
+# generate terasort input data
 ./jp_load_data_terasort.sh ${TS_SCALING_FACTOR} ${TS_NODE_COUNT} ${TS_DGEN_ID}
 if [[ $? != 0 ]]; then
    exit $?
