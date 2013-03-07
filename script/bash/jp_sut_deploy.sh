@@ -27,4 +27,8 @@ rm -Rf ${SYSTEM_HOME}
 
 echo "Deploying SUT from '${SYSTEM_TAR}' to '${SYSTEM_HOME}'."
 tar -xzvf ${SYSTEM_TAR} -C `dirname ${SYSTEM_HOME}` > /dev/null
+
+echo "Setting proper rights in SUT home."
 chown -R ${EXP_USER}:${EXP_GROUP} ${SYSTEM_HOME}
+find ${SYSTEM_HOME} -type f | xargs -I{} chmod g+w {}
+find ${SYSTEM_HOME} -type d | xargs -I{} chmod g+w {}

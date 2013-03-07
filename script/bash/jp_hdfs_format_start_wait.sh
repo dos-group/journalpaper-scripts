@@ -49,7 +49,7 @@ echo "Starting HDFS..."
 ${HDFS_BIN}/start-dfs.sh > /dev/null
 
 # wait until hdfs is started
-echo "Waiting for all datanodes to connect and HDFS to turn safe mode off."
+echo "Waiting for all datanodes to connect and HDFS to turn safe mode off..."
 safeModeOff=0
 nodeCnt=0
 timeoutCnt=0
