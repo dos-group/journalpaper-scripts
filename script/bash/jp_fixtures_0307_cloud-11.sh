@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# load config
+. ./jp_env_configure.sh
+
+# deploy systems under test (SUTs)
+./jp_sut_deploy.sh ${HDP_MAPR_TAR} ${HDP_MAPR_HOME}
+./jp_sut_deploy.sh ${STR_PACT_TAR} ${STR_PACT_HOME}
+
+#  5 nodes
+./jp_run_wordcount.sh  5
+./jp_run_terasort.sh   5
+# 10 nodes
+./jp_run_wordcount.sh 10
+./jp_run_terasort.sh  10
+# 15 nodes
+./jp_run_wordcount.sh 15
+./jp_run_terasort.sh  15
+# 20 nodes
+./jp_run_wordcount.sh 20
+./jp_run_terasort.sh  20
+# 25 nodes
+./jp_run_wordcount.sh 25
+./jp_run_terasort.sh  25
