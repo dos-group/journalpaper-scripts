@@ -3,7 +3,7 @@
 # Executes a Stratosphere job and measures the execution time.
 # The default result path is removed.
 # Parameters:
-# 1) ExecutionId to identify the execution run
+# 1) EXP_ID the key for this experiment
 # 2) JOB_STRING that gives the job jar and all job arguments
 #
 # Author: Fabian Hueske (fabian.hueske@tu-berlin.de)
@@ -12,13 +12,12 @@
 . ./jp_env_configure.sh
 
 USER=`whoami`
-
 EXP_ID=$1
 JOB_STRING=$2
 
-# check that execution id is set
+# check that experiment ID is set
 if [[ $EXP_ID == '' ]]; then
-   echo "You need to specify an execution id. Canceling..."
+   echo "You need to specify an experiment ID. Canceling..."
    exit 1
 fi
 
@@ -31,32 +30,31 @@ fi
 # create run log folder
 mkdir -p ${EXP_LOG_DIR}/${EXP_ID}
 # derive name of log and output files
+errFile=${EXP_LOG_DIR}/${EXP_ID}/run.err
 outFile=${EXP_LOG_DIR}/${EXP_ID}/run.out
 logFile=${EXP_LOG_DIR}/${EXP_ID}/run.log
 
 # start job
 echo "Starting job execution for experiment ${EXP_ID}."
 startTS=`date +%s`
-${STR_PACT_BIN}/pact-client.sh run -w -j $JOB_STRING > $outFoutFile
+${STR_PACT_BIN}/pact-client.sh run -w -j $JOB_STRING > $outFile 2> $errFile
 
 if [[ $? == 0 ]]; then
    endTS=`date +%s`
    (( jobDuration=$endTS - $startTS ))
    line=`printf "%-50s%-30s\n" $EXP_ID $jobDuration`
-   echo "$line" \"$JOB_STRING\" >> $logFile
+   echo "$line" \"$JOB_STRING\" > $logFile
    echo "Job executed in $jobDuration seconds."
 else
    line=`printf "%-50s%-30s\n" $EXP_ID -1`
-   echo "$line" \"$JOB_STRING\" >> $logFile
+   echo "$line" \"$JOB_STRING\" > $logFile
    echo "Job execution failed!"
 fi
 
-# copy jobmanager log file
-#logEnd=`cat ${STR_PACT_LOG}/nephele-${USER}-jobmanager-${STR_PACT_JOBMANAGER_HOST}.log | wc -l`
-#logLength=$(( $logEnd - $logStart ))
-#cat ${STR_PACT_LOG}/nephele-${USER}-jobmanager-${STR_PACT_JOBMANAGER_HOST}.log | tail -n $logLength > ${EXP_LOG_DIR}/${EXP_ID}-jobmanager-log
+# copy Stratosphere log files
 mkdir -p ${EXP_LOG_DIR}/${EXP_ID}/stratosphere-logs
 cp ${STR_PACT_LOG}/* ${EXP_LOG_DIR}/${EXP_ID}/stratosphere-logs
 
 # clean result dir
+echo "Removing job output path ${HDFS_OUTPUT_PATH}"
 ${HDFS_BIN}/hadoop fs -rmr ${HDFS_OUTPUT_PATH}
