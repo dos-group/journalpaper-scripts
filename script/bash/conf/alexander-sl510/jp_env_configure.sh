@@ -13,6 +13,10 @@ EXP_NUM_REPETITION_RUNS=1
 EXP_USER=alexander
 # user group for the experiments
 EXP_GROUP=alexander
+# list of all available slaves, top N slaves will be used for dop N
+EXP_ALL_SLAVES=$(dirname ${CONFIG_FILE})/all_slaves
+# list of all current slaves
+EXP_CUR_SLAVES=$(dirname ${CONFIG_FILE})/cur_slaves
 # wordcount-gen data generator home
 EXP_WC_DGEN_HOME=${EXP_DGEN_HOME}/wordcount-gen
 # tera-gen data generator home
@@ -23,7 +27,7 @@ EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
 ################ HDFS
 
 # path to HDFS root folder
-HDFS_HOME=${HDP_MAPR_HOME}
+HDFS_HOME=/home/alexander/etc/hadoop-0.20.203.0
 # HDFS bin folder
 HDFS_BIN=${HDFS_HOME}/bin
 # HDFS log folder
@@ -42,11 +46,19 @@ HDFS_NAME_DIR=/data/hdfs/name
 ################ HADOOP
 
 # path to Hadoop MapReduce deployment archive
-HDP_MAPR_TAR=/home/alexander/etc/hadoop-1.0.4.tar.gz
+HDP_MAPR_TAR=/home/alexander/etc/hadoop-0.20.203.0.tar.gz
 # path to Hadoop MapReduce root folder
-HDP_MAPR_HOME=/home/alexander/etc/hadoop-1.0.4.tar.gz
+HDP_MAPR_HOME=/home/alexander/etc/hadoop-0.20.203.0
+# Hadoop bin dir
+HDP_MAPR_BIN=${HDP_MAPR_HOME}/bin
+# Hadoop log dir
+HDP_MAPR_LOG=${HDP_MAPR_HOME}/logs
+# Hadoop conf dir
+HDP_MAPR_CONF=${HDP_MAPR_HOME}/conf
 # host name of the Hadoop MapReduce jobtracker
 HDP_MAPR_JOBTRACKER_HOST=alexander-sl510
+# number of map slots per tasktracker
+HDP_MAPR_MAP_SLOTS_PER_SLAVE=2
 
 ################ STRATOSPHERE
 

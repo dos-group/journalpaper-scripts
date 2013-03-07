@@ -35,7 +35,7 @@ outFile=${EXP_LOG_DIR}/${EXP_ID}/run.out
 logFile=${EXP_LOG_DIR}/${EXP_ID}/run.log
 
 # start job
-echo "Starting to execute job: $JOB_STRING"
+echo "Starting job execution for experiment ${EXP_ID}."
 startTS=`date +%s`
 ${STR_PACT_BIN}/pact-client.sh run -w -j $JOB_STRING > $outFoutFile
 

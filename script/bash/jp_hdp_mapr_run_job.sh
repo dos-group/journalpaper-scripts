@@ -30,7 +30,7 @@ mkdir -p ${EXP_LOG_DIR}/${EXP_ID}
 outFile=${EXP_LOG_DIR}/${EXP_ID}/run.out
 logFile=${EXP_LOG_DIR}/${EXP_ID}/run.log
 
-echo "Starting to execute job: $JOB_STRING"
+echo "Starting job execution for experiment ${EXP_ID}."
 startTS=`date +%s`
 ${HDP_MAPR_BIN}/hadoop jar $JOB_STRING > $outFile
 

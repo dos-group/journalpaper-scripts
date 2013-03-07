@@ -13,13 +13,13 @@ USER=`whoami`
 # check that HDFS is not running!
 if [[ `jps | grep NameNode | wc -l` > 0 ]]
 then
-   echo "HDFS is running. Canceling..."
+   echo "HDFS is already running. Skipping startAndWait() procedure."
    exit
 fi
 
 # remove log files
-rm ${HDFS_LOG}/hadoop-${USER}-*node-*.log* > /dev/null
-echo "HDFS log files removed"
+rm -Rf ${HDFS_LOG}/hadoop-${USER}-*node-*.log* > /dev/null
+echo "Removed HDFS log files."
 
 if [ ! -f ${EXP_CUR_SLAVES} ]; then
    echo "Current slaves file ${EXP_CUR_SLAVES} does not exist. Canceling..."
@@ -33,21 +33,20 @@ SLAVECNT=`cat ${EXP_CUR_SLAVES} | wc -l`
 
 # format namenode
 echo "Formatting HDFS..."
-echo "Y" | ${HDFS_BIN}/hadoop namenode -format
-echo "HDFS is formatted."
+echo "Y" | ${HDFS_BIN}/hadoop namenode -format > /dev/null 2> /dev/null
+echo "Formatting HDFS ready."
 
 for datanode in $(cat ${HDFS_CONF}/slaves); do
    echo "Copying namenode VERSION file to datanode ${datanode}."
    scp ${HDFS_NAME_DIR}/current/VERSION ${USER}@${datanode}:${HDFS_DATA_DIR}/current/VERSION.backup > /dev/null
    echo "Adapt VERSION file on ${datanode}."
    ssh ${USER}@${datanode} "cat ${HDFS_DATA_DIR}/current/VERSION.backup | sed '3 i storageID=' | sed 's/storageType=NAME_NODE/storageType=DATA_NODE/g' > ${HDFS_DATA_DIR}/current/VERSION" > /dev/null
-   ssh ${USER}@${datanode} "rm ${HDFS_DATA_DIR}/current/VERSION.backup" > /dev/null
+   ssh ${USER}@${datanode} "rm -Rf ${HDFS_DATA_DIR}/current/VERSION.backup" > /dev/null
 done
 
 # start hdfs
 echo "Starting HDFS..."
 ${HDFS_BIN}/start-dfs.sh > /dev/null
-echo "HDFS is now running."
 
 # wait until hdfs is started
 echo "Waiting for all datanodes to connect and HDFS to turn safe mode off."

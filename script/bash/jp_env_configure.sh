@@ -11,14 +11,12 @@
 PWD=`pwd`
 # path to the scripts project
 EXP_SCRIPT_DIR=$(dirname $(dirname $PWD))
+# path to experiments data generators home
+EXP_DGEN_HOME=${EXP_SCRIPT_DIR}/datagen
+# path to the experiment jobs
+EXP_JOBS_HOME=${EXP_SCRIPT_DIR}/job
 # path to experiments log file folder
 EXP_LOG_DIR=${EXP_SCRIPT_DIR}/log
-# path to the experiment jobs
-EXP_JOBS_HOME=${EXP_SCRIPT_DIR}/jobs
-# list of all available slaves, top N slaves will be used for dop N
-EXP_ALL_SLAVES=${EXP_SCRIPT_DIR}/script/bash/conf/alexander-sl510/all_slaves
-# list of all current slaves
-EXP_CUR_SLAVES=${EXP_SCRIPT_DIR}/script/bash/conf/alexander-sl510/cur_slaves
 
 ################ HDFS
 
@@ -37,8 +35,6 @@ HDFS_OUTPUT_PATH=/benchmarks/output
 HDP_MAPR_STARTUP_CHECK_TIMEOUT=180
 # interval in seconds to check whether Hadoop MapReduce is ready
 HDP_MAPR_STARTUP_CHECK_INTERVAL=5
-# number of map slots per tasktracker
-HDP_MAPR_MAP_SLOTS_PER_SLAVE=2
 
 ################ STRATOSPHERE
 

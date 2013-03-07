@@ -37,6 +37,12 @@ if [[ $? != 0 ]]; then
    exit $?
 fi
 
+# start hadoop_mr
+./jp_hdp_mapr_start_wait.sh
+if [[ $? != 0 ]]; then
+   exit $?
+fi
+
 # generate wc data
 ${HDP_MAPR_BIN}/hadoop jar ${EXP_TS_DGEN_HOME}/bin/tera-gen-driver-jobs.jar ${EXP_TS_DGEN_HOME} -s${SCALING_FACTOR} -N${NODE_COUNT} -m${DATASET_ID} -o${HDFS_INPUT_PATH} -xrecord
 echo "TeraSort data generated."

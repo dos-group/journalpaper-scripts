@@ -13,20 +13,20 @@ USER=`whoami`
 # check that Nephele is not running!
 if [[ `jps | grep JobManager | wc -l` > 0 ]]
 then
-   echo "Stratosphere is already running. Canceling..."
+   echo "Stratosphere is already running. Skipping startAndWait() procedure."
    exit
 fi
 
 # check that file with current slaves exists
 if [ ! -f ${EXP_CUR_SLAVES} ]
 then
-   echo "Current slaves file ${EXP_CUR_SLAVES} does not exist. Canceling..."
+   echo "Current slaves file ${EXP_CUR_SLAVES} does not exist."
    exit 1
 fi
 
 # remove log files
-rm ${STR_PACT_LOG}/nephele-${USER}-*.log*
-rm ${STR_PACT_LOG}/nephele-${USER}-*.out*
+rm -Rf ${STR_PACT_LOG}/nephele-${USER}-*.log*
+rm -Rf ${STR_PACT_LOG}/nephele-${USER}-*.out*
 echo "Stratosphere log files removed"
 
 # adapt number of tasktrackers
@@ -40,7 +40,7 @@ ${STR_PACT_BIN}/start-cluster.sh
 echo "Nephele started"
 
 # wait until all task managers connected
-echo "waiting for $SLAVECNT TaskManagers to connect"
+echo "waiting for $SLAVECNT TaskManagers to connect..."
 nodeCnt=0
 timeoutCnt=0
 while [[ ( $nodeCnt -lt $SLAVECNT ) && ( $timeoutCnt -lt $STR_PACT_STARTUP_CHECK_TIMEOUT ) ]]

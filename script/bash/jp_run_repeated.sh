@@ -11,17 +11,16 @@ EXEC_SYSTEM=$1
 EXEC_ID_PREF=$2
 JOB_STRING=$3
 
-echo $EXEC_SYSTEM
 if [[ "HDP_MAPR|HDP_HIVE|STR_PACT|STR_MET" =~ $EXEC_SYSTEM ]]; then
    RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR)_(MAPR|HIVE|PACT|METR)/\1/'`
-   echo "Using ${RUNTIME_SYSTEM} runtime system" # concatenate strings
+   echo "Using ${RUNTIME_SYSTEM} runtime system." # concatenate strings
    
    if [[ $RUNTIME_SYSTEM =~ "HDP" ]]; then
       FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/HDP_(MAPR|HIVE)/\1/'`
    else # RUNTIME_SYSTEM == "STR"
       FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/STR_(PACT|METR)/\1/'`
    fi
-   echo "Using ${FRONTEND_SYSTEM} programming API" # concatenate strings
+   echo "Using ${FRONTEND_SYSTEM} programming API." # concatenate strings
 else
    echo "You need to specify an system + API pair to execute (one of HDP_MAPR, HDP_HIVE, STR_PACT, STR_MTOR is expected)."
    echo "Canceling..."
@@ -56,7 +55,7 @@ if [[ $RUNTIME_SYSTEM == 'HDP' ]]; then
       # run job
       if [[ $FRONTEND_SYSTEM == 'MAPR' ]]; then
          ./jp_hdp_mapr_run_job.sh $EXP_ID "${JOB_STRING}"
-      elif [[ $FRONTEND_SYSTEM == 'HIVE' ]]
+      elif [[ $FRONTEND_SYSTEM == 'HIVE' ]]; then
          echo "Skipping unsupported frontend API ${FRONTEND_SYSTEM}."
       fi
    done

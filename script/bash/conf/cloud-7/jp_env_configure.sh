@@ -13,6 +13,10 @@ EXP_NUM_REPETITION_RUNS=3
 EXP_USER=aalexandrov
 # user group for the experiments
 EXP_GROUP=users
+# list of all available slaves, top N slaves will be used for dop N
+EXP_ALL_SLAVES=$(dirname ${CONFIG_FILE})/all_slaves
+# list of all current slaves
+EXP_CUR_SLAVES=$(dirname ${CONFIG_FILE})/cur_slaves
 # wordcount-gen data generator home
 EXP_WC_DGEN_HOME=${EXP_DGEN_HOME}/wordcount-gen
 # tera-gen data generator home
@@ -23,7 +27,7 @@ EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
 ################ HDFS
 
 # path to HDFS root folder
-HDFS_HOME=${HDP_MAPR_HOME}
+HDFS_HOME=/share/journalpaper/systems/hadoop-1.0.4
 # HDFS bin folder
 HDFS_BIN=${HDFS_HOME}/bin
 # HDFS log folder
@@ -53,6 +57,8 @@ HDP_MAPR_LOG=${HDP_MAPR_HOME}/logs
 HDP_MAPR_CONF=${HDP_MAPR_HOME}/conf
 # Hadoop MapReduce Job Tracker host name
 HDP_MAPR_JOBTRACKER_HOST=cloud-7
+# number of map slots per tasktracker
+HDP_MAPR_MAP_SLOTS_PER_SLAVE=8
 
 ################ STRATOSPHERE
 
