@@ -12,4 +12,7 @@ ${HDFS_BIN}/hadoop fs -rmr '/*'
 echo "HDFS is now empty."
 
 # shut down HDFS
+echo "Stopping HDFS..."
 ${HDFS_BIN}/stop-dfs.sh > /dev/null
+sleep $(( 4 * $HDFS_STARTUP_CHECK_INTERVAL ))
+echo "HDFS is now stopped."
