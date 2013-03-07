@@ -17,8 +17,8 @@
 -->
 <configuration>
 
-	<!--  ========================================================================
-                                     Addresses and Ports 
+	    <!--  ========================================================================
+                                          Addresses and Ports 
               ======================================================================== -->
 
         <!-- the address of the job manager -->
@@ -30,13 +30,18 @@
         <!-- the IPC port of the job manager -->
         <property>
                 <key>jobmanager.rpc.port</key>
-                <value>6123</value>
+                <value>6002</value>
         </property>
 
         <!-- the IPC port of the task manager -->
         <property>
                 <key>taskmanager.rpc.port</key>
                 <value>6122</value>
+        </property>
+
+        <property>
+                <key>job.execution.retries</key>
+                <value>0</value>
         </property>
 
         <!--  ========================================================================
@@ -46,13 +51,67 @@
         <!--  The directories for temporary files. Add a colon (:) separated list for multiple directories -->
         <property>
                 <key>taskmanager.tmp.dirs</key>
-                <value>/data/1/stratosphere/tm-local:/data/2/stratosphere/tm-local:/data/3/stratosphere/tm-local:/data/4/stratosphere/tm-local</value>
+                <value>/data/1/journalpaper/tm-local:/data/2/stratosphere/tm-local:/data/3/stratosphere/tm-local:/data/4/stratosphere/tm-local</value>
+        </property>
+
+        <property>
+                <key>jobclient.polling.internval</key>
+                <value>3</value>
+        </property>
+
+        <property>
+                <key>jobmanager.rpc.numhandler</key>
+                <value>12</value>
         </property>
 
         <!-- The number of network buffers used by the TaskManager -->
         <property>
-                <key>channel.network.numberOfBuffers</key>
-                <value>4096</value>
+		        <key>channel.network.numberOfBuffers</key>
+		        <value>32768</value>
+	    </property>
+
+        <property>
+                <key>channel.network.bufferSizeInBytes</key>
+                <value>32768</value>
+        </property>
+
+        <property>
+                <key>taskmanager.memory.size</key>
+                <value>22528</value>
+        </property>
+
+        <property>
+                <key>fs.hdfs.hdfsdefault</key>
+                <value>/share/journalpaper/systems/hadoop-1.0.4/conf/hdfs-site.xml</value>
+        </property>
+
+        <property>
+                <key>taskmanager.tmp.dirs</key>
+                <value>/data/nephele/tmp/:/data/nephele/tmp/:/data/nephele/tmp/:/data/nephele/tmp/</value>
+        </property>
+
+        <property>
+                <key>channel.network.mergeSpilledBuffers</key>
+                <value>false</value>
+        </property>
+
+        <!--  ========================================================================
+	                                        Multicast
+	      ======================================================================== -->
+
+        <property>
+                <key>multicast.enable</key>
+                <value>false</value>
+        </property>
+
+        <property>
+                <key>multicast.branching</key>
+                <value>1</value>
+        </property>
+
+        <property>
+                <key>multicast.randomize</key>
+                <value>true</value>
         </property>
 
         <!--  ========================================================================
@@ -64,21 +123,26 @@
 	     will be considered to have the here defined resources available.
 	     The available resources are defined as follows:
 	     <name>,<compute-units>,<CPU-cores>,<memory in MB>,<disk-space in GB>,<price-per-hour>  -->
+
+        <property>
+                <key>instancemanager.cluster.defaulttype</key>
+                <value>1</value>
+        </property>
+
+        <property>
+                <key>instancemanager.local.type</key>
+                <value>standard,2,1,300,10,10</value>
+        </property>
 	
-	<property>
-		<key>instancemanager.cluster.type.1</key>
-		<value>standard,2,1,1024,20,0</value>
-	</property>
+        <property>
+                <key>instancemanager.cluster.type.1</key>
+                <value>standard,2,1,1024,20,0</value>
+        </property>
 	
-	<property>
-		<key>instancemanager.cluster.type.2</key>
-		<value>medium,4,2,2048,40,0</value>
-	</property>
-	
-	<property>
-		<key>instancemanager.cluster.defaulttype</key>
-		<value>1</value>
-	</property>
+        <property>
+                <key>instancemanager.cluster.type.2</key>
+                <value>medium,4,2,2048,40,0</value>
+        </property>
 
 	<!-- Definition of 64-bit standard instance types on Amazon EC2 -->
 	<property>
@@ -153,7 +217,7 @@
 	      
 	<property>
 		<key>jobmanager.profiling.enable</key>
-		<value>true</value>
+		<value>false</value>
 	</property>
 
 	<property>

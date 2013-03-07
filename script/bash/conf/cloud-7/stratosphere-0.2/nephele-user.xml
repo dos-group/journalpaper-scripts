@@ -17,8 +17,8 @@
 -->
 <configuration>
 
-	<!--  ========================================================================
-                                     Addresses and Ports 
+	    <!--  ========================================================================
+                                          Addresses and Ports 
               ======================================================================== -->
 
         <!-- the address of the job manager -->
@@ -40,46 +40,47 @@
         </property>
 
         <property>
+                <key>job.execution.retries</key>
+                <value>0</value>
+        </property>
+
+        <!--  ========================================================================
+	                               Memory, Buffers and Directories
+	      ======================================================================== -->
+
+        <!--  The directories for temporary files. Add a colon (:) separated list for multiple directories -->
+        <property>
+                <key>taskmanager.tmp.dirs</key>
+                <value>/data/hdfs-0.20_varscale/tm-local</value>
+        </property>
+
+        <property>
                 <key>jobclient.polling.internval</key>
                 <value>2</value>
         </property>
 
-	<property>
+        <property>
                 <key>jobmanager.rpc.numhandler</key>
                 <value>12</value>
         </property>
 
-	<property>
-		<key>channel.network.numberOfBuffers</key>
-		<value>32768</value>
-	</property>
+        <!-- The number of network buffers used by the TaskManager -->
+        <property>
+		        <key>channel.network.numberOfBuffers</key>
+		        <value>32768</value>
+	    </property>
 
-	<property>
-		<key>channel.network.bufferSizeInBytes</key>
-		<value>32768</value>
-	</property>
+        <property>
+                <key>channel.network.bufferSizeInBytes</key>
+                <value>32768</value>
+        </property>
 
         <property>
                 <key>taskmanager.memory.size</key>
                 <value>22528</value>
         </property>
 
-	<property>
-                <key>multicast.enable</key>
-                <value>false</value>
-        </property>
-
-	<property>
-		<key>multicast.branching</key>
-		<value>1</value>
-	</property>
-
-	<property>
-		<key>multicast.randomize</key>
-		<value>true</value>
-	</property>
-
-	<property>
+        <property>
                 <key>fs.hdfs.hdfsdefault</key>
                 <value>/share/journalpaper/systems/hadoop-1.0.4/conf/hdfs-site.xml</value>
         </property>
@@ -94,13 +95,27 @@
                 <value>false</value>
         </property>
 
-	<property>
-		<key>job.execution.retries</key>
-		<value>0</value>
-	</property>
+        <!--  ========================================================================
+	                                        Multicast
+	      ======================================================================== -->
+
+        <property>
+                <key>multicast.enable</key>
+                <value>false</value>
+        </property>
+
+        <property>
+                <key>multicast.branching</key>
+                <value>1</value>
+        </property>
+
+        <property>
+                <key>multicast.randomize</key>
+                <value>true</value>
+        </property>
 
         <!--  ========================================================================
-	                           Instance and Memory Management 
+	                                   Instances
 	      ======================================================================== -->
 	      
 	<!-- Definition of the standard instance type. This definition describes the instances in 
@@ -108,21 +123,47 @@
 	     will be considered to have the here defined resources available.
 	     The available resources are defined as follows:
 	     <name>,<compute-units>,<CPU-cores>,<memory in MB>,<disk-space in GB>,<price-per-hour>  -->
-	
-        <property>
-                <key>instancemanager.local.type</key>
-                <value>standard,2,1,300,10,10</value>
-        </property>
-
-        <property>
-                <key>instancemanager.cluster.type.1</key>
-                <value>large,24,8,28000,240,0</value>
-        </property>
 
         <property>
                 <key>instancemanager.cluster.defaulttype</key>
                 <value>1</value>
         </property>
+
+        <property>
+                <key>instancemanager.local.type</key>
+                <value>standard,2,1,300,10,10</value>
+        </property>
+	
+        <property>
+                <key>instancemanager.cluster.type.1</key>
+                <value>standard,2,1,1024,20,0</value>
+        </property>
+	
+        <property>
+                <key>instancemanager.cluster.type.2</key>
+                <value>medium,4,2,2048,40,0</value>
+        </property>
+
+	<!-- Definition of 64-bit standard instance types on Amazon EC2 -->
+	<property>
+		<key>instancemanager.ec2.type.1</key>
+		<value>t1.micro,2,1,613,8,3</value>
+	</property>
+	
+	<property>
+		<key>instancemanager.ec2.type.2</key>
+		<value>m1.large,4,2,7680,850,38</value>
+	</property>
+
+	<property>
+		<key>instancemanager.ec2.type.3</key>
+		<value>m1.xlarge,8,4,15360,1690,76</value>
+	</property>
+	
+	<property>
+		<key>instancemanager.ec2.defaulttype</key>
+		<value>1</value>
+	</property>
 	
 	<!--  ========================================================================
 	                   Scheduler and Instance Manager Classes 

@@ -53,13 +53,13 @@
 	<!-- The port of the frontend web server -->
 	<property>
 		<key>pact.web.port</key>
-		<value>8080</value>
+		<value>6001</value>
 	</property>
 	
 	<!-- The path to the root directory containing the web documents -->
 	<property>
 		<key>pact.web.rootpath</key>
-		<value>./resources/web-docs/</value>
+		<value>resources/web-docs/</value>
 	</property>
 	
 	<!-- The temp directory for the web server -->
@@ -71,7 +71,7 @@
 	<!-- The directory into which the web server will store uploaded pact programs -->
 	<property>
 		<key>pact.web.uploaddir</key>
-		<value>/tmp/pact-jobs/</value>
+		<value>/data/journalpaper/pact-jobs</value>
 	</property>
 	
 	<!-- The directory into which the web server will dump temporary JSON files describing pact plans -->

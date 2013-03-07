@@ -21,8 +21,13 @@
   </property>
 
   <property>
+    <name>mapred.local.dir</name>
+    <value>${hadoop.tmp.dir}/mapred/local</value>
+  </property>
+
+  <property>
     <name>mapred.job.tracker.http.address</name>
-    <value>cloud-7:4507</value>
+    <value>0.0.0.0:4507</value>
   </property>
 
   <property>
@@ -41,8 +46,13 @@
   </property>
 
   <property>
+    <name>mapred.map.tasks</name>
+    <value>32</value>
+  </property>
+
+  <property>
     <name>mapred.reduce.tasks</name>
-    <value>8</value>
+    <value>32</value>
   </property>
 
   <property>
@@ -53,6 +63,16 @@
   <property>
     <name>io.sort.factor</name>
     <value>64</value>
+  </property>
+
+  <property>
+    <name>mapred.task.timeout</name>
+    <value>7200000</value>
+  </property>
+
+  <property>
+    <name>mapred.map.max.attempts</name>
+    <value>1</value>
   </property>
 
   <property>

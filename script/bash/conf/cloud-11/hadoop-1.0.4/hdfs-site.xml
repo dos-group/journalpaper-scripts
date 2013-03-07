@@ -6,27 +6,27 @@
 <configuration>
   <property>
     <name>dfs.data.dir</name>
-    <value>/data/1/hadoop/hdfs-data,/data/2/hadoop/hdfs-data,/data/3/hadoop/hdfs-data,/data/4/hadoop/hdfs-data</value> 
+    <value>/data/1/journalpaper/hdfs-data,/data/2/journalpaper/hdfs-data,/data/3/journalpaper/hdfs-data,/data/4/journalpaper/hdfs-data</value> 
   </property>
 
   <property>
     <name>dfs.name.dir</name>
-    <value>/data/hadoop/name</value>
+    <value>/data/journalpaper/namenode</value>
   </property>
 
   <property>
     <name>fs.checkpoint.dir</name>
-    <value>/data/hadoop/namesecondary</value>
+    <value>/data/journalpaper/namesecondary</value>
   </property>
 
   <property>
     <name>dfs.datanode.address</name>
-    <value>0.0.0.0:40020</value>
+    <value>0.0.0.0:45020</value>
   </property>
 
   <property>
     <name>dfs.datanode.ipc.address</name>
-    <value>0.0.0.0:40025</value>
+    <value>0.0.0.0:45025</value>
   </property>
 
   <property>
@@ -36,8 +36,7 @@
 
   <property>
     <name>dfs.block.size</name>
-    <!--value>134217728</value-->
-    <value>67108864</value>	
+    <value>134217728</value>
   </property>
 
   <property>
@@ -47,17 +46,17 @@
 
   <property>
     <name>dfs.http.address</name>
-    <value>0.0.0.0:6003</value>
+    <value>0.0.0.0:4503</value>
   </property>
 
   <property>
     <name>dfs.secondary.http.address</name>
-    <value>0.0.0.0:6010</value>
+    <value>0.0.0.0:4510</value>
   </property>
 
   <property>
     <name>dfs.datanode.http.address</name>
-    <value>0.0.0.0:6009</value>
+    <value>0.0.0.0:4509</value>
   </property>
 
   <property>
@@ -79,17 +78,4 @@
     <name>dfs.namenode.handler.count</name>
     <value>32</value>
   </property>
-<!--
-  <property>
-    <name>dfs.heartbeat.interval</name>
-    <value>3</value>
-    <description>Determines datanode heartbeat interval in seconds.</description>
-  </property>
-
-  <property>
-    <name>dfs.heartbeat.recheck.interval</name>
-    <value>3</value>
-    <description>Determines datanode heartbeat interval in seconds.</description>
-  </property>
--->
 </configuration>

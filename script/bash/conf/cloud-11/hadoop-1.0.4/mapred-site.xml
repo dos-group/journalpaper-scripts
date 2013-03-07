@@ -7,52 +7,62 @@
 
   <property>
     <name>mapred.job.tracker</name>
-    <value>cloud-11.dima.tu-berlin.de:40030</value>
+    <value>cloud-11.dima.tu-berlin.de:45030</value>
   </property>
 
   <property>
     <name>mapred.job.reuse.jvm.num.tasks</name>
-    <value>1</value>
+    <value>-1</value>
   </property>
 
   <property>
     <name>mapred.child.java.opts</name>
-    <value>-Xmx4096m</value>
+    <value>-Xms1536m -Xmx1536m</value> <!-- old value: -Xmx4096m -->
   </property>
 
   <property>
     <name>mapred.local.dir</name>
-    <value>/data/1/hadoop/mapred-local,/data/2/hadoop/mapred-local,/data/3/hadoop/mapred-local,/data/4/hadoop/mapred-local,/data/hadoop/jm-mapred-local</value>
+    <value>/data/1/journalpaper/mapred-local,/data/2/journalpaper/mapred-local,/data/3/journalpaper/mapred-local,/data/4/journalpaper/mapred-local</value>
   </property>
 
   <property>
     <name>mapred.job.tracker.http.address</name>
-    <value>0.0.0.0:6007</value>
+    <value>0.0.0.0:4507</value>
   </property>
 
   <property>
     <name>mapred.task.tracker.http.address</name>
-    <value>0.0.0.0:6006</value>
+    <value>0.0.0.0:4506</value>
   </property>
 
   <property>
     <name>mapred.tasktracker.map.tasks.maximum</name>
-    <value>6</value>
+    <value>8</value>
   </property>
 
   <property>
     <name>mapred.tasktracker.reduce.tasks.maximum</name>
-    <value>1</value>
+    <value>8</value>
   </property>
 
   <property>
     <name>mapred.map.tasks</name>
-    <value>240</value>
+    <value>208</value>
   </property>
 
   <property>
     <name>mapred.reduce.tasks</name>
-    <value>26</value>
+    <value>208</value>
+  </property>
+
+  <property>
+    <name>io.sort.mb</name>
+    <value>1024</value>
+  </property>
+
+  <property>
+    <name>io.sort.factor</name>
+    <value>64</value>
   </property>
 
   <property>
@@ -63,6 +73,21 @@
   <property>
     <name>mapred.map.max.attempts</name>
     <value>1</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.parallel.copies</name>
+    <value>20</value>
+  </property>
+
+  <property>
+    <name>mapred.map.tasks.speculative.execution</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.tasks.speculative.execution</name>
+    <value>false</value>
   </property>
 
 </configuration>

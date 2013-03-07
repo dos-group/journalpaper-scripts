@@ -35,7 +35,7 @@ HDFS_LOG=${HDFS_HOME}/logs
 # HDFS con folder
 HDFS_CONF=${HDFS_HOME}/conf
 # HDFS address
-HDFS_ADDRESS=hdfs://cloud-11:45010
+HDFS_ADDRESS=hdfs://cloud-11.dima.tu-berlin.de:45010
 # host name of the HDFS namenode
 HDFS_NAMENODE_HOST=cloud-11
 # directory where all datanodes store their data
