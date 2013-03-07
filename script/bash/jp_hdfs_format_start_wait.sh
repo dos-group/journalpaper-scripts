@@ -10,9 +10,14 @@ USER=`whoami`
 # load configuration
 . ./jp_env_configure.sh
 
+# paranoid check for suspicious 'HDFS_DATA_DIR' values
+if [[ "$HDFS_DATA_DIR" =~ /data/[0-9]+/hadoop ]]; then
+   echo "Paranoid interrupt of HDFS format: we really think it is a a bad idea to use the given 'HDFS_DATA_DIR'."
+   exit 1
+fi
+
 # check that HDFS is not running!
-if [[ `jps | grep NameNode | wc -l` > 0 ]]
-then
+if [[ `jps | grep NameNode | wc -l` > 0 ]]; then
    echo "HDFS is already running. Skipping startAndWait() procedure."
    exit
 fi
@@ -37,11 +42,16 @@ echo "Y" | ${HDFS_BIN}/hadoop namenode -format > /dev/null 2> /dev/null
 echo "Formatting HDFS ready."
 
 for datanode in $(cat ${HDFS_CONF}/slaves); do
-   echo "Copying namenode VERSION file to datanode ${datanode}."
-   scp ${HDFS_NAME_DIR}/current/VERSION ${USER}@${datanode}:${HDFS_DATA_DIR}/current/VERSION.backup > /dev/null
-   echo "Adapt VERSION file on ${datanode}."
-   ssh ${USER}@${datanode} "cat ${HDFS_DATA_DIR}/current/VERSION.backup | sed '3 i storageID=' | sed 's/storageType=NAME_NODE/storageType=DATA_NODE/g' > ${HDFS_DATA_DIR}/current/VERSION" > /dev/null
-   ssh ${USER}@${datanode} "rm -Rf ${HDFS_DATA_DIR}/current/VERSION.backup" > /dev/null
+   for dataDir in $(echo $HDFS_DATA_DIR | sed 's/,/ /g'); do
+      echo "Initializing data dir ${dataDir} at datanode ${datanode}."
+      ssh ${USER}@${datanode} "rm -Rf ${dataDir}/current" > /dev/null
+      ssh ${USER}@${datanode} "mkdir -p ${dataDir}/current" > /dev/null
+      echo "Copying namenode VERSION file to datanode ${datanode}."
+      scp ${HDFS_NAME_DIR}/current/VERSION ${USER}@${datanode}:${dataDir}/current/VERSION.backup > /dev/null
+      echo "Adapt VERSION file on ${datanode}."
+      ssh ${USER}@${datanode} "cat ${dataDir}/current/VERSION.backup | sed '3 i storageID=' | sed 's/storageType=NAME_NODE/storageType=DATA_NODE/g' > ${dataDir}/current/VERSION" > /dev/null
+      ssh ${USER}@${datanode} "rm -Rf ${dataDir}/current/VERSION.backup" > /dev/null
+   done
 done
 
 # start hdfs
