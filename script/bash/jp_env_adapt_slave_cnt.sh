@@ -20,4 +20,4 @@ fi
 
 # adapt number of slaves
 head -n ${SLAVECNT} ${EXP_ALL_SLAVES} > ${EXP_CUR_SLAVES}
-echo "Number of slaves set to $SLAVECNT"
+echo "Number of slaves set to $SLAVECNT."

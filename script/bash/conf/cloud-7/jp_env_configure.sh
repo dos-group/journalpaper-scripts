@@ -41,9 +41,9 @@ HDFS_NAME_DIR=/share/journalpaper/systems/hadoop-1.0.4/namenode
 
 ################ HADOOP
 
-# path to Hadoop MR deployment archive
+# path to Hadoop MapReduce deployment archive
 HDP_MAPR_TAR=/share/journalpaper/systems/hadoop-1.0.4.tar.gz
-# path to Hadoop MR root folder
+# path to Hadoop MapReduce root folder
 HDP_MAPR_HOME=/share/journalpaper/systems/hadoop-1.0.4
 # Hadoop bin dir
 HDP_MAPR_BIN=${HDP_MAPR_HOME}/bin
@@ -51,7 +51,7 @@ HDP_MAPR_BIN=${HDP_MAPR_HOME}/bin
 HDP_MAPR_LOG=${HDP_MAPR_HOME}/logs
 # Hadoop conf dir
 HDP_MAPR_CONF=${HDP_MAPR_HOME}/conf
-# Hadoop MR Job Tracker host name
+# Hadoop MapReduce Job Tracker host name
 HDP_MAPR_JOBTRACKER_HOST=cloud-7
 
 ################ STRATOSPHERE

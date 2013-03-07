@@ -11,50 +11,34 @@ fi
 # load config
 . ./jp_env_configure.sh
 
-NODE_COUNT=$((${HDP_MAPR_MAP_SLOTS_PER_SLAVE} * ${NUM_SLAVES}))
-SCALING_FACTOR=$((1 * ${NODE_COUNT}))
-DGEN_ID=`printf "terasort-%04d" ${SCALING_FACTOR}`
-TS_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/${DGEN_ID}/terasort.txt
+TS_NODE_COUNT=$((${HDP_MAPR_MAP_SLOTS_PER_SLAVE} * ${NUM_SLAVES}))
+TS_SCALING_FACTOR=$((1 * ${TS_NODE_COUNT}))
+TS_DGEN_ID=`printf "terasort-%04d" ${TS_SCALING_FACTOR}`
+TS_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/${TS_DGEN_ID}/terasort.txt
 TS_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}
-
-# deploy systems
-./jp_sut_deploy.sh ${HDP_MAPR_TAR} ${HDP_MAPR_HOME}
-./jp_sut_deploy.sh ${STR_PACT_TAR} ${STR_PACT_HOME}
 
 # adapt number of slaves
 ./jp_env_adapt_slave_cnt.sh $NUM_SLAVES
 
 # format and start HDFS
 ./jp_hdfs_format_start_wait.sh
-if [[ $? != 0 ]]
-then
-   exit $?
-fi
-
-# start hadoop_mr
-./jp_hdp_mapr_start_wait.sh
-if [[ $? != 0 ]]
-then
+if [[ $? != 0 ]]; then
    exit $?
 fi
 
 # generate wordcount input data
-./jp_load_data_terasort.sh ${SCALING_FACTOR} ${NODE_COUNT} ${DGEN_ID}
-if [[ $? != 0 ]]
-then
+./jp_load_data_terasort.sh ${TS_SCALING_FACTOR} ${TS_NODE_COUNT} ${TS_DGEN_ID}
+if [[ $? != 0 ]]; then
    exit $?
 fi
 
-# stop hadoop_mr
-./jp_hdp_mapr_stop.sh
-
 # repeat Hadoop runs
-execIdPrefix=`printf "ts-hdp_mapr-dop%04d" ${NODE_COUNT}`
-./jp_run_repeated.sh HDP $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-hadoop.jar ${TS_IN} ${TS_OUT}"
+execIdPrefix=`printf "ts-hdp_mapr-dop%04d" ${TS_NODE_COUNT}`
+./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-hadoop.jar ${TS_IN} ${TS_OUT}"
 
 # repeat Stratosphere runs
-execIdPrefix=`printf "ts-str_pact-dop%04d" ${NODE_COUNT}`
-./jp_run_repeated.sh STR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-pact.jar -a ${NODE_COUNT} ${TS_IN} ${TS_OUT}"
+execIdPrefix=`printf "ts-str_pact-dop%04d" ${TS_NODE_COUNT}`
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-pact.jar -a ${TS_NODE_COUNT} ${TS_IN} ${TS_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh

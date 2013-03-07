@@ -7,9 +7,9 @@
 # load config
 . ./jp_env_configure.sh
 
-# clean hdfs
+# clean HDFS
 ${HDFS_BIN}/hadoop fs -rmr '/*'
-echo "HDFS cleaned"
+echo "HDFS is now empty."
 
 # shut down HDFS
-${HDFS_BIN}/stop-dfs.sh
+${HDFS_BIN}/stop-dfs.sh > /dev/null

@@ -14,28 +14,27 @@
 EXP_ID=$1
 JOB_STRING=$2
 
-if [[ $EXP_ID == '' ]]
-then
+if [[ $EXP_ID == '' ]]; then
    echo "You need to specify an execution id. Canceling..."
    exit 1
 fi
 
-if [[ $JOB_STRING == '' ]]
-then
+if [[ $JOB_STRING == '' ]]; then
    echo "You need to specify a job string for execution. Canceling..."
    exit 1
 fi
 
-echo "Starting to execute job: $JOB_STRING"
-date
-startTS=`date +%s`
-${HDP_MAPR_BIN}/hadoop jar $JOB_STRING
-
-logFile=${EXP_LOG_DIR}/${EXP_ID}/exec-time
+# create run log folder
 mkdir -p ${EXP_LOG_DIR}/${EXP_ID}
+# derive name of log and output files
+outFile=${EXP_LOG_DIR}/${EXP_ID}/run.out
+logFile=${EXP_LOG_DIR}/${EXP_ID}/run.log
 
-if [[ $? == 0 ]]
-then
+echo "Starting to execute job: $JOB_STRING"
+startTS=`date +%s`
+${HDP_MAPR_BIN}/hadoop jar $JOB_STRING > $outFile
+
+if [[ $? == 0 ]]; then
    endTS=`date +%s`
    (( jobDuration=$endTS - $startTS ))
    line=`printf "%-50s%-30s\n" $EXP_ID $jobDuration`
@@ -47,7 +46,7 @@ else
    echo "Job execution failed!"
 fi
 
-# copy hadoop log file
+# copy Hadoop log file
 mkdir -p ${EXP_LOG_DIR}/${EXP_ID}/hadoop-logs
 ${HDFS_BIN}/hadoop fs -copyToLocal ${HDFS_OUTPUT_PATH}/_logs/history ${EXP_LOG_DIR}/${EXP_ID}/hadoop-logs
 

@@ -41,11 +41,11 @@ HDFS_NAME_DIR=/data/hdfs/name
 
 ################ HADOOP
 
-# path to Hadoop MR deployment archive
+# path to Hadoop MapReduce deployment archive
 HDP_MAPR_TAR=/home/alexander/etc/hadoop-1.0.4.tar.gz
-# path to Hadoop MR root folder
+# path to Hadoop MapReduce root folder
 HDP_MAPR_HOME=/home/alexander/etc/hadoop-1.0.4.tar.gz
-# host name of the Hadoop MR jobtracker
+# host name of the Hadoop MapReduce jobtracker
 HDP_MAPR_JOBTRACKER_HOST=alexander-sl510
 
 ################ STRATOSPHERE

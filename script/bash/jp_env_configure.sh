@@ -33,9 +33,9 @@ HDFS_OUTPUT_PATH=/benchmarks/output
 
 ################ HADOOP
 
-# timeout in seconds to bring up Hadoop MR (let all tasktrackers connect)
+# timeout in seconds to bring up Hadoop MapReduce (let all tasktrackers connect)
 HDP_MAPR_STARTUP_CHECK_TIMEOUT=180
-# interval in seconds to check whether Hadoop MR is ready
+# interval in seconds to check whether Hadoop MapReduce is ready
 HDP_MAPR_STARTUP_CHECK_INTERVAL=5
 # number of map slots per tasktracker
 HDP_MAPR_MAP_SLOTS_PER_SLAVE=2
