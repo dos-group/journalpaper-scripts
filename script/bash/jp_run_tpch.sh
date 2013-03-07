@@ -18,11 +18,11 @@ TS_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/${DGEN_ID}/terasort.txt
 TS_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}
 
 # deploy systems
-./jp_deploy_sut.sh ${HADOOPMR_TAR} ${HADOOPMR_HOME}
-./jp_deploy_sut.sh ${STRATOSPHERE_TAR_METEOR} ${STRATOSPHERE_HOME}
+./jp_sut_deploy.sh ${HADOOPMR_TAR} ${HADOOPMR_HOME}
+./jp_sut_deploy.sh ${STRATOSPHERE_TAR_METEOR} ${STRATOSPHERE_HOME}
 
 # adapt number of slaves
-./jp_adapt_slave_cnt.sh $NUM_SLAVES
+./jp_env_adapt_slave_cnt.sh $NUM_SLAVES
 
 # format and start HDFS
 ./jp_hdfs_format_start_wait.sh
@@ -32,7 +32,7 @@ then
 fi
 
 # start hadoop_mr
-./jp_hadoop_mr_start_wait.sh
+./jp_hdp_mapr_start_wait.sh
 if [[ $? != 0 ]]
 then  
   exit $?
@@ -46,7 +46,7 @@ then
 fi
 
 # stop hadoop_mr
-./jp_hadoop_mr_stop.sh
+./jp_hdp_mapr_stop.sh
 
 # TODO: repeat Hadoop Hive runs
 execIdPrefix=`printf "tpch-hdp_hive-dop%04d" ${NODE_COUNT}`
