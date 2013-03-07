@@ -1,0 +1,948 @@
+11:37:04,002 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+11:37:04,028 INFO  eu.stratosphere.nephele.discovery.DiscoveryService            - Discovery service socket is bound to /130.149.21.11:7001
+11:37:04,053 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+11:37:04,053 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6002: starting
+11:37:04,053 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 1 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 2 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 3 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 4 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 5 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 6 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 7 on 6002: starting
+11:37:04,054 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 8 on 6002: starting
+11:37:04,055 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 9 on 6002: starting
+11:37:04,055 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 10 on 6002: starting
+11:37:04,055 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 11 on 6002: starting
+11:37:04,055 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting job manager in cluster mode
+11:37:04,061 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Trying to load eu.stratosphere.nephele.instance.cluster.ClusterManager as instance manager
+11:37:04,067 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Loaded instance type large from the configuration
+11:37:04,074 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Trying to load eu.stratosphere.nephele.jobmanager.scheduler.queue.QueueScheduler as scheduler
+11:37:16,217 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.11 matches with instance type large (24,8,28000,240,0)
+11:37:16,218 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-7, parent is root
+11:37:16,218 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 1
+11:37:16,725 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.12 matches with instance type large (24,8,28000,240,0)
+11:37:16,725 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-8, parent is root
+11:37:16,725 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 2
+11:37:17,205 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.13 matches with instance type large (24,8,28000,240,0)
+11:37:17,205 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-9, parent is root
+11:37:17,205 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 3
+11:37:17,790 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.14 matches with instance type large (24,8,28000,240,0)
+11:37:17,790 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-10, parent is root
+11:37:17,790 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 4
+11:37:21,534 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Creating initial execution graph from job graph WordCount Example
+11:37:21,887 WARN  eu.stratosphere.pact.common.io.FileInputFormat                - Minimal split size of 1 is larger than the block size of 0. Decreasing minimal split size to block size.
+11:37:21,939 INFO  eu.stratosphere.nephele.executiongraph.ExecutionGraph         - Job input vertex Input Lines generated 65 input splits
+11:37:21,994 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Trying to load input split assigner for type FileInputSplit
+11:37:21,995 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Scheduling job WordCount Example
+11:37:22,000 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Requesting the following instances for job 1714f0fb1d6f540039ded454b6d5c800
+11:37:22,000 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  -  large (24,8,28000,240,0) [4, 4]
+11:37:22,000 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:37:22,001 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:37:22,001 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:37:22,001 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:37:22,003 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (1/32)
+11:37:22,020 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Status of job WordCount Example(1714f0fb1d6f540039ded454b6d5c800) changed to SCHEDULED
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (1/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (1/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (2/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (2/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (3/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (3/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (4/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (4/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (5/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (5/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (6/32)
+11:37:22,021 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (6/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (7/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (7/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (8/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (8/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (9/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (9/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (10/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (10/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (11/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (11/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (12/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (12/32)
+11:37:22,022 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (13/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (13/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (14/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (14/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (15/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (15/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (16/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (16/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (17/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (17/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (18/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (18/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (19/32)
+11:37:22,023 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (19/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (20/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (20/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (21/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (21/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (22/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (22/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (23/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (23/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (24/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (24/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (25/32)
+11:37:22,024 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (25/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (26/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (26/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (27/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (27/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (28/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (28/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (29/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (29/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (30/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (30/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (31/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (31/32)
+11:37:22,025 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Count Words (32/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Word Counts (32/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (2/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (3/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (4/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (5/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (6/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (7/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (8/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (9/32)
+11:37:22,026 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (10/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (11/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (12/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (13/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (14/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (15/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (16/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (17/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (18/32)
+11:37:22,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (19/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (20/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (21/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (22/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (23/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (24/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (25/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (26/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (27/32)
+11:37:22,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (28/32)
+11:37:22,029 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (29/32)
+11:37:22,029 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (30/32)
+11:37:22,029 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (31/32)
+11:37:22,029 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Input Lines (32/32)
+11:37:22,030 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (8/32)
+11:37:22,030 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (5/32)
+11:37:22,030 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (8/32)
+11:37:22,030 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (2/32)
+11:37:22,030 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (3/32)
+11:37:22,031 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (7/32)
+11:37:22,031 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (6/32)
+11:37:22,031 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (2/32)
+11:37:22,031 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (4/32)
+11:37:22,031 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (8/32)
+11:37:22,031 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (5/32)
+11:37:22,031 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (7/32)
+11:37:22,032 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (6/32)
+11:37:22,032 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (3/32)
+11:37:22,032 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (1/32)
+11:37:22,032 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (3/32)
+11:37:22,032 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (2/32)
+11:37:22,032 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (5/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (4/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (1/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (6/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (4/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (1/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (7/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (10/32)
+11:37:22,033 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (12/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (15/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (10/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (13/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (11/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (16/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (16/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (14/32)
+11:37:22,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (11/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (10/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (9/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (14/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (9/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (13/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (15/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (16/32)
+11:37:22,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (9/32)
+11:37:22,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (14/32)
+11:37:22,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (12/32)
+11:37:22,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (11/32)
+11:37:22,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (13/32)
+11:37:22,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (12/32)
+11:37:22,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (15/32)
+11:37:22,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (19/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (22/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (19/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (20/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (17/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (22/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (23/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (18/32)
+11:37:22,037 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (20/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (17/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (24/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (21/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (18/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (20/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (23/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (21/32)
+11:37:22,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (18/32)
+11:37:22,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (22/32)
+11:37:22,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (17/32)
+11:37:22,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (24/32)
+11:37:22,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (19/32)
+11:37:22,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (24/32)
+11:37:22,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (23/32)
+11:37:22,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (21/32)
+11:37:22,040 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (26/32)
+11:37:22,040 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (29/32)
+11:37:22,040 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (30/32)
+11:37:22,040 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (31/32)
+11:37:22,040 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (30/32)
+11:37:22,040 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (30/32)
+11:37:22,040 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (26/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (25/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (32/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (31/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (31/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (29/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (25/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (28/32)
+11:37:22,041 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (27/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (28/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (32/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (26/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (27/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (27/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (29/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Word Counts (28/32)
+11:37:22,042 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Input Lines (32/32)
+11:37:22,043 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Count Words (25/32)
+11:37:22,043 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (1/32)
+11:37:22,043 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (2/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (3/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (4/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (5/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (6/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (7/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (8/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (9/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (10/32)
+11:37:22,044 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (11/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (12/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (13/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (14/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (15/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (16/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (17/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (18/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (19/32)
+11:37:22,045 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (20/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (21/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (22/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (23/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (24/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (25/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (26/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (27/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (28/32)
+11:37:22,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (29/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (30/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (31/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Input Lines (32/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (1/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (2/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (3/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (4/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (5/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (6/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (7/32)
+11:37:22,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (8/32)
+11:37:22,048 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (9/32)
+11:37:22,048 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (10/32)
+11:37:22,048 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (11/32)
+11:37:22,048 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (12/32)
+11:37:22,048 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (13/32)
+11:37:22,048 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (14/32)
+11:37:22,048 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (15/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (16/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (17/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (18/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (19/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (20/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (21/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (22/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (23/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (24/32)
+11:37:22,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (25/32)
+11:37:22,050 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (26/32)
+11:37:22,050 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (27/32)
+11:37:22,050 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (28/32)
+11:37:22,050 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (29/32)
+11:37:22,050 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (30/32)
+11:37:22,050 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (31/32)
+11:37:22,050 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Input Lines (32/32)
+11:37:22,093 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (25/32) on cloud-7
+11:37:22,094 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (26/32) on cloud-7
+11:37:22,094 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (27/32) on cloud-7
+11:37:22,094 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (28/32) on cloud-7
+11:37:22,094 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (29/32) on cloud-7
+11:37:22,094 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (30/32) on cloud-7
+11:37:22,094 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (31/32) on cloud-7
+11:37:22,094 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (32/32) on cloud-7
+11:37:22,095 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (1/32) on cloud-10
+11:37:22,095 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (2/32) on cloud-10
+11:37:22,095 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (3/32) on cloud-10
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (4/32) on cloud-10
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (5/32) on cloud-10
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (9/32) on cloud-9
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (10/32) on cloud-9
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (11/32) on cloud-9
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (12/32) on cloud-9
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (6/32) on cloud-10
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (17/32) on cloud-8
+11:37:22,097 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (18/32) on cloud-8
+11:37:22,097 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (7/32) on cloud-10
+11:37:22,097 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (8/32) on cloud-10
+11:37:22,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (13/32) on cloud-9
+11:37:22,097 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (19/32) on cloud-8
+11:37:22,097 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (14/32) on cloud-9
+11:37:22,097 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (20/32) on cloud-8
+11:37:22,098 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (15/32) on cloud-9
+11:37:22,098 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (21/32) on cloud-8
+11:37:22,098 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (16/32) on cloud-9
+11:37:22,098 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (22/32) on cloud-8
+11:37:22,098 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (23/32) on cloud-8
+11:37:22,098 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Input Lines (24/32) on cloud-8
+11:37:22,227 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (25/32)
+11:37:22,228 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Status of job WordCount Example(1714f0fb1d6f540039ded454b6d5c800) changed to RUNNING
+11:37:22,228 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (30/32)
+11:37:22,228 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (32/32)
+11:37:22,228 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (28/32)
+11:37:22,229 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (29/32)
+11:37:22,229 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (31/32)
+11:37:22,230 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (27/32)
+11:37:22,231 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (26/32)
+11:37:22,245 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (19/32)
+11:37:22,245 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (17/32)
+11:37:22,246 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (18/32)
+11:37:22,247 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (21/32)
+11:37:22,248 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (20/32)
+11:37:22,248 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (23/32)
+11:37:22,249 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (22/32)
+11:37:22,251 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (1/32)
+11:37:22,251 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (24/32)
+11:37:22,252 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (6/32)
+11:37:22,253 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (5/32)
+11:37:22,253 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (9/32)
+11:37:22,253 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (7/32)
+11:37:22,253 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (10/32)
+11:37:22,254 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (4/32)
+11:37:22,254 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (16/32)
+11:37:22,255 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (2/32)
+11:37:22,255 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (14/32)
+11:37:22,255 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (3/32)
+11:37:22,256 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (15/32)
+11:37:22,256 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (12/32)
+11:37:22,256 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (8/32)
+11:37:22,257 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (13/32)
+11:37:22,257 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Input Lines (11/32)
+11:37:22,294 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,294 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (32/32) receives input split 22
+11:37:22,297 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,297 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (31/32) receives input split 48
+11:37:22,308 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,308 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (29/32) receives input split 23
+11:37:22,317 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,317 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (3/32) receives input split 44
+11:37:22,319 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,319 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (12/32) receives input split 38
+11:37:22,321 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,321 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (17/32) receives input split 17
+11:37:22,323 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,323 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (2/32) receives input split 3
+11:37:22,324 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,324 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (18/32) receives input split 4
+11:37:22,324 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,324 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (9/32) receives input split 31
+11:37:22,329 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,329 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (22/32) receives input split 28
+11:37:22,329 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,329 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (27/32) receives input split 7
+11:37:22,341 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,341 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (16/32) receives input split 64
+11:37:22,341 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,341 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (7/32) receives input split 53
+11:37:22,345 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,345 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (25/32) receives input split 47
+11:37:22,355 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,355 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (23/32) receives input split 63
+11:37:22,359 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,359 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (13/32) receives input split 29
+11:37:22,359 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,359 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (5/32) receives input split 27
+11:37:22,363 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,364 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (28/32) receives input split 32
+11:37:22,369 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,369 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (21/32) receives input split 2
+11:37:22,372 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,372 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (11/32) receives input split 6
+11:37:22,378 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,378 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (30/32) receives input split 18
+11:37:22,383 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,383 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (20/32) receives input split 33
+11:37:22,385 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,385 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (6/32) receives input split 54
+11:37:22,391 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,391 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (14/32) receives input split 13
+11:37:22,393 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:22,393 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (26/32) receives input split 45
+11:37:22,396 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,396 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (1/32) receives input split 34
+11:37:22,399 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,399 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (24/32) receives input split 51
+11:37:22,410 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,410 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (4/32) receives input split 12
+11:37:22,411 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,411 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (15/32) receives input split 41
+11:37:22,414 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:22,414 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (19/32) receives input split 9
+11:37:22,419 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:22,419 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (10/32) receives input split 55
+11:37:22,425 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:22,425 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (8/32) receives input split 49
+11:37:24,356 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (19/32)
+11:37:24,356 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (19/32)
+11:37:24,356 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (19/32)
+11:37:24,356 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (19/32)
+11:37:24,358 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (19/32) on cloud-8
+11:37:24,358 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (19/32) on cloud-8
+11:37:24,402 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (21/32)
+11:37:24,402 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (21/32)
+11:37:24,402 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (21/32)
+11:37:24,402 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (21/32)
+11:37:24,421 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (21/32) on cloud-8
+11:37:24,421 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (21/32) on cloud-8
+11:37:24,422 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (4/32)
+11:37:24,422 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (4/32)
+11:37:24,422 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (4/32)
+11:37:24,422 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (4/32)
+11:37:24,424 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (4/32) on cloud-10
+11:37:24,424 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (4/32) on cloud-10
+11:37:24,458 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (19/32)
+11:37:24,460 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (4/32)
+11:37:24,470 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (19/32)
+11:37:24,516 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (4/32)
+11:37:24,517 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (31/32)
+11:37:24,517 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (31/32)
+11:37:24,517 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (31/32)
+11:37:24,517 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (31/32)
+11:37:24,519 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (31/32) on cloud-7
+11:37:24,519 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (31/32) on cloud-7
+11:37:24,529 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (27/32)
+11:37:24,529 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (27/32)
+11:37:24,529 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (27/32)
+11:37:24,529 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (27/32)
+11:37:24,546 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (21/32)
+11:37:24,547 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (31/32)
+11:37:24,548 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (31/32)
+11:37:24,548 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (27/32) on cloud-7
+11:37:24,548 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (27/32) on cloud-7
+11:37:24,574 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (27/32)
+11:37:24,580 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (27/32)
+11:37:24,602 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (21/32)
+11:37:24,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (29/32)
+11:37:24,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (29/32)
+11:37:24,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (29/32)
+11:37:24,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (29/32)
+11:37:24,614 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (29/32) on cloud-7
+11:37:24,614 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (29/32) on cloud-7
+11:37:24,639 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (29/32)
+11:37:24,662 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (22/32)
+11:37:24,662 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (22/32)
+11:37:24,662 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (22/32)
+11:37:24,662 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (22/32)
+11:37:24,664 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (22/32) on cloud-8
+11:37:24,664 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (22/32) on cloud-8
+11:37:24,673 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (29/32)
+11:37:24,681 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (24/32)
+11:37:24,682 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (24/32)
+11:37:24,682 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (24/32)
+11:37:24,682 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (24/32)
+11:37:24,702 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (24/32) on cloud-8
+11:37:24,702 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (24/32) on cloud-8
+11:37:24,740 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (22/32)
+11:37:24,801 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (28/32)
+11:37:24,801 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (28/32)
+11:37:24,801 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (28/32)
+11:37:24,801 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (28/32)
+11:37:24,843 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (2/32)
+11:37:24,843 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (2/32)
+11:37:24,843 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (2/32)
+11:37:24,843 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (2/32)
+11:37:24,844 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (2/32) on cloud-10
+11:37:24,844 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (2/32) on cloud-10
+11:37:24,855 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (2/32)
+11:37:24,886 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (2/32)
+11:37:24,895 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (26/32)
+11:37:24,895 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (26/32)
+11:37:24,895 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (26/32)
+11:37:24,895 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (26/32)
+11:37:24,899 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (6/32)
+11:37:24,899 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (6/32)
+11:37:24,899 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (6/32)
+11:37:24,899 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (6/32)
+11:37:24,900 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (6/32) on cloud-10
+11:37:24,901 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (6/32) on cloud-10
+11:37:24,928 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (28/32) on cloud-7
+11:37:24,928 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (28/32) on cloud-7
+11:37:24,934 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (20/32)
+11:37:24,934 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (20/32)
+11:37:24,934 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (20/32)
+11:37:24,934 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (20/32)
+11:37:24,948 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (6/32)
+11:37:24,968 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (26/32) on cloud-7
+11:37:24,969 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (26/32) on cloud-7
+11:37:24,973 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (28/32)
+11:37:24,976 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (7/32)
+11:37:24,976 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (7/32)
+11:37:24,976 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (7/32)
+11:37:24,977 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (7/32)
+11:37:24,982 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (28/32)
+11:37:24,992 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (26/32)
+11:37:25,001 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (26/32)
+11:37:25,061 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (25/32)
+11:37:25,061 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (25/32)
+11:37:25,061 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (25/32)
+11:37:25,061 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (25/32)
+11:37:25,072 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (25/32) on cloud-7
+11:37:25,072 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (25/32) on cloud-7
+11:37:25,092 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (25/32)
+11:37:25,113 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (12/32)
+11:37:25,113 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (12/32)
+11:37:25,113 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (12/32)
+11:37:25,114 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (12/32)
+11:37:25,115 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (12/32) on cloud-9
+11:37:25,116 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (12/32) on cloud-9
+11:37:25,130 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (25/32)
+11:37:25,156 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (22/32)
+11:37:25,163 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (12/32)
+11:37:25,179 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (16/32)
+11:37:25,179 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (16/32)
+11:37:25,179 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (16/32)
+11:37:25,179 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (16/32)
+11:37:25,180 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (16/32) on cloud-9
+11:37:25,180 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (16/32) on cloud-9
+11:37:25,196 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (20/32) on cloud-8
+11:37:25,196 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (20/32) on cloud-8
+11:37:25,204 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (12/32)
+11:37:25,226 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (16/32)
+11:37:25,252 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (6/32)
+11:37:25,252 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (7/32) on cloud-10
+11:37:25,253 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (7/32) on cloud-10
+11:37:25,268 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (24/32)
+11:37:25,277 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (16/32)
+11:37:25,320 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (7/32)
+11:37:25,333 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (24/32)
+11:37:25,338 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (7/32)
+11:37:25,378 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (20/32)
+11:37:25,403 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (1/32)
+11:37:25,404 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (1/32)
+11:37:25,404 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (1/32)
+11:37:25,404 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (1/32)
+11:37:25,406 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (1/32) on cloud-10
+11:37:25,406 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (1/32) on cloud-10
+11:37:25,410 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (20/32)
+11:37:25,420 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (1/32)
+11:37:25,421 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (13/32)
+11:37:25,421 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (13/32)
+11:37:25,422 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (13/32)
+11:37:25,422 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (13/32)
+11:37:25,423 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (13/32) on cloud-9
+11:37:25,423 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (13/32) on cloud-9
+11:37:25,434 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (1/32)
+11:37:25,436 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (18/32)
+11:37:25,436 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (18/32)
+11:37:25,437 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (18/32)
+11:37:25,437 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (18/32)
+11:37:25,444 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (18/32) on cloud-8
+11:37:25,444 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (18/32) on cloud-8
+11:37:25,457 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (14/32)
+11:37:25,457 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (14/32)
+11:37:25,457 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (14/32)
+11:37:25,457 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (14/32)
+11:37:25,496 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (18/32)
+11:37:25,512 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (18/32)
+11:37:25,588 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (3/32)
+11:37:25,588 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (3/32)
+11:37:25,588 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (3/32)
+11:37:25,588 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (3/32)
+11:37:25,590 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (3/32) on cloud-10
+11:37:25,590 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (3/32) on cloud-10
+11:37:25,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (10/32)
+11:37:25,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (10/32)
+11:37:25,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (10/32)
+11:37:25,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (10/32)
+11:37:25,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (3/32)
+11:37:25,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (3/32)
+11:37:25,781 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (10/32) on cloud-9
+11:37:25,781 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (10/32) on cloud-9
+11:37:25,785 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (14/32) on cloud-9
+11:37:25,785 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (14/32) on cloud-9
+11:37:25,795 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (13/32)
+11:37:25,804 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (13/32)
+11:37:25,834 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (10/32)
+11:37:25,843 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (10/32)
+11:37:25,847 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (8/32)
+11:37:25,848 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (8/32)
+11:37:25,848 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (8/32)
+11:37:25,848 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (8/32)
+11:37:25,849 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (14/32)
+11:37:25,849 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (8/32) on cloud-10
+11:37:25,849 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (8/32) on cloud-10
+11:37:25,851 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (14/32)
+11:37:25,871 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (5/32)
+11:37:25,871 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (5/32)
+11:37:25,872 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (5/32)
+11:37:25,872 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (5/32)
+11:37:25,872 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (15/32)
+11:37:25,872 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (15/32)
+11:37:25,872 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (15/32)
+11:37:25,873 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (15/32)
+11:37:25,873 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (5/32) on cloud-10
+11:37:25,873 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (5/32) on cloud-10
+11:37:25,876 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (15/32) on cloud-9
+11:37:25,876 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (15/32) on cloud-9
+11:37:25,888 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (15/32)
+11:37:25,890 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (15/32)
+11:37:25,890 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (8/32)
+11:37:25,897 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (8/32)
+11:37:25,912 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (23/32)
+11:37:25,912 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (23/32)
+11:37:25,912 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (23/32)
+11:37:25,912 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (23/32)
+11:37:25,914 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (23/32) on cloud-8
+11:37:25,914 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (23/32) on cloud-8
+11:37:25,927 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (5/32)
+11:37:25,947 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (5/32)
+11:37:25,953 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (23/32)
+11:37:25,958 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (11/32)
+11:37:25,958 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (11/32)
+11:37:25,958 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (11/32)
+11:37:25,958 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (11/32)
+11:37:25,960 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (11/32) on cloud-9
+11:37:25,960 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (11/32) on cloud-9
+11:37:25,972 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (17/32)
+11:37:25,972 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (17/32)
+11:37:25,972 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (17/32)
+11:37:25,972 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (17/32)
+11:37:25,974 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (17/32) on cloud-8
+11:37:25,974 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (17/32) on cloud-8
+11:37:25,976 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (23/32)
+11:37:25,979 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (30/32)
+11:37:25,979 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (30/32)
+11:37:25,979 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (30/32)
+11:37:25,979 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (30/32)
+11:37:25,981 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (30/32) on cloud-7
+11:37:25,981 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (30/32) on cloud-7
+11:37:25,982 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (11/32)
+11:37:25,992 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (17/32)
+11:37:26,005 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (17/32)
+11:37:26,006 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (11/32)
+11:37:26,018 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (30/32)
+11:37:26,019 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (30/32)
+11:37:26,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (32/32)
+11:37:26,046 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (32/32)
+11:37:26,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (32/32)
+11:37:26,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (32/32)
+11:37:26,048 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (32/32) on cloud-7
+11:37:26,048 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (32/32) on cloud-7
+11:37:26,089 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (32/32)
+11:37:26,095 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Count Words (9/32)
+11:37:26,095 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Word Counts (9/32)
+11:37:26,095 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Count Words (9/32)
+11:37:26,095 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Word Counts (9/32)
+11:37:26,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Count Words (9/32) on cloud-9
+11:37:26,096 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Word Counts (9/32) on cloud-9
+11:37:26,116 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Count Words (9/32)
+11:37:26,120 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (32/32)
+11:37:26,128 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Word Counts (9/32)
+11:37:35,363 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:35,364 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (16/32) receives input split 61
+11:37:36,125 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:36,125 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (8/32) receives input split 42
+11:37:36,322 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:36,322 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (22/32) receives input split 58
+11:37:36,465 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:36,465 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (4/32) receives input split 11
+11:37:36,800 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:36,800 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (3/32) receives input split 35
+11:37:37,009 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:37,009 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (14/32) receives input split 39
+11:37:37,106 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:37,106 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (20/32) receives input split 20
+11:37:37,179 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:37,179 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (15/32) receives input split 46
+11:37:37,720 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:37,720 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (6/32) receives input split 25
+11:37:38,035 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:38,035 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (2/32) receives input split 43
+11:37:38,183 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:38,183 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (29/32) receives input split 16
+11:37:38,189 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:38,189 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (9/32) receives input split 30
+11:37:38,276 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:38,276 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (28/32) receives input split 59
+11:37:38,404 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:38,404 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (24/32) receives input split 57
+11:37:38,895 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:38,895 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (31/32) receives input split 56
+11:37:38,906 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:38,907 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (25/32) receives input split 1
+11:37:38,950 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:38,950 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (19/32) receives input split 52
+11:37:39,230 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:39,230 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (7/32) receives input split 8
+11:37:39,259 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:39,259 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (13/32) receives input split 50
+11:37:39,326 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:39,326 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (18/32) receives input split 14
+11:37:39,451 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:39,452 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (32/32) receives input split 5
+11:37:39,650 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:39,650 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (12/32) receives input split 36
+11:37:39,773 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:39,773 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (1/32) receives input split 24
+11:37:40,037 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:40,037 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (17/32) receives input split 26
+11:37:40,237 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:40,237 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (10/32) receives input split 62
+11:37:40,638 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:37:40,638 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (11/32) receives input split 19
+11:37:40,923 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:37:40,923 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (5/32) receives input split 15
+11:37:41,145 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:37:41,145 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (26/32) receives input split 40
+11:37:41,192 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:41,192 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (21/32) receives input split 21
+11:37:41,614 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:37:41,614 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (23/32) receives input split 37
+11:37:43,175 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives remote file input split (distance 2)
+11:37:43,175 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (27/32) receives input split 10
+11:37:43,462 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives remote file input split (distance 2)
+11:37:43,462 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (30/32) receives input split 60
+11:37:48,075 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives remote file input split (distance 2147483647)
+11:37:48,075 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Input Lines (8/32) receives input split 0
+11:38:20,513 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (21/32)
+11:38:20,711 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (32/32)
+11:38:20,870 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (15/32)
+11:38:21,180 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (11/32)
+11:38:21,675 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (29/32)
+11:38:21,713 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (18/32)
+11:38:22,328 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (28/32)
+11:38:23,034 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (7/32)
+11:38:23,320 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (23/32)
+11:38:23,505 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (17/32)
+11:38:24,009 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (13/32)
+11:38:24,009 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (19/32)
+11:38:24,029 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (12/32)
+11:38:24,064 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (3/32)
+11:38:24,214 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (20/32)
+11:38:24,428 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (31/32)
+11:38:24,481 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (1/32)
+11:38:24,550 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (9/32)
+11:38:24,713 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (10/32)
+11:38:25,261 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (25/32)
+11:38:25,288 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (8/32)
+11:38:25,964 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (14/32)
+11:38:26,075 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (2/32)
+11:38:26,446 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (24/32)
+11:38:27,229 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (30/32)
+11:38:27,418 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (5/32)
+11:38:27,710 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (26/32)
+11:38:27,758 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (22/32)
+11:38:28,593 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (27/32)
+11:38:29,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (16/32)
+11:38:30,578 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (4/32)
+11:38:33,774 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Input Lines (6/32)
+11:38:39,731 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (15/32)
+11:38:39,776 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (15/32)
+11:38:39,779 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (15/32)
+11:38:39,834 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (15/32)
+11:38:40,064 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (17/32)
+11:38:40,075 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (12/32)
+11:38:40,091 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (12/32)
+11:38:40,092 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (12/32)
+11:38:40,109 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (17/32)
+11:38:40,113 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (17/32)
+11:38:40,120 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (29/32)
+11:38:40,124 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (10/32)
+11:38:40,136 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (10/32)
+11:38:40,137 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (10/32)
+11:38:40,166 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (17/32)
+11:38:40,172 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (29/32)
+11:38:40,175 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (29/32)
+11:38:40,177 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (12/32)
+11:38:40,223 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (29/32)
+11:38:40,226 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (10/32)
+11:38:40,238 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (2/32)
+11:38:40,278 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (31/32)
+11:38:40,291 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (31/32)
+11:38:40,291 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (2/32)
+11:38:40,292 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (31/32)
+11:38:40,295 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (2/32)
+11:38:40,339 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (32/32)
+11:38:40,340 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (2/32)
+11:38:40,352 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (32/32)
+11:38:40,353 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (32/32)
+11:38:40,378 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (21/32)
+11:38:40,380 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (31/32)
+11:38:40,395 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (21/32)
+11:38:40,397 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (21/32)
+11:38:40,441 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (32/32)
+11:38:40,482 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (21/32)
+11:38:40,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (3/32)
+11:38:40,641 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (3/32)
+11:38:40,642 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (3/32)
+11:38:40,683 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (5/32)
+11:38:40,696 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (5/32)
+11:38:40,697 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (5/32)
+11:38:40,720 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (13/32)
+11:38:40,729 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (3/32)
+11:38:40,733 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (13/32)
+11:38:40,734 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (13/32)
+11:38:40,769 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (18/32)
+11:38:40,783 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (18/32)
+11:38:40,785 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (18/32)
+11:38:40,785 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (5/32)
+11:38:40,794 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (25/32)
+11:38:40,795 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (23/32)
+11:38:40,807 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (25/32)
+11:38:40,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (25/32)
+11:38:40,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (23/32)
+11:38:40,809 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (23/32)
+11:38:40,810 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (8/32)
+11:38:40,822 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (13/32)
+11:38:40,823 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (8/32)
+11:38:40,825 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (8/32)
+11:38:40,872 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (18/32)
+11:38:40,896 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (25/32)
+11:38:40,897 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (23/32)
+11:38:40,913 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (8/32)
+11:38:40,968 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (7/32)
+11:38:40,980 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (7/32)
+11:38:40,981 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (7/32)
+11:38:41,070 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (7/32)
+11:38:41,139 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (9/32)
+11:38:41,153 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (9/32)
+11:38:41,154 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (9/32)
+11:38:41,168 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (27/32)
+11:38:41,175 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (20/32)
+11:38:41,179 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (27/32)
+11:38:41,180 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (27/32)
+11:38:41,188 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (20/32)
+11:38:41,190 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (20/32)
+11:38:41,241 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (9/32)
+11:38:41,249 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (1/32)
+11:38:41,254 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (28/32)
+11:38:41,261 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (1/32)
+11:38:41,262 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (1/32)
+11:38:41,266 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (28/32)
+11:38:41,267 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (28/32)
+11:38:41,270 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (27/32)
+11:38:41,277 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (20/32)
+11:38:41,351 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (1/32)
+11:38:41,356 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (28/32)
+11:38:41,375 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (6/32)
+11:38:41,388 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (6/32)
+11:38:41,389 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (6/32)
+11:38:41,456 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (19/32)
+11:38:41,469 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (19/32)
+11:38:41,470 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (19/32)
+11:38:41,477 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (6/32)
+11:38:41,559 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (19/32)
+11:38:41,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (4/32)
+11:38:41,635 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (4/32)
+11:38:41,636 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (4/32)
+11:38:41,724 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (4/32)
+11:38:41,773 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (16/32)
+11:38:41,784 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (30/32)
+11:38:41,786 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (16/32)
+11:38:41,787 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (16/32)
+11:38:41,795 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (30/32)
+11:38:41,796 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (30/32)
+11:38:41,876 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (16/32)
+11:38:41,886 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (30/32)
+11:38:42,349 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (26/32)
+11:38:42,361 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (26/32)
+11:38:42,362 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (26/32)
+11:38:42,451 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (26/32)
+11:38:42,632 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (24/32)
+11:38:42,645 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (24/32)
+11:38:42,646 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (24/32)
+11:38:42,688 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (22/32)
+11:38:42,700 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (22/32)
+11:38:42,701 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (22/32)
+11:38:42,734 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (24/32)
+11:38:42,790 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (22/32)
+11:38:42,869 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (14/32)
+11:38:42,879 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Count Words (11/32)
+11:38:42,882 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (14/32)
+11:38:42,883 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (14/32)
+11:38:42,885 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (9/32)
+11:38:42,891 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Word Counts (11/32)
+11:38:42,891 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (21/32)
+11:38:42,892 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (23/32)
+11:38:42,893 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Word Counts (11/32)
+11:38:42,893 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (3/32)
+11:38:42,893 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (18/32)
+11:38:42,894 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (20/32)
+11:38:42,896 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (14/32)
+11:38:42,897 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (4/32)
+11:38:42,902 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (2/32)
+11:38:42,910 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (1/32)
+11:38:42,911 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (28/32)
+11:38:42,912 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (29/32)
+11:38:42,912 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (25/32)
+11:38:42,916 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (27/32)
+11:38:42,935 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (26/32)
+11:38:42,937 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (19/32)
+11:38:42,938 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (17/32)
+11:38:42,948 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (32/32)
+11:38:42,956 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (30/32)
+11:38:42,956 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (15/32)
+11:38:42,957 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (10/32)
+11:38:42,957 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (11/32)
+11:38:42,958 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (13/32)
+11:38:42,959 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (12/32)
+11:38:42,961 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (31/32)
+11:38:42,961 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-7
+11:38:42,969 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (16/32)
+11:38:42,972 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (14/32)
+11:38:42,973 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (24/32)
+11:38:42,977 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (22/32)
+11:38:42,978 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-8
+11:38:42,981 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Count Words (11/32)
+11:38:42,981 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-9
+11:38:42,983 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (7/32)
+11:38:42,984 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (5/32)
+11:38:42,987 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (6/32)
+11:38:43,018 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Input Lines (8/32)
+11:38:43,018 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-10
+11:38:43,021 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Status of job WordCount Example(1714f0fb1d6f540039ded454b6d5c800) changed to FINISHED

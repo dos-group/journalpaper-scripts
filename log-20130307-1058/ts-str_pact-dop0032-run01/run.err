@@ -1,0 +1,9 @@
+Exception in thread "main" eu.stratosphere.pact.compiler.CompilerException: No instance currently registered at the job-manager. Retry later.
+If the system has recently started, it may take a few seconds until the instances register.
+	at eu.stratosphere.pact.compiler.PactCompiler.getType(PactCompiler.java:1599)
+	at eu.stratosphere.pact.compiler.PactCompiler.compile(PactCompiler.java:536)
+	at eu.stratosphere.pact.client.nephele.api.Client.getOptimizedPlan(Client.java:109)
+	at eu.stratosphere.pact.client.nephele.api.Client.run(Client.java:185)
+	at eu.stratosphere.pact.client.CliFrontend.run(CliFrontend.java:287)
+	at eu.stratosphere.pact.client.CliFrontend.parseParameters(CliFrontend.java:726)
+	at eu.stratosphere.pact.client.CliFrontend.main(CliFrontend.java:747)

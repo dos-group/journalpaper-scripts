@@ -1,0 +1,218 @@
+Removing SUT home folder '/share/journalpaper/systems/hadoop-1.0.4'.
+Deploying SUT from '/share/journalpaper/systems/hadoop-1.0.4.tar.gz' to '/share/journalpaper/systems/hadoop-1.0.4'.
+Using SUT config from '/share/journalpaper/experiments/script/bash/conf/cloud-7/hadoop-1.0.4' at '/share/journalpaper/systems/hadoop-1.0.4/conf'.
+Setting proper rights in SUT home.
+Removing SUT home folder '/share/journalpaper/systems/stratosphere-0.2'.
+Deploying SUT from '/share/journalpaper/systems/stratosphere-0.2.tar.gz' to '/share/journalpaper/systems/stratosphere-0.2'.
+Using SUT config from '/share/journalpaper/experiments/script/bash/conf/cloud-7/stratosphere-0.2' at '/share/journalpaper/systems/stratosphere-0.2/conf'.
+Setting proper rights in SUT home.
+Number of slaves set to 4.
+HDFS is already running. Skipping startAndWait() procedure.
+HDFS is already running. Skipping startAndWait() procedure.
+Hadoop MapReduce is already running. Skipping startAndWait() procedure.
+/share/journalpaper/systems/hadoop-1.0.4/bin
+Running wordcount-gen for stage `token`
+WordCount data generated.
+Using HDP runtime system.
+Using MAPR programming API.
+Hadoop MapReduce log files removed.
+Number of task trackers adapted.
+Starting Hadoop MapReduce...
+Hadoop MapReduce is now running.
+Waiting for 4 tasktrackers to connect...
+Hadoop MapReduce is now ready for use (all tasktrackers connected).
+Starting job execution for experiment wc-hdp_mapr-dop0032-run01.
+Job executed in 179 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Starting job execution for experiment wc-hdp_mapr-dop0032-run02.
+Job executed in 182 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Starting job execution for experiment wc-hdp_mapr-dop0032-run03.
+Job executed in 179 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Using STR runtime system.
+Using PACT programming API.
+Stratosphere log files removed
+Number of tasktrackers adapted
+starting Nephele
+Starting Nephele job manager
+Starting Nephele task manager on host cloud-7
+Starting Nephele task manager on host cloud-8
+Starting Nephele task manager on host cloud-9
+Starting Nephele task manager on host cloud-10
+Nephele started
+waiting for 4 TaskManagers to connect...
+All TaskManagers connected. Nephele ready for use.
+Starting job execution for experiment wc-str_pact-dop0032-run01.
+Job executed in 81 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Stopping Nephele job manager
+Stopping Nephele task manager on host cloud-7
+Stopping Nephele task manager on host cloud-8
+Stopping Nephele task manager on host cloud-9
+Stopping Nephele task manager on host cloud-10
+Stratosphere log files removed
+Number of tasktrackers adapted
+starting Nephele
+Starting Nephele job manager
+Starting Nephele task manager on host cloud-7
+Starting Nephele task manager on host cloud-8
+Starting Nephele task manager on host cloud-9
+Starting Nephele task manager on host cloud-10
+Nephele started
+waiting for 4 TaskManagers to connect...
+All TaskManagers connected. Nephele ready for use.
+Starting job execution for experiment wc-str_pact-dop0032-run02.
+Job executed in 81 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Stopping Nephele job manager
+Stopping Nephele task manager on host cloud-7
+Stopping Nephele task manager on host cloud-8
+Stopping Nephele task manager on host cloud-9
+Stopping Nephele task manager on host cloud-10
+Stratosphere log files removed
+Number of tasktrackers adapted
+starting Nephele
+Starting Nephele job manager
+Starting Nephele task manager on host cloud-7
+Starting Nephele task manager on host cloud-8
+Starting Nephele task manager on host cloud-9
+Starting Nephele task manager on host cloud-10
+Nephele started
+waiting for 4 TaskManagers to connect...
+All TaskManagers connected. Nephele ready for use.
+Starting job execution for experiment wc-str_pact-dop0032-run03.
+Job executed in 82 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Stopping Nephele job manager
+Stopping Nephele task manager on host cloud-7
+Stopping Nephele task manager on host cloud-8
+Stopping Nephele task manager on host cloud-9
+Stopping Nephele task manager on host cloud-10
+Deleted hdfs://cloud-7:45010/benchmarks
+Deleted hdfs://cloud-7:45010/data
+HDFS is now empty.
+Stopping HDFS...
+HDFS is now stopped.
+Number of slaves set to 4.
+Removed HDFS log files.
+Number of datanodes adapted.
+Formatting HDFS...
+Formatting HDFS ready.
+Initializing data dir /data/hdfs-0.20_varscale/data at datanode cloud-7.
+Copying namenode VERSION file to datanode cloud-7.
+Adapt VERSION file on cloud-7.
+Initializing data dir /data/hdfs-0.20_varscale/data at datanode cloud-8.
+Copying namenode VERSION file to datanode cloud-8.
+Adapt VERSION file on cloud-8.
+Initializing data dir /data/hdfs-0.20_varscale/data at datanode cloud-9.
+Copying namenode VERSION file to datanode cloud-9.
+Adapt VERSION file on cloud-9.
+Initializing data dir /data/hdfs-0.20_varscale/data at datanode cloud-10.
+Copying namenode VERSION file to datanode cloud-10.
+Adapt VERSION file on cloud-10.
+Starting HDFS...
+Waiting for all datanodes to connect and HDFS to turn safe mode off...
+HDFS is now ready for use (all datanodes are connected, safe mode turned off) 
+Hadoop MapReduce log files removed.
+Number of task trackers adapted.
+Starting Hadoop MapReduce...
+Hadoop MapReduce is now running.
+Waiting for 4 tasktrackers to connect...
+Hadoop MapReduce is now ready for use (all tasktrackers connected).
+Hadoop MapReduce is already running. Skipping startAndWait() procedure.
+Running tera-gen for stage `record`
+TeraSort data generated.
+Using HDP runtime system.
+Using MAPR programming API.
+Hadoop MapReduce log files removed.
+Number of task trackers adapted.
+Starting Hadoop MapReduce...
+Hadoop MapReduce is now running.
+Waiting for 4 tasktrackers to connect...
+Hadoop MapReduce is now ready for use (all tasktrackers connected).
+Starting job execution for experiment ts-hdp_mapr-dop0032-run01.
+Job executed in 78 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Starting job execution for experiment ts-hdp_mapr-dop0032-run02.
+Job executed in 76 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Starting job execution for experiment ts-hdp_mapr-dop0032-run03.
+Job executed in 77 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Using STR runtime system.
+Using PACT programming API.
+Stratosphere log files removed
+Number of tasktrackers adapted
+starting Nephele
+Starting Nephele job manager
+Starting Nephele task manager on host cloud-7
+Starting Nephele task manager on host cloud-8
+Starting Nephele task manager on host cloud-9
+Starting Nephele task manager on host cloud-10
+Nephele started
+waiting for 4 TaskManagers to connect...
+All TaskManagers connected. Nephele ready for use.
+Starting job execution for experiment ts-str_pact-dop0032-run01.
+Job executed in 71 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Stopping Nephele job manager
+Stopping Nephele task manager on host cloud-7
+Stopping Nephele task manager on host cloud-8
+Stopping Nephele task manager on host cloud-9
+Stopping Nephele task manager on host cloud-10
+Stratosphere log files removed
+Number of tasktrackers adapted
+starting Nephele
+Starting Nephele job manager
+Starting Nephele task manager on host cloud-7
+Starting Nephele task manager on host cloud-8
+Starting Nephele task manager on host cloud-9
+Starting Nephele task manager on host cloud-10
+Nephele started
+waiting for 4 TaskManagers to connect...
+All TaskManagers connected. Nephele ready for use.
+Starting job execution for experiment ts-str_pact-dop0032-run02.
+Job executed in 73 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Stopping Nephele job manager
+Stopping Nephele task manager on host cloud-7
+Stopping Nephele task manager on host cloud-8
+Stopping Nephele task manager on host cloud-9
+Stopping Nephele task manager on host cloud-10
+Stratosphere log files removed
+Number of tasktrackers adapted
+starting Nephele
+Starting Nephele job manager
+Starting Nephele task manager on host cloud-7
+Starting Nephele task manager on host cloud-8
+Starting Nephele task manager on host cloud-9
+Starting Nephele task manager on host cloud-10
+Nephele started
+waiting for 4 TaskManagers to connect...
+All TaskManagers connected. Nephele ready for use.
+Starting job execution for experiment ts-str_pact-dop0032-run03.
+Job executed in 70 seconds.
+Removing job output path /benchmarks/output
+Deleted hdfs://cloud-7:45010/benchmarks/output
+Stopping Nephele job manager
+Stopping Nephele task manager on host cloud-7
+Stopping Nephele task manager on host cloud-8
+Stopping Nephele task manager on host cloud-9
+Stopping Nephele task manager on host cloud-10
+Deleted hdfs://cloud-7:45010/benchmarks
+Deleted hdfs://cloud-7:45010/data
+HDFS is now empty.
+Stopping HDFS...
+HDFS is now stopped.

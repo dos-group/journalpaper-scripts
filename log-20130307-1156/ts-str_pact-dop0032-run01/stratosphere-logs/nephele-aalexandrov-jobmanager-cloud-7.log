@@ -1,0 +1,694 @@
+11:49:05,639 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+11:49:05,664 INFO  eu.stratosphere.nephele.discovery.DiscoveryService            - Discovery service socket is bound to /130.149.21.11:7001
+11:49:05,687 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+11:49:05,687 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6002: starting
+11:49:05,688 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6002: starting
+11:49:05,688 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 1 on 6002: starting
+11:49:05,688 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 2 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 3 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 4 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 5 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 6 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 7 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 8 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 9 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 10 on 6002: starting
+11:49:05,689 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting job manager in cluster mode
+11:49:05,689 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 11 on 6002: starting
+11:49:05,694 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Trying to load eu.stratosphere.nephele.instance.cluster.ClusterManager as instance manager
+11:49:05,701 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Loaded instance type large from the configuration
+11:49:05,707 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Trying to load eu.stratosphere.nephele.jobmanager.scheduler.queue.QueueScheduler as scheduler
+11:49:18,081 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.11 matches with instance type large (24,8,28000,240,0)
+11:49:18,082 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-7, parent is root
+11:49:18,082 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 1
+11:49:18,441 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.12 matches with instance type large (24,8,28000,240,0)
+11:49:18,441 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-8, parent is root
+11:49:18,441 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 2
+11:49:18,748 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.13 matches with instance type large (24,8,28000,240,0)
+11:49:18,748 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-9, parent is root
+11:49:18,748 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 3
+11:49:19,168 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Hardware profile of cluster instance with IP /130.149.21.14 matches with instance type large (24,8,28000,240,0)
+11:49:19,168 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Creating instance of type large (24,8,28000,240,0) for cloud-10, parent is root
+11:49:19,168 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - New number of registered hosts is 4
+11:49:23,110 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Creating initial execution graph from job graph TeraSort
+11:49:23,467 WARN  eu.stratosphere.pact.common.io.FileInputFormat                - Minimal split size of 1 is larger than the block size of 0. Decreasing minimal split size to block size.
+11:49:23,528 INFO  eu.stratosphere.nephele.executiongraph.ExecutionGraph         - Job input vertex Data Source generated 66 input splits
+11:49:23,578 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Trying to load input split assigner for type FileInputSplit
+11:49:23,580 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Scheduling job TeraSort
+11:49:23,584 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Requesting the following instances for job 199adbd7f44258001ee6234c1b5b9800
+11:49:23,584 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  -  large (24,8,28000,240,0) [4, 4]
+11:49:23,584 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:49:23,585 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:49:23,585 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:49:23,585 INFO  eu.stratosphere.nephele.instance.cluster.ClusterManager       - Trying to allocate instance of type large
+11:49:23,587 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (1/32)
+11:49:23,604 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Status of job TeraSort(199adbd7f44258001ee6234c1b5b9800) changed to SCHEDULED
+11:49:23,604 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (1/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (2/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (3/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (4/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (5/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (6/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (7/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (8/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (9/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (10/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (11/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (12/32)
+11:49:23,605 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (13/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (14/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (15/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (16/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (17/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (18/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (19/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (20/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (21/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (22/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (23/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (24/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (25/32)
+11:49:23,606 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (26/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (27/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (28/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (29/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (30/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (31/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Sink (32/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (2/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (3/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (4/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (5/32)
+11:49:23,607 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (6/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (7/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (8/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (9/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (10/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (11/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (12/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (13/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (14/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (15/32)
+11:49:23,608 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (16/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (17/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (18/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (19/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (20/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (21/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (22/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (23/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (24/32)
+11:49:23,609 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (25/32)
+11:49:23,610 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (26/32)
+11:49:23,610 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (27/32)
+11:49:23,610 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (28/32)
+11:49:23,610 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (29/32)
+11:49:23,610 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (30/32)
+11:49:23,610 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (31/32)
+11:49:23,610 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from CREATED to SCHEDULED for task Data Source (32/32)
+11:49:23,611 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (2/32)
+11:49:23,611 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (2/32)
+11:49:23,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (6/32)
+11:49:23,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (4/32)
+11:49:23,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (3/32)
+11:49:23,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (1/32)
+11:49:23,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (4/32)
+11:49:23,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (6/32)
+11:49:23,612 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (7/32)
+11:49:23,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (5/32)
+11:49:23,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (8/32)
+11:49:23,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (7/32)
+11:49:23,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (8/32)
+11:49:23,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (5/32)
+11:49:23,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (1/32)
+11:49:23,613 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (3/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (12/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (14/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (9/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (13/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (15/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (12/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (10/32)
+11:49:23,614 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (16/32)
+11:49:23,615 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (15/32)
+11:49:23,615 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (14/32)
+11:49:23,615 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (11/32)
+11:49:23,615 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (13/32)
+11:49:23,615 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (10/32)
+11:49:23,615 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (16/32)
+11:49:23,615 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (11/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (9/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (24/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (24/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (21/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (19/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (18/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (20/32)
+11:49:23,616 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (18/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (23/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (20/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (22/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (21/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (22/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (19/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (17/32)
+11:49:23,617 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (17/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (23/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (31/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (27/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (26/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (30/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (28/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (29/32)
+11:49:23,618 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (25/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (28/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (25/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (32/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (29/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (32/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (31/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (26/32)
+11:49:23,619 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Source (27/32)
+11:49:23,620 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from SCHEDULED to ASSIGNED for task Data Sink (30/32)
+11:49:23,620 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (1/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (2/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (3/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (4/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (5/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (6/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (7/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (8/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (9/32)
+11:49:23,621 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (10/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (11/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (12/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (13/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (14/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (15/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (16/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (17/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (18/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (19/32)
+11:49:23,622 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (20/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (21/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (22/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (23/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (24/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (25/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (26/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (27/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (28/32)
+11:49:23,623 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (29/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (30/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (31/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Source (32/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (1/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (2/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (3/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (4/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (5/32)
+11:49:23,624 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (6/32)
+11:49:23,625 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (7/32)
+11:49:23,625 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (8/32)
+11:49:23,625 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (9/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (10/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (11/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (12/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (13/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (14/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (15/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (16/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (17/32)
+11:49:23,626 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (18/32)
+11:49:23,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (19/32)
+11:49:23,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (20/32)
+11:49:23,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (21/32)
+11:49:23,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (22/32)
+11:49:23,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (23/32)
+11:49:23,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (24/32)
+11:49:23,627 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (25/32)
+11:49:23,628 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (26/32)
+11:49:23,628 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (27/32)
+11:49:23,628 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (28/32)
+11:49:23,628 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (29/32)
+11:49:23,628 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (30/32)
+11:49:23,628 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (31/32)
+11:49:23,628 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Source (32/32)
+11:49:23,678 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (25/32) on cloud-7
+11:49:23,678 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (1/32) on cloud-10
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (26/32) on cloud-7
+11:49:23,678 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (17/32) on cloud-8
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (27/32) on cloud-7
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (2/32) on cloud-10
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (3/32) on cloud-10
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (9/32) on cloud-9
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (4/32) on cloud-10
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (28/32) on cloud-7
+11:49:23,679 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (18/32) on cloud-8
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (29/32) on cloud-7
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (5/32) on cloud-10
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (10/32) on cloud-9
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (6/32) on cloud-10
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (30/32) on cloud-7
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (19/32) on cloud-8
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (31/32) on cloud-7
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (7/32) on cloud-10
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (11/32) on cloud-9
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (8/32) on cloud-10
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (32/32) on cloud-7
+11:49:23,680 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (20/32) on cloud-8
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (12/32) on cloud-9
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (21/32) on cloud-8
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (13/32) on cloud-9
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (22/32) on cloud-8
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (14/32) on cloud-9
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (23/32) on cloud-8
+11:49:23,681 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (15/32) on cloud-9
+11:49:23,682 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (24/32) on cloud-8
+11:49:23,682 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Source (16/32) on cloud-9
+11:49:23,797 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (25/32)
+11:49:23,798 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Status of job TeraSort(199adbd7f44258001ee6234c1b5b9800) changed to RUNNING
+11:49:23,798 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (27/32)
+11:49:23,799 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (1/32)
+11:49:23,799 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (26/32)
+11:49:23,799 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (8/32)
+11:49:23,800 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (29/32)
+11:49:23,800 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (31/32)
+11:49:23,800 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (7/32)
+11:49:23,801 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (21/32)
+11:49:23,801 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (30/32)
+11:49:23,802 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (6/32)
+11:49:23,802 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (28/32)
+11:49:23,802 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (24/32)
+11:49:23,803 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,803 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (25/32) receives input split 15
+11:49:23,803 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (32/32)
+11:49:23,803 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (5/32)
+11:49:23,804 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,804 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (8/32) receives input split 34
+11:49:23,805 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,805 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (21/32) receives input split 26
+11:49:23,806 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,806 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (17/32)
+11:49:23,806 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (32/32) receives input split 16
+11:49:23,806 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (2/32)
+11:49:23,807 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (3/32)
+11:49:23,807 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (19/32)
+11:49:23,807 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,807 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (5/32) receives input split 58
+11:49:23,807 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,808 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (28/32) receives input split 22
+11:49:23,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (4/32)
+11:49:23,808 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,808 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (17/32) receives input split 35
+11:49:23,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (23/32)
+11:49:23,809 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,809 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (6/32) receives input split 32
+11:49:23,809 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,809 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (30/32) receives input split 25
+11:49:23,810 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (20/32)
+11:49:23,810 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,810 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (24/32) receives input split 18
+11:49:23,810 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (22/32)
+11:49:23,810 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,811 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (7/32) receives input split 39
+11:49:23,811 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,811 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (31/32) receives input split 1
+11:49:23,811 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (18/32)
+11:49:23,811 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (14/32)
+11:49:23,812 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,812 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (22/32) receives input split 60
+11:49:23,812 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,812 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (1/32) receives input split 51
+11:49:23,812 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (12/32)
+11:49:23,812 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,812 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (29/32) receives input split 65
+11:49:23,813 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (15/32)
+11:49:23,816 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,817 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (20/32) receives input split 46
+11:49:23,817 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,817 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (26/32) receives input split 49
+11:49:23,817 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,817 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (4/32) receives input split 11
+11:49:23,817 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (13/32)
+11:49:23,818 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,818 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (14/32) receives input split 33
+11:49:23,818 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (9/32)
+11:49:23,818 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,819 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (23/32) receives input split 62
+11:49:23,819 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:23,819 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (27/32) receives input split 6
+11:49:23,819 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,819 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (3/32) receives input split 12
+11:49:23,820 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (11/32)
+11:49:23,820 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,820 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (19/32) receives input split 52
+11:49:23,821 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (10/32)
+11:49:23,821 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:23,821 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (2/32) receives input split 43
+11:49:23,821 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,821 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (11/32) receives input split 64
+11:49:23,822 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Source (16/32)
+11:49:23,822 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:23,822 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (18/32) receives input split 36
+11:49:23,823 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,823 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (9/32) receives input split 9
+11:49:23,824 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,824 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (13/32) receives input split 24
+11:49:23,825 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,826 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (15/32) receives input split 2
+11:49:23,827 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,827 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (12/32) receives input split 31
+11:49:23,828 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,828 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (16/32) receives input split 3
+11:49:23,828 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:23,829 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (10/32) receives input split 37
+11:49:24,144 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:24,144 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (31/32) receives input split 55
+11:49:24,298 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (32/32)
+11:49:24,298 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (32/32)
+11:49:24,300 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (32/32) on cloud-7
+11:49:24,327 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (32/32)
+11:49:24,347 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (25/32)
+11:49:24,347 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (25/32)
+11:49:24,347 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (18/32)
+11:49:24,347 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (18/32)
+11:49:24,348 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (25/32) on cloud-7
+11:49:24,348 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (30/32)
+11:49:24,349 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (30/32)
+11:49:24,349 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (18/32) on cloud-8
+11:49:24,349 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (5/32)
+11:49:24,349 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (5/32)
+11:49:24,351 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (5/32) on cloud-10
+11:49:24,356 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (25/32)
+11:49:24,357 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (30/32) on cloud-7
+11:49:24,363 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (30/32)
+11:49:24,369 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (5/32)
+11:49:24,373 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (18/32)
+11:49:24,383 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (14/32)
+11:49:24,383 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (14/32)
+11:49:24,385 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (14/32) on cloud-9
+11:49:24,389 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (12/32)
+11:49:24,389 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (12/32)
+11:49:24,390 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (4/32)
+11:49:24,390 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (4/32)
+11:49:24,391 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (8/32)
+11:49:24,391 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (8/32)
+11:49:24,391 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (4/32) on cloud-10
+11:49:24,392 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (8/32) on cloud-10
+11:49:24,397 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (3/32)
+11:49:24,397 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (3/32)
+11:49:24,398 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (4/32)
+11:49:24,400 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (6/32)
+11:49:24,400 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (6/32)
+11:49:24,403 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (8/32)
+11:49:24,404 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (6/32) on cloud-10
+11:49:24,404 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (14/32)
+11:49:24,405 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (12/32) on cloud-9
+11:49:24,405 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (3/32) on cloud-10
+11:49:24,406 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (16/32)
+11:49:24,406 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (16/32)
+11:49:24,408 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (15/32)
+11:49:24,408 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (15/32)
+11:49:24,411 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (12/32)
+11:49:24,412 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (15/32) on cloud-9
+11:49:24,412 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (6/32)
+11:49:24,412 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (26/32)
+11:49:24,412 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (26/32)
+11:49:24,413 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (29/32)
+11:49:24,413 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (29/32)
+11:49:24,413 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (16/32) on cloud-9
+11:49:24,414 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (26/32) on cloud-7
+11:49:24,415 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (29/32) on cloud-7
+11:49:24,417 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (17/32)
+11:49:24,418 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (17/32)
+11:49:24,419 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (3/32)
+11:49:24,419 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (17/32) on cloud-8
+11:49:24,420 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (15/32)
+11:49:24,420 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (26/32)
+11:49:24,425 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (17/32)
+11:49:24,425 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (29/32)
+11:49:24,428 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (16/32)
+11:49:24,437 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (11/32)
+11:49:24,437 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (11/32)
+11:49:24,439 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (11/32) on cloud-9
+11:49:24,440 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (19/32)
+11:49:24,440 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (19/32)
+11:49:24,441 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (19/32) on cloud-8
+11:49:24,446 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (11/32)
+11:49:24,448 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (19/32)
+11:49:24,453 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (24/32)
+11:49:24,453 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (24/32)
+11:49:24,454 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (24/32) on cloud-8
+11:49:24,456 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (21/32)
+11:49:24,456 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (21/32)
+11:49:24,460 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (24/32)
+11:49:24,460 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (21/32) on cloud-8
+11:49:24,462 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (22/32)
+11:49:24,462 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (22/32)
+11:49:24,466 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (21/32)
+11:49:24,466 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (22/32) on cloud-8
+11:49:24,471 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (22/32)
+11:49:24,807 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (9/32)
+11:49:24,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (9/32)
+11:49:24,809 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (9/32) on cloud-9
+11:49:24,816 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (10/32)
+11:49:24,816 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (10/32)
+11:49:24,817 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (9/32)
+11:49:24,817 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (10/32) on cloud-9
+11:49:24,819 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (20/32)
+11:49:24,819 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (20/32)
+11:49:24,821 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (20/32) on cloud-8
+11:49:24,827 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (10/32)
+11:49:24,828 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (23/32)
+11:49:24,828 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (23/32)
+11:49:24,829 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (20/32)
+11:49:24,830 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (23/32) on cloud-8
+11:49:24,832 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (27/32)
+11:49:24,832 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (27/32)
+11:49:24,834 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (27/32) on cloud-7
+11:49:24,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (23/32)
+11:49:24,839 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (1/32)
+11:49:24,839 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (1/32)
+11:49:24,840 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (1/32) on cloud-10
+11:49:24,841 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (27/32)
+11:49:24,842 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (28/32)
+11:49:24,842 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (28/32)
+11:49:24,843 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (28/32) on cloud-7
+11:49:24,847 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (1/32)
+11:49:24,852 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (28/32)
+11:49:24,860 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (13/32)
+11:49:24,860 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (13/32)
+11:49:24,861 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (13/32) on cloud-9
+11:49:24,869 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (13/32)
+11:49:24,873 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (31/32)
+11:49:24,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (31/32)
+11:49:24,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (2/32)
+11:49:24,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (2/32)
+11:49:24,875 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (31/32) on cloud-7
+11:49:24,876 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (2/32) on cloud-10
+11:49:24,881 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (31/32)
+11:49:24,881 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from ASSIGNED to READY for task Data Sink (7/32)
+11:49:24,881 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from READY to STARTING for task Data Sink (7/32)
+11:49:24,883 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (2/32)
+11:49:24,883 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Starting task Data Sink (7/32) on cloud-10
+11:49:24,891 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from STARTING to RUNNING for task Data Sink (7/32)
+11:49:26,675 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:26,675 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (9/32) receives input split 29
+11:49:27,076 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:27,076 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (15/32) receives input split 30
+11:49:27,253 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:27,253 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (1/32) receives input split 42
+11:49:27,333 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:27,333 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (7/32) receives input split 27
+11:49:27,380 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:27,380 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (29/32) receives input split 40
+11:49:27,383 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:27,383 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (31/32) receives input split 10
+11:49:27,530 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:27,530 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (26/32) receives input split 54
+11:49:27,652 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:27,652 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (17/32) receives input split 57
+11:49:27,833 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:27,833 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (2/32) receives input split 59
+11:49:28,097 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:28,097 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (4/32) receives input split 47
+11:49:28,391 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:28,391 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (16/32) receives input split 41
+11:49:28,448 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:28,448 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (32/32) receives input split 7
+11:49:28,537 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:28,538 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (14/32) receives input split 23
+11:49:28,595 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:28,596 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (8/32) receives input split 50
+11:49:28,658 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:28,659 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (19/32) receives input split 45
+11:49:28,718 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:28,718 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (18/32) receives input split 28
+11:49:28,798 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:28,799 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (6/32) receives input split 53
+11:49:28,890 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:28,890 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (30/32) receives input split 8
+11:49:28,923 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:28,923 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (22/32) receives input split 5
+11:49:29,161 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:29,161 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (12/32) receives input split 14
+11:49:29,384 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:29,384 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (25/32) receives input split 13
+11:49:29,486 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:29,486 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (10/32) receives input split 48
+11:49:29,820 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:29,820 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (24/32) receives input split 61
+11:49:29,860 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:29,860 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (13/32) receives input split 56
+11:49:29,870 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:29,871 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (20/32) receives input split 20
+11:49:29,949 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:29,950 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (23/32) receives input split 4
+11:49:30,012 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:30,012 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (5/32) receives input split 19
+11:49:30,094 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-8 receives local file input split
+11:49:30,094 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (21/32) receives input split 21
+11:49:30,123 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:30,123 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (27/32) receives input split 38
+11:49:30,388 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives local file input split
+11:49:30,388 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (11/32) receives input split 17
+11:49:30,773 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-7 receives local file input split
+11:49:30,773 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (28/32) receives input split 63
+11:49:31,084 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-10 receives local file input split
+11:49:31,084 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (3/32) receives input split 44
+11:49:31,821 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.file.FileInputSplitList  - cloud-9 receives remote file input split (distance 2147483647)
+11:49:31,821 INFO  eu.stratosphere.nephele.jobmanager.splitassigner.InputSplitManager  - Data Source (9/32) receives input split 0
+11:49:31,828 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (9/32)
+11:49:34,406 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (15/32)
+11:49:34,533 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (7/32)
+11:49:35,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (2/32)
+11:49:35,425 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (32/32)
+11:49:35,505 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (6/32)
+11:49:35,601 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (17/32)
+11:49:35,711 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (29/32)
+11:49:35,909 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (4/32)
+11:49:35,940 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (26/32)
+11:49:35,991 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (31/32)
+11:49:36,272 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (16/32)
+11:49:36,372 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (1/32)
+11:49:36,655 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (30/32)
+11:49:36,702 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (14/32)
+11:49:36,728 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (19/32)
+11:49:36,729 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (8/32)
+11:49:36,801 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (25/32)
+11:49:36,898 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (22/32)
+11:49:37,248 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (5/32)
+11:49:37,284 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (28/32)
+11:49:37,334 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (24/32)
+11:49:37,552 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (21/32)
+11:49:37,898 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (18/32)
+11:49:37,912 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (11/32)
+11:49:37,938 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (12/32)
+11:49:38,163 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (27/32)
+11:49:38,211 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (10/32)
+11:49:38,473 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (13/32)
+11:49:38,499 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (20/32)
+11:49:38,573 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (23/32)
+11:49:39,528 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Source (3/32)
+11:50:11,792 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (6/32)
+11:50:11,798 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (6/32)
+11:50:12,397 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (22/32)
+11:50:12,403 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (22/32)
+11:50:14,035 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (24/32)
+11:50:14,038 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (24/32)
+11:50:14,830 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (21/32)
+11:50:14,833 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (21/32)
+11:50:15,085 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (9/32)
+11:50:15,092 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (9/32)
+11:50:15,259 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (26/32)
+11:50:15,265 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (26/32)
+11:50:15,486 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (18/32)
+11:50:15,489 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (18/32)
+11:50:16,234 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (25/32)
+11:50:16,236 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (25/32)
+11:50:16,778 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (12/32)
+11:50:16,781 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (12/32)
+11:50:16,876 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (5/32)
+11:50:16,879 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (5/32)
+11:50:17,156 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (23/32)
+11:50:17,160 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (23/32)
+11:50:17,650 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (15/32)
+11:50:17,653 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (15/32)
+11:50:17,818 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (14/32)
+11:50:17,820 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (14/32)
+11:50:17,996 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (28/32)
+11:50:17,997 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (28/32)
+11:50:18,596 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (31/32)
+11:50:18,598 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (31/32)
+11:50:18,789 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (11/32)
+11:50:18,791 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (11/32)
+11:50:19,281 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (17/32)
+11:50:19,283 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (17/32)
+11:50:19,555 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (13/32)
+11:50:19,557 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (13/32)
+11:50:19,563 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (20/32)
+11:50:19,758 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (20/32)
+11:50:19,853 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (7/32)
+11:50:19,856 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (7/32)
+11:50:19,857 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (4/32)
+11:50:19,859 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (4/32)
+11:50:20,184 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (30/32)
+11:50:20,186 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (30/32)
+11:50:20,472 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (29/32)
+11:50:20,474 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (29/32)
+11:50:20,590 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (16/32)
+11:50:20,592 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (16/32)
+11:50:22,166 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (2/32)
+11:50:22,169 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (2/32)
+11:50:23,261 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (1/32)
+11:50:23,264 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (1/32)
+11:50:23,485 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (3/32)
+11:50:23,486 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (3/32)
+11:50:23,588 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (10/32)
+11:50:23,590 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (10/32)
+11:50:23,595 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (27/32)
+11:50:23,596 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (27/32)
+11:50:23,731 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (8/32)
+11:50:23,930 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (8/32)
+11:50:23,948 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (19/32)
+11:50:24,148 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (19/32)
+11:50:30,796 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from RUNNING to FINISHING for task Data Sink (32/32)
+11:50:30,798 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Sink (32/32)
+11:50:30,799 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (25/32)
+11:50:30,800 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (29/32)
+11:50:30,802 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (31/32)
+11:50:30,802 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (20/32)
+11:50:30,803 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (26/32)
+11:50:30,803 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (24/32)
+11:50:30,805 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (18/32)
+11:50:30,806 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (17/32)
+11:50:30,819 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (7/32)
+11:50:30,820 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (4/32)
+11:50:30,821 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (27/32)
+11:50:30,822 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (30/32)
+11:50:30,825 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (3/32)
+11:50:30,826 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (6/32)
+11:50:30,828 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (8/32)
+11:50:30,829 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (5/32)
+11:50:30,833 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (21/32)
+11:50:30,836 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (2/32)
+11:50:30,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (23/32)
+11:50:30,840 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (1/32)
+11:50:30,840 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-10
+11:50:30,848 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (16/32)
+11:50:30,850 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (28/32)
+11:50:30,851 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (9/32)
+11:50:30,853 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (12/32)
+11:50:30,854 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (13/32)
+11:50:30,856 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (15/32)
+11:50:30,882 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (10/32)
+11:50:30,884 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (14/32)
+11:50:30,886 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (11/32)
+11:50:30,886 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-9
+11:50:30,896 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (32/32)
+11:50:30,896 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-7
+11:50:30,897 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (22/32)
+11:50:30,900 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - JM: ExecutionState set from FINISHING to FINISHED for task Data Source (19/32)
+11:50:30,900 INFO  eu.stratosphere.nephele.jobmanager.scheduler.AbstractScheduler  - Releasing instance cloud-8
+11:50:30,903 INFO  eu.stratosphere.nephele.jobmanager.JobManager                 - Status of job TeraSort(199adbd7f44258001ee6234c1b5b9800) changed to FINISHED

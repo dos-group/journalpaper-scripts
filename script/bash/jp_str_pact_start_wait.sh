@@ -36,7 +36,7 @@ SLAVECNT=`cat ${EXP_CUR_SLAVES} | wc -l`
 
 # start Nephele cluster
 echo "starting Nephele"
-${STR_PACT_BIN}/start-cluster.sh
+${STR_PACT_BIN}/start-cluster.sh > /dev/null
 echo "Nephele started"
 
 # wait until all task managers connected
@@ -53,7 +53,7 @@ done
 if [[ $timeoutCnt == $STR_PACT_STARTUP_CHECK_TIMEOUT ]]
 then
    echo "Nephele did not start within timeout. Shutting it down"
-   ${STR_PACT_BIN}/stop-cluster.sh
+   ${STR_PACT_BIN}/stop-cluster.sh > /dev/null
    echo "Nephele shut down"
    exit 1
 fi

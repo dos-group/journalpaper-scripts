@@ -120,23 +120,23 @@
 	     <name>,<compute-units>,<CPU-cores>,<memory in MB>,<disk-space in GB>,<price-per-hour>  -->
 
         <property>
-                <key>instancemanager.cluster.defaulttype</key>
-                <value>1</value>
-        </property>
-
-        <property>
                 <key>instancemanager.local.type</key>
-                <value>standard,2,1,300,10,10</value>
+                <value>local,2,2,300,10,10</value>
         </property>
 	
         <property>
                 <key>instancemanager.cluster.type.1</key>
-                <value>standard,2,1,1024,20,0</value>
+                <value>standard,8,16,32768,20,0</value>
         </property>
 	
         <property>
                 <key>instancemanager.cluster.type.2</key>
-                <value>medium,4,2,2048,40,0</value>
+                <value>medium,8,16,32768,40,0</value>
+        </property>
+
+        <property>
+                <key>instancemanager.cluster.defaulttype</key>
+                <value>1</value>
         </property>
 
 	<!-- Definition of 64-bit standard instance types on Amazon EC2 -->
