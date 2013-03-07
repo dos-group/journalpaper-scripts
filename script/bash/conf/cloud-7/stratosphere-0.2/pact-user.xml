@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!--  ========================================================================
+	                                    Parallelism
+	      ======================================================================== -->
+	      
+	<!-- The default degree of parallelism for each user function, if no other degree
+	      is explicitly specified. -->
+	<property>
+		<key>pact.parallelization.degree</key>
+		<value>32</value>
+	</property>
+	
+	<!-- The default number of parallel instances of the user function that are assigned to
+	     a single computing instance. -->
+	<property>
+		<key>pact.parallelization.max-intra-node-degree</key>
+		<value>8</value>
+	</property>
+
+	<!--  ========================================================================
+	                                    Web Frontend
+	      ======================================================================== -->
+	      
+	<!-- The port of the frontend web server -->
+	<property>
+		<key>pact.web.port</key>
+		<value>6001</value>
+	</property>
+	
+	<!-- The path to the root directory containing the web documents -->
+	<property>
+		<key>pact.web.rootpath</key>
+		<value>resources/web-docs/</value>
+	</property>
+	
+	<!-- The temp directory for the web server -->
+	<property>
+		<key>pact.web.temp</key>
+		<value>/tmp</value>
+	</property>
+	
+	<!-- The directory into which the web server will store uploaded pact programs -->
+	<property>
+		<key>pact.web.uploaddir</key>
+		<value>/data/pact-jobs-journalpaper</value>
+	</property>
+	
+	<!-- The directory into which the web server will dump temporary JSON files describing pact plans -->
+	<property>
+		<key>pact.web.plandump</key>
+		<value>/tmp</value>
+	</property>
+	
+</configuration>
