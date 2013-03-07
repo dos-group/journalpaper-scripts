@@ -41,7 +41,7 @@ HDFS_NAMENODE_HOST=cloud-7
 # directory where all datanodes store their data
 HDFS_DATA_DIR=/data/hdfs-0.20_varscale/data
 # direactory where the namenode stores its data
-HDFS_NAME_DIR=/share/journalpaper/systems/hadoop-1.0.4/namenode
+HDFS_NAME_DIR=/data/hdfs-0.20_varscale/namenode
 
 ################ HADOOP
 
