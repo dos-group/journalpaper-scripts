@@ -5,7 +5,7 @@
 # Author: Fabian Hueske (fabian.hueske@tu-berlin.de)
 
 # load config
-. ./jp_configure.sh
+. ./jp_env_configure.sh
 
 # shut down Nephele
-${STRATOSPHERE_BIN}/stop-cluster.sh
+${STR_PACT_BIN}/stop-cluster.sh

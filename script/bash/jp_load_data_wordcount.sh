@@ -15,24 +15,24 @@ DATASET_ID=$3
 
 if [[ $SCALING_FACTOR == '' ]]
 then
-  echo "You need to specify scaling factor per slave. Canceling..."
-  exit 1
+   echo "You need to specify scaling factor per slave. Canceling..."
+   exit 1
 fi
 
 if ! [[ "$NODE_COUNT" =~ ^[0-9]+$ ]] ; then
-  echo "You need to specify DOP. Canceling..."
-  exit 1
+   echo "You need to specify DOP. Canceling..."
+   exit 1
 fi
 
 if [[ $DATASET_ID == '' ]]
 then
-  echo "You need to specify dataset ID. Canceling..."
-  exit 1
+   echo "You need to specify dataset ID. Canceling..."
+   exit 1
 fi
 
 # load configuration
-. ./jp_configure.sh
+. ./jp_env_configure.sh
 
 # generate wc data
-${HADOOPMR_BIN}/hadoop jar ${WC_GEN_HOME}/bin/wordcount-gen-driver-jobs.jar ${WC_GEN_HOME} -s${SCALING_FACTOR} -N${NODE_COUNT} -m${DATASET_ID} -o${HDFS_INPUT_PATH} -xlineitem,orders,custom
+${HDP_MAPR_BIN}/hadoop jar ${EXP_WC_DGEN_HOME}/bin/wordcount-gen-driver-jobs.jar ${EXP_WC_DGEN_HOME} -s${SCALING_FACTOR} -N${NODE_COUNT} -m${DATASET_ID} -o${HDFS_INPUT_PATH} -xlineitem,orders,custom
 echo "WordCount data generated"

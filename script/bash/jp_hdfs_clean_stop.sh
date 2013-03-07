@@ -5,7 +5,7 @@
 # Author: Fabian Hueske (fabian.hueske@tu-berlin.de)
 
 # load config
-. ./jp_configure.sh
+. ./jp_env_configure.sh
 
 # clean hdfs
 ${HDFS_BIN}/hadoop fs -rmr '/*'

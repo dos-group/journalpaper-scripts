@@ -9,20 +9,20 @@ SYSTEM_HOME=$2
 
 if [[ $SYSTEM_TAR == '' ]]
 then
-  echo "You need to specify a system tar.tz archive path for deployment. Canceling..."
-  exit 1
+   echo "You need to specify a system tar.tz archive path for deployment. Canceling..."
+   exit 1
 fi
 
 if [[ $SYSTEM_HOME == '' ]]
 then
-  echo "You need a system home folder for deployment. Canceling..."
-  exit 1
+   echo "You need a system home folder for deployment. Canceling..."
+   exit 1
 fi
 
 # load config
-. ./jp_configure.sh
+. ./jp_env_configure.sh
 
-echo "Removing SUT home folder '${SYSTEM_HOME}'." 
+echo "Removing SUT home folder '${SYSTEM_HOME}'."
 rm -Rf ${SYSTEM_HOME}
 
 echo "Deploying SUT from '${SYSTEM_TAR}' to '${SYSTEM_HOME}'."

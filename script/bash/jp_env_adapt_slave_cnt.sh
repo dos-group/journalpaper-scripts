@@ -11,13 +11,13 @@ USER=`whoami`
 
 # check that $SLAVECNT is set
 if ! [[ "$SLAVECNT" =~ ^[0-9]+$ ]] ; then
-  echo "You need to specify a slave count. Canceling..."
-  exit 1
+   echo "You need to specify a slave count. Canceling..."
+   exit 1
 fi
 
 # load configuration
-. ./jp_configure.sh
+. ./jp_env_configure.sh
 
 # adapt number of slaves
-head -n ${SLAVECNT} ${ALL_SLAVES} > ${CUR_SLAVES}
+head -n ${SLAVECNT} ${EXP_ALL_SLAVES} > ${EXP_CUR_SLAVES}
 echo "Number of slaves set to $SLAVECNT"
