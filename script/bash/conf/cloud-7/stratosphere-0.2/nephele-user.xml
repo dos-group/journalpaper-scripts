@@ -66,8 +66,8 @@
 
         <!-- The number of network buffers used by the TaskManager -->
         <property>
-		        <key>channel.network.numberOfBuffers</key>
-		        <value>32768</value>
+	            <key>channel.network.numberOfBuffers</key>
+	            <value>32768</value>
 	    </property>
 
         <property>
@@ -112,8 +112,8 @@
         <!--  ========================================================================
 	                                   Instances
 	      ======================================================================== -->
-	      
-	<!-- Definition of the standard instance type. This definition describes the instances in 
+
+        <!-- Definition of the standard instance type. This definition describes the instances in 
 	     a local and cluster setup. Each node (or more precisely each TaskManager running on a node) 
 	     will be considered to have the here defined resources available.
 	     The available resources are defined as follows:
@@ -123,15 +123,10 @@
                 <key>instancemanager.local.type</key>
                 <value>local,2,2,300,10,10</value>
         </property>
-	
+
         <property>
                 <key>instancemanager.cluster.type.1</key>
                 <value>standard,8,16,32768,20,0</value>
-        </property>
-	
-        <property>
-                <key>instancemanager.cluster.type.2</key>
-                <value>medium,8,16,32768,40,0</value>
         </property>
 
         <property>
@@ -139,109 +134,109 @@
                 <value>1</value>
         </property>
 
-	<!-- Definition of 64-bit standard instance types on Amazon EC2 -->
-	<property>
-		<key>instancemanager.ec2.type.1</key>
-		<value>t1.micro,2,1,613,8,3</value>
-	</property>
-	
-	<property>
-		<key>instancemanager.ec2.type.2</key>
-		<value>m1.large,4,2,7680,850,38</value>
-	</property>
+        <!-- Definition of 64-bit standard instance types on Amazon EC2 -->
+        <property>
+                <key>instancemanager.ec2.type.1</key>
+                <value>t1.micro,2,1,613,8,3</value>
+        </property>
 
-	<property>
-		<key>instancemanager.ec2.type.3</key>
-		<value>m1.xlarge,8,4,15360,1690,76</value>
-	</property>
-	
-	<property>
-		<key>instancemanager.ec2.defaulttype</key>
-		<value>1</value>
-	</property>
-	
-	<!--  ========================================================================
+        <property>
+                <key>instancemanager.ec2.type.2</key>
+                <value>m1.large,4,2,7680,850,38</value>
+        </property>
+
+        <property>
+                <key>instancemanager.ec2.type.3</key>
+                <value>m1.xlarge,8,4,15360,1690,76</value>
+        </property>
+
+        <property>
+                <key>instancemanager.ec2.defaulttype</key>
+                <value>1</value>
+        </property>
+
+        <!--  ========================================================================
 	                   Scheduler and Instance Manager Classes 
 	      ======================================================================== -->
-	
-	<!--the default scheduler for local execution mode -->
-	<property>
-		<key>jobmanager.scheduler.local.classname</key>
-		<value>eu.stratosphere.nephele.jobmanager.scheduler.local.LocalScheduler</value>
-	</property>
-	
-	<!-- the default instance manager for local execution mode -->
-	<property>
-		<key>>jobmanager.instancemanager.local.classname</key>
-		<value>eu.stratosphere.nephele.instance.local.LocalInstanceManager</value>
-	</property>
-	
-	<!--the default scheduler for cluster execution mode -->
-	<property>
-		<key>jobmanager.scheduler.cluster.classname</key>
-		<value>eu.stratosphere.nephele.jobmanager.scheduler.queue.QueueScheduler</value>
-	</property>
-	
-	<!-- the default instance manager for cluster execution mode -->
-	<property>
-		<key>jobmanager.instancemanager.cluster.classname</key>
-		<value>eu.stratosphere.nephele.instance.cluster.ClusterManager</value>
-	</property>
-	
-	<!--the default scheduler for cloud execution mode -->
-	<property>
-		<key>jobmanager.scheduler.cloud.classname</key>
-		<value>eu.stratosphere.nephele.jobmanager.scheduler.queue.QueueScheduler</value>
-	</property>
-	
-	<!-- the default instance manager for cloud execution mode -->
-	<property>
-		<key>jobmanager.instancemanager.cloud.classname</key>
-		<value>eu.stratosphere.nephele.instance.ec2.EC2CloudManager</value>
-	</property>
-	
-	<property>
-		<key>jobmanager.instancemanager.cluster.cleanupinterval</key>
-		<value>120</value>
-	</property>
-	
-	
-	<!--  ========================================================================
+
+        <!--the default scheduler for local execution mode -->
+        <property>
+                <key>jobmanager.scheduler.local.classname</key>
+                <value>eu.stratosphere.nephele.jobmanager.scheduler.local.LocalScheduler</value>
+        </property>
+
+        <!-- the default instance manager for local execution mode -->
+        <property>
+                <key>>jobmanager.instancemanager.local.classname</key>
+                <value>eu.stratosphere.nephele.instance.local.LocalInstanceManager</value>
+        </property>
+
+        <!--the default scheduler for cluster execution mode -->
+        <property>
+                <key>jobmanager.scheduler.cluster.classname</key>
+                <value>eu.stratosphere.nephele.jobmanager.scheduler.queue.QueueScheduler</value>
+        </property>
+
+        <!-- the default instance manager for cluster execution mode -->
+        <property>
+                <key>jobmanager.instancemanager.cluster.classname</key>
+                <value>eu.stratosphere.nephele.instance.cluster.ClusterManager</value>
+        </property>
+
+        <!--the default scheduler for cloud execution mode -->
+        <property>
+                <key>jobmanager.scheduler.cloud.classname</key>
+                <value>eu.stratosphere.nephele.jobmanager.scheduler.queue.QueueScheduler</value>
+        </property>
+
+        <!-- the default instance manager for cloud execution mode -->
+        <property>
+                <key>jobmanager.instancemanager.cloud.classname</key>
+                <value>eu.stratosphere.nephele.instance.ec2.EC2CloudManager</value>
+        </property>
+
+        <property>
+                <key>jobmanager.instancemanager.cluster.cleanupinterval</key>
+                <value>120</value>
+        </property>
+
+
+        <!--  ========================================================================
 	                       Job / Instance Profiling 
 	      ======================================================================== -->
-	      
-	<property>
-		<key>jobmanager.profiling.enable</key>
-		<value>false</value>
-	</property>
 
-	<property>
-		<key>jobmanager.profiling.classname</key>
-		<value>eu.stratosphere.nephele.profiling.impl.JobManagerProfilerImpl</value>
-	</property>
-	
-	<property>
-		<key>taskmanager.profiling.classname</key>
-		<value>eu.stratosphere.nephele.profiling.impl.TaskManagerProfilerImpl</value>
-	 </property>
-	 
-	 	<!--  ========================================================================
+        <property>
+                <key>jobmanager.profiling.enable</key>
+                <value>false</value>
+        </property>
+
+        <property>
+                <key>jobmanager.profiling.classname</key>
+                <value>eu.stratosphere.nephele.profiling.impl.JobManagerProfilerImpl</value>
+        </property>
+
+        <property>
+                <key>taskmanager.profiling.classname</key>
+                <value>eu.stratosphere.nephele.profiling.impl.TaskManagerProfilerImpl</value>
+	    </property>
+
+	    <!--  ========================================================================
 	                                  Compression
 	      ======================================================================== -->
-	<property>
-		<key>channel.compression.lightClass</key> 
-		<value>eu.stratosphere.nephele.io.compression.library.quicklz.QuicklzLibrary</value> 
-	</property>
-	<property>
-		<key>channel.compression.mediumClass</key> 
-		<value>eu.stratosphere.nephele.io.compression.library.zlib.ZlibLibrary</value> 
-	</property>
-	<property>
-		<key>channel.compression.heavyClass</key> 
-		<value>eu.stratosphere.nephele.io.compression.library.lzma.LzmaLibrary</value> 
-	</property>
-	<property>
-		<key>channel.compression.dynamicClass</key> 
-		<value>eu.stratosphere.nephele.io.compression.library.dynamic.DynamicLibrary</value> 
-	</property>
+        <property>
+                <key>channel.compression.lightClass</key> 
+                <value>eu.stratosphere.nephele.io.compression.library.quicklz.QuicklzLibrary</value> 
+        </property>
+        <property>
+                <key>channel.compression.mediumClass</key> 
+                <value>eu.stratosphere.nephele.io.compression.library.zlib.ZlibLibrary</value> 
+        </property>
+        <property>
+                <key>channel.compression.heavyClass</key> 
+                <value>eu.stratosphere.nephele.io.compression.library.lzma.LzmaLibrary</value> 
+        </property>
+        <property>
+                <key>channel.compression.dynamicClass</key> 
+                <value>eu.stratosphere.nephele.io.compression.library.dynamic.DynamicLibrary</value> 
+        </property>
 </configuration>
