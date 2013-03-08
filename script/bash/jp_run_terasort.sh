@@ -34,7 +34,7 @@ fi
 
 # repeat Hadoop runs
 execIdPrefix=`printf "ts-hdp_mapr-dop%04d" ${TS_NODE_COUNT}`
-./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-hadoop.jar ${TS_IN} ${TS_OUT}"
+./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-hadoop.jar ${TS_NODE_COUNT} ${TS_IN} ${TS_OUT}"
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "ts-str_pact-dop%04d" ${TS_NODE_COUNT}`
