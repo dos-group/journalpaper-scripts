@@ -17,9 +17,12 @@ if [[ "$HDFS_DATA_DIR" =~ /data/[0-9]+/hadoop ]]; then
 fi
 
 # check that HDFS is not running!
-if [[ `jps | grep NameNode | wc -l` > 0 ]]; then
-   echo "HDFS is already running. Skipping startAndWait() procedure."
-   exit
+pid=${HDFS_PID}/hadoop-${USER}-namenode.pid
+if [ -f $pid ]; then
+   if kill -0 `cat $pid` > /dev/null 2>&1; then
+      echo "HDFS is already running. Skipping startAndWait() procedure."
+      exit
+   fi
 fi
 
 # remove log files

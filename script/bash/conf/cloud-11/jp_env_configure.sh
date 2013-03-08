@@ -30,10 +30,12 @@ EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
 HDFS_HOME=/share/hadoop/journalpaper/systems/hadoop-1.0.4
 # HDFS bin folder
 HDFS_BIN=${HDFS_HOME}/bin
-# HDFS log folder
-HDFS_LOG=${HDFS_HOME}/logs
 # HDFS con folder
 HDFS_CONF=${HDFS_HOME}/conf
+# HDFS log folder
+HDFS_LOG=${HDFS_HOME}/logs
+# HDFS PIDs folder
+HDFS_PID=/data/journalpaper/pid
 # HDFS address
 HDFS_ADDRESS=hdfs://cloud-11.dima.tu-berlin.de:45010
 # host name of the HDFS namenode
@@ -49,13 +51,15 @@ HDFS_NAME_DIR=/data/journalpaper/hdfs-name
 HDP_MAPR_TAR=/share/hadoop/journalpaper/systems/hadoop-1.0.4.tar.gz
 # path to Hadoop MapReduce root folder
 HDP_MAPR_HOME=/share/hadoop/journalpaper/systems/hadoop-1.0.4
-# Hadoop bin dir
+# Hadoop bin folder
 HDP_MAPR_BIN=${HDP_MAPR_HOME}/bin
-# Hadoop log dir
-HDP_MAPR_LOG=${HDP_MAPR_HOME}/logs
-# Hadoop conf dir
+# Hadoop conf folder
 HDP_MAPR_CONF=${HDP_MAPR_HOME}/conf
-# Hadoop MapReduce Job Tracker host name
+# Hadoop log folder
+HDP_MAPR_LOG=${HDP_MAPR_HOME}/logs
+# Hadoop PIDs folder
+HDP_MAPR_PID=/data/journalpaper/pid
+# host name of the Hadoop MapReduce jobtracker
 HDP_MAPR_JOBTRACKER_HOST=cloud-11
 # number of map slots per tasktracker
 HDP_MAPR_MAP_SLOTS_PER_SLAVE=8
@@ -74,5 +78,7 @@ STR_PACT_BIN=${STR_PACT_HOME}/bin
 STR_PACT_CONF=${STR_PACT_HOME}/conf
 # Stratosphere log folder
 STR_PACT_LOG=${STR_PACT_HOME}/log
+# Stratosphere PIDs folder
+STR_PACT_PID=/data/journalpaper/pid
 # Stratosphere Job Manager host name
 STR_PACT_JOBMANAGER_HOST=cloud-11

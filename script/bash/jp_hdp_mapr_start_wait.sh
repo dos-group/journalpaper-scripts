@@ -11,9 +11,12 @@
 USER=`whoami`
 
 # check that HadoopMR is not running!
-if [[ `jps | grep JobTracker | wc -l` > 0 ]]; then
-   echo "Hadoop MapReduce is already running. Skipping startAndWait() procedure."
-   exit
+pid=${HDP_MAPR_PID}/hadoop-${USER}-jobtracker.pid
+if [ -f $pid ]; then
+   if kill -0 `cat $pid` > /dev/null 2>&1; then
+      echo "Hadoop MapReduce is already running. Skipping startAndWait() procedure."
+      exit
+   fi
 fi
 
 # check that file with current slaves exists

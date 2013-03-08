@@ -11,10 +11,12 @@
 USER=`whoami`
 
 # check that Nephele is not running!
-if [[ `jps | grep JobManager | wc -l` > 0 ]]
-then
-   echo "Stratosphere is already running. Skipping startAndWait() procedure."
-   exit
+pid=${STR_PACT_PID}/nephele-${USER}-jobmanager.pid
+if [ -f $pid ]; then
+   if kill -0 `cat $pid` > /dev/null 2>&1; then
+      echo "Stratosphere is already running. Skipping startAndWait() procedure."
+      exit
+   fi
 fi
 
 # check that file with current slaves exists
