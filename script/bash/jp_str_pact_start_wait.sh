@@ -37,12 +37,11 @@ echo "Number of tasktrackers adapted"
 SLAVECNT=`cat ${EXP_CUR_SLAVES} | wc -l`
 
 # start Nephele cluster
-echo "starting Nephele"
+echo "Starting Nephele"
 ${STR_PACT_BIN}/start-cluster.sh > /dev/null
-echo "Nephele started"
 
 # wait until all task managers connected
-echo "waiting for $SLAVECNT TaskManagers to connect..."
+echo "Waiting for $SLAVECNT TaskManagers to connect..."
 nodeCnt=0
 timeoutCnt=0
 while [[ ( $nodeCnt -lt $SLAVECNT ) && ( $timeoutCnt -lt $STR_PACT_STARTUP_CHECK_TIMEOUT ) ]]
