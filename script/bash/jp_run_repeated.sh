@@ -47,7 +47,7 @@ if [[ $RUNTIME_SYSTEM == 'HDP' ]]; then
    if [[ $? != 0 ]]; then
       exit $?
    fi
-   
+
    # Start run loop
    for (( i=1; i<=${EXP_NUM_REPETITION_RUNS}; i++ )); do
       # compute experiment ID for this job run
@@ -69,27 +69,37 @@ if [[ $RUNTIME_SYSTEM == 'HDP' ]]; then
 elif [[ $RUNTIME_SYSTEM == 'STR' ]]; then
 
     # Start run loop
-	for (( i=1; i<=${EXP_NUM_REPETITION_RUNS}; i++ )); do
-	   # start Stratosphere
-	   ./jp_str_pact_start_wait.sh
-	   if [[ $? != 0 ]]; then
-	      exit $?
-	   fi
+    for (( i=1; i<=${EXP_NUM_REPETITION_RUNS}; i++ )); do
+       # start Stratosphere
+       ./jp_str_pact_start_wait.sh
+       if [[ $? != 0 ]]; then
+          # start Stratosphere (2nd try)
+          ./jp_str_pact_stop.sh
+          ./jp_str_pact_start_wait.sh
+          if [[ $? != 0 ]]; then
+               # start Stratosphere (3nd try)
+               ./jp_str_pact_stop.sh
+               ./jp_str_pact_start_wait.sh
+               if [[ $? != 0 ]]; then
+                   exit $?
+               fi
+          fi
+       fi
 
-	   # compute experiment ID for this job run
-	   EXP_ID=`printf "%s-run%02d" ${EXEC_ID_PREF} ${i}`
-	   # run job
-	   if [[ $FRONTEND_SYSTEM == 'PACT' ]]; then
-	      # run Stratosphere PACT job
-	      ./jp_str_pact_run_job.sh $EXP_ID "${JOB_STRING}"
-	   fi
-	   
-	   # stop Stratosphere
-	   ./jp_str_pact_stop.sh
-	   if [[ $? != 0 ]]; then
-	      exit $?
-	   fi
-	
-	done
+       # compute experiment ID for this job run
+       EXP_ID=`printf "%s-run%02d" ${EXEC_ID_PREF} ${i}`
+       # run job
+       if [[ $FRONTEND_SYSTEM == 'PACT' ]]; then
+          # run Stratosphere PACT job
+          ./jp_str_pact_run_job.sh $EXP_ID "${JOB_STRING}"
+       fi
+       
+       # stop Stratosphere
+       ./jp_str_pact_stop.sh
+       if [[ $? != 0 ]]; then
+          exit $?
+       fi
+    
+    done
 
 fi # Stratosphere
