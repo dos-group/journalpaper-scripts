@@ -33,12 +33,12 @@ if [[ $? != 0 ]]; then
 fi
 
 # repeat Hadoop runs
-execIdPrefix=`printf "wc-hdp_mapr-dop%04d" ${WC_NODE_COUNT}`
-./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-hadoop.jar ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
+#execIdPrefix=`printf "wc-hdp_mapr-dop%04d-sf%04d" ${WC_NODE_COUNT} ${WC_SCALING_FACTOR}`
+#./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-hadoop.jar ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
 
 # repeat Stratosphere runs
-execIdPrefix=`printf "wc-str_pact-dop%04d" ${WC_NODE_COUNT}`
-./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
+execIdPrefix=`printf "wc_jst-str_pact-dop%04d-sf%04d" ${WC_NODE_COUNT}`
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact-jst.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh

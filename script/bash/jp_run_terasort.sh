@@ -33,12 +33,12 @@ if [[ $? != 0 ]]; then
 fi
 
 # repeat Hadoop runs
-execIdPrefix=`printf "ts-hdp_mapr-dop%04d" ${TS_NODE_COUNT}`
+execIdPrefix=`printf "ts-hdp_mapr-dop%04d-sf%04d" ${TS_NODE_COUNT} ${TS_SCALING_FACTOR}`
 ./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-hadoop.jar ${TS_NODE_COUNT} ${TS_IN} ${TS_OUT}"
 
 # repeat Stratosphere runs
-#execIdPrefix=`printf "ts-str_pact-dop%04d" ${TS_NODE_COUNT}`
-#./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-pact.jar -a ${TS_NODE_COUNT} ${TS_IN} ${TS_OUT}"
+execIdPrefix=`printf "ts-str_pact-dop%04d-sf%04d" ${TS_NODE_COUNT} ${TS_SCALING_FACTOR}`
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-pact.jar -a ${TS_NODE_COUNT} ${TS_IN} ${TS_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh

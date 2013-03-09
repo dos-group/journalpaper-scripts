@@ -9,10 +9,17 @@
 for path in $(find .. -mindepth 2 -maxdepth 2 -type d); do
     baseName=$(basename $path)
     dirName=$(dirname $path)
-    prefix=${baseName:0:15}
-    dopOld=${baseName:15:4}
-    dopNew=$(expr $dopOld / 4 )
+    prefix=${baseName:0:12}
+    dop=${baseName:17:2}
+    if [[ $dop == "08" ]]; then
+        dop=8
+    fi
+    dop=$(( $dop / 1 ))
+    sf=$(( $dop / 4 ))
     suffix=${baseName:19:10}
-    git mv ${dirName}/${prefix}${dopOld}${suffix} ${dirName}/${prefix}$(printf "%04d" ${dopNew})${suffix}
-#   ln -s ${dirName}/${prefix}$(printf "%04d" ${dopNew})${suffix}
+    echo git mv ${dirName}/${prefix}$(printf "dop%04d" ${dop})${suffix} ${dirName}/${prefix}$(printf "sf%04d-dop%04d" ${sf} ${dop})${suffix}
+    if [[ ! ${sf} -eq 32 ]]; then
+        echo unlink ${prefix}$(printf "dop%04d" ${dop})${suffix}
+        echo ln -s ${dirName}/${prefix}$(printf "sf%04d-dop%04d" ${sf} ${dop})${suffix}
+    fi
 done
