@@ -1,0 +1,99 @@
+13/03/09 03:52:21 INFO mapred.FileInputFormat: Total input paths to process : 200
+13/03/09 03:52:21 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+13/03/09 03:52:21 WARN snappy.LoadSnappy: Snappy native library not loaded
+13/03/09 03:52:22 INFO zlib.ZlibFactory: Successfully loaded & initialized native-zlib library
+13/03/09 03:52:22 INFO compress.CodecPool: Got brand-new compressor
+13/03/09 03:52:22 INFO mapred.FileInputFormat: Total input paths to process : 200
+13/03/09 03:52:23 INFO mapred.JobClient: Running job: job_201303090352_0001
+13/03/09 03:52:24 INFO mapred.JobClient:  map 0% reduce 0%
+13/03/09 03:52:41 INFO mapred.JobClient:  map 1% reduce 0%
+13/03/09 03:52:44 INFO mapred.JobClient:  map 18% reduce 0%
+13/03/09 03:52:46 INFO mapred.JobClient: Task Id : attempt_201303090352_0001_m_000051_0, Status : FAILED
+java.lang.Throwable: Child Error
+	at org.apache.hadoop.mapred.TaskRunner.run(TaskRunner.java:271)
+Caused by: java.io.IOException: Task process exit with nonzero status of 126.
+	at org.apache.hadoop.mapred.TaskRunner.run(TaskRunner.java:258)
+
+13/03/09 03:52:46 WARN mapred.JobClient: Error reading task outputhttp://cloud-29.dima.tu-berlin.de:4506/tasklog?plaintext=true&attemptid=attempt_201303090352_0001_m_000051_0&filter=stdout
+13/03/09 03:52:46 WARN mapred.JobClient: Error reading task outputhttp://cloud-29.dima.tu-berlin.de:4506/tasklog?plaintext=true&attemptid=attempt_201303090352_0001_m_000051_0&filter=stderr
+13/03/09 03:52:47 INFO mapred.JobClient:  map 49% reduce 0%
+13/03/09 03:52:56 INFO mapred.JobClient:  map 51% reduce 0%
+13/03/09 03:52:59 INFO mapred.JobClient:  map 53% reduce 0%
+13/03/09 03:53:02 INFO mapred.JobClient:  map 95% reduce 0%
+13/03/09 03:53:05 INFO mapred.JobClient:  map 99% reduce 1%
+13/03/09 03:53:08 INFO mapred.JobClient:  map 99% reduce 5%
+13/03/09 03:53:10 INFO mapred.JobClient: Task Id : attempt_201303090352_0001_m_000151_0, Status : FAILED
+java.lang.Throwable: Child Error
+	at org.apache.hadoop.mapred.TaskRunner.run(TaskRunner.java:271)
+Caused by: java.io.IOException: Task process exit with nonzero status of 255.
+	at org.apache.hadoop.mapred.TaskRunner.run(TaskRunner.java:258)
+
+13/03/09 03:53:10 WARN mapred.JobClient: Error reading task outputhttp://cloud-29.dima.tu-berlin.de:4506/tasklog?plaintext=true&attemptid=attempt_201303090352_0001_m_000151_0&filter=stdout
+13/03/09 03:53:10 WARN mapred.JobClient: Error reading task outputhttp://cloud-29.dima.tu-berlin.de:4506/tasklog?plaintext=true&attemptid=attempt_201303090352_0001_m_000151_0&filter=stderr
+13/03/09 03:53:11 INFO mapred.JobClient:  map 99% reduce 9%
+13/03/09 03:53:14 INFO mapred.JobClient:  map 99% reduce 12%
+13/03/09 03:53:17 INFO mapred.JobClient:  map 99% reduce 16%
+13/03/09 03:53:20 INFO mapred.JobClient:  map 99% reduce 20%
+13/03/09 03:53:23 INFO mapred.JobClient:  map 99% reduce 24%
+13/03/09 03:53:26 INFO mapred.JobClient:  map 99% reduce 28%
+13/03/09 03:53:29 INFO mapred.JobClient:  map 99% reduce 32%
+13/03/09 03:53:32 INFO mapred.JobClient:  map 99% reduce 33%
+13/03/09 03:53:38 INFO mapred.JobClient:  map 100% reduce 33%
+13/03/09 03:53:50 INFO mapred.JobClient:  map 100% reduce 45%
+13/03/09 03:53:53 INFO mapred.JobClient:  map 100% reduce 60%
+13/03/09 03:53:56 INFO mapred.JobClient:  map 100% reduce 70%
+13/03/09 03:53:59 INFO mapred.JobClient:  map 100% reduce 72%
+13/03/09 03:54:02 INFO mapred.JobClient:  map 100% reduce 75%
+13/03/09 03:54:05 INFO mapred.JobClient:  map 100% reduce 77%
+13/03/09 03:54:08 INFO mapred.JobClient:  map 100% reduce 79%
+13/03/09 03:54:11 INFO mapred.JobClient:  map 100% reduce 81%
+13/03/09 03:54:14 INFO mapred.JobClient:  map 100% reduce 83%
+13/03/09 03:54:17 INFO mapred.JobClient:  map 100% reduce 85%
+13/03/09 03:54:20 INFO mapred.JobClient:  map 100% reduce 87%
+13/03/09 03:54:23 INFO mapred.JobClient:  map 100% reduce 89%
+13/03/09 03:54:26 INFO mapred.JobClient:  map 100% reduce 90%
+13/03/09 03:54:29 INFO mapred.JobClient:  map 100% reduce 92%
+13/03/09 03:54:32 INFO mapred.JobClient:  map 100% reduce 94%
+13/03/09 03:54:35 INFO mapred.JobClient:  map 100% reduce 95%
+13/03/09 03:54:38 INFO mapred.JobClient:  map 100% reduce 97%
+13/03/09 03:54:41 INFO mapred.JobClient:  map 100% reduce 98%
+13/03/09 03:54:47 INFO mapred.JobClient:  map 100% reduce 99%
+13/03/09 03:54:53 INFO mapred.JobClient:  map 100% reduce 100%
+13/03/09 03:54:58 INFO mapred.JobClient: Job complete: job_201303090352_0001
+13/03/09 03:54:58 INFO mapred.JobClient: Counters: 31
+13/03/09 03:54:58 INFO mapred.JobClient:   Job Counters 
+13/03/09 03:54:58 INFO mapred.JobClient:     Launched reduce tasks=200
+13/03/09 03:54:58 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=5310496
+13/03/09 03:54:58 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+13/03/09 03:54:58 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+13/03/09 03:54:58 INFO mapred.JobClient:     Rack-local map tasks=26
+13/03/09 03:54:58 INFO mapred.JobClient:     Launched map tasks=402
+13/03/09 03:54:58 INFO mapred.JobClient:     Data-local map tasks=376
+13/03/09 03:54:58 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=18482279
+13/03/09 03:54:58 INFO mapred.JobClient:   File Input Format Counters 
+13/03/09 03:54:58 INFO mapred.JobClient:     Bytes Read=50104857800
+13/03/09 03:54:58 INFO mapred.JobClient:   File Output Format Counters 
+13/03/09 03:54:58 INFO mapred.JobClient:     Bytes Written=50500000000
+13/03/09 03:54:58 INFO mapred.JobClient:   FileSystemCounters
+13/03/09 03:54:58 INFO mapred.JobClient:     FILE_BYTES_READ=51502218000
+13/03/09 03:54:58 INFO mapred.JobClient:     HDFS_BYTES_READ=50104917400
+13/03/09 03:54:58 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=103016409582
+13/03/09 03:54:58 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=50500000000
+13/03/09 03:54:58 INFO mapred.JobClient:   Map-Reduce Framework
+13/03/09 03:54:58 INFO mapred.JobClient:     Map output materialized bytes=51500480000
+13/03/09 03:54:58 INFO mapred.JobClient:     Map input records=500000000
+13/03/09 03:54:58 INFO mapred.JobClient:     Reduce shuffle bytes=51371873393
+13/03/09 03:54:58 INFO mapred.JobClient:     Spilled Records=1000000000
+13/03/09 03:54:58 INFO mapred.JobClient:     Map output bytes=50500000000
+13/03/09 03:54:58 INFO mapred.JobClient:     Total committed heap usage (bytes)=915458293760
+13/03/09 03:54:58 INFO mapred.JobClient:     CPU time spent (ms)=14206930
+13/03/09 03:54:58 INFO mapred.JobClient:     Map input bytes=50000000000
+13/03/09 03:54:58 INFO mapred.JobClient:     SPLIT_RAW_BYTES=59600
+13/03/09 03:54:58 INFO mapred.JobClient:     Combine input records=0
+13/03/09 03:54:58 INFO mapred.JobClient:     Reduce input records=500000000
+13/03/09 03:54:58 INFO mapred.JobClient:     Reduce input groups=500000000
+13/03/09 03:54:58 INFO mapred.JobClient:     Combine output records=0
+13/03/09 03:54:58 INFO mapred.JobClient:     Physical memory (bytes) snapshot=663944761344
+13/03/09 03:54:58 INFO mapred.JobClient:     Reduce output records=500000000
+13/03/09 03:54:58 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1507339747328
+13/03/09 03:54:58 INFO mapred.JobClient:     Map output records=500000000
