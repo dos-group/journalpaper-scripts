@@ -45,7 +45,17 @@ if [[ $RUNTIME_SYSTEM == 'HDP' ]]; then
    # start Hadoop MapReduce
    ./jp_hdp_mapr_start_wait.sh
    if [[ $? != 0 ]]; then
-      exit $?
+      # start Hadoop MapReduce (2nd try)
+      ./jp_hdp_mapr_stop.sh
+      ./jp_hdp_mapr_start_wait.sh
+      if [[ $? != 0 ]]; then
+         # start Hadoop MapReduce (3rd try)
+         ./jp_hdp_mapr_stop.sh
+         ./jp_hdp_mapr_start_wait.sh
+         if [[ $? != 0 ]]; then
+            exit $?
+         fi
+      fi
    fi
 
    # Start run loop
@@ -77,12 +87,12 @@ elif [[ $RUNTIME_SYSTEM == 'STR' ]]; then
           ./jp_str_pact_stop.sh
           ./jp_str_pact_start_wait.sh
           if [[ $? != 0 ]]; then
-               # start Stratosphere (3nd try)
-               ./jp_str_pact_stop.sh
-               ./jp_str_pact_start_wait.sh
-               if [[ $? != 0 ]]; then
-                   exit $?
-               fi
+              # start Stratosphere (3nd try)
+              ./jp_str_pact_stop.sh
+              ./jp_str_pact_start_wait.sh
+              if [[ $? != 0 ]]; then
+                  exit $?
+              fi
           fi
        fi
 
