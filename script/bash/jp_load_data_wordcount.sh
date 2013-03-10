@@ -31,20 +31,18 @@ fi
 # load configuration
 . ./jp_env_configure.sh
 
-# start hdfs
-./jp_hdfs_format_start_wait.sh
-if [[ $? != 0 ]]; then
-   exit $?
-fi
-
 # start hadoop_mr
 ./jp_hdp_mapr_start_wait.sh
 if [[ $? != 0 ]]; then
-   exit $?
+   # start hadoop_mr (second try)
+   ./jp_hdp_mapr_stop.sh
+   ./jp_hdp_mapr_start_wait.sh
+   if [[ $? != 0 ]]; then
+      exit $?
+   fi
 fi
 
 # generate wc data
-echo ${HDP_MAPR_BIN}
 ${HDP_MAPR_BIN}/hadoop jar ${EXP_WC_DGEN_HOME}/bin/wordcount-gen-driver-jobs.jar ${EXP_WC_DGEN_HOME} -s${SCALING_FACTOR} -N${NODE_COUNT} -m${DATASET_ID} -o${HDFS_INPUT_PATH} -xtoken
 echo "WordCount data generated."
 

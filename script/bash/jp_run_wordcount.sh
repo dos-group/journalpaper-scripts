@@ -40,8 +40,8 @@ execIdPrefix=`printf "wc-hdp_mapr-sf%04d-dop%04d" ${WC_SCALING_FACTOR} ${WC_NODE
 execIdPrefix=`printf "wc-str_pact-sf%04d-dop%04d" ${WC_SCALING_FACTOR} ${WC_NODE_COUNT}`
 ./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
 # variant using Java StringTokenizer 
-#execIdPrefix=`printf "wc_jst-str_pact-sf%04d-dop%04d" ${WC_SCALING_FACTOR} ${WC_NODE_COUNT}`
-#./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact-jst.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
+execIdPrefix=`printf "wc_jst-str_pact-sf%04d-dop%04d" ${WC_SCALING_FACTOR} ${WC_NODE_COUNT}`
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact-jst.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh

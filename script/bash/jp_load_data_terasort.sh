@@ -18,7 +18,7 @@ if [[ $SCALING_FACTOR == '' ]]; then
    exit 1
 fi
 
-if ! [[ "$NODE_COUNT" =~ ^[0-9]+$ ]] ; then
+if ! [[ "$NODE_COUNT" =~ ^[0-9]+$ ]]; then
    echo "You need to specify DOP. Canceling..."
    exit 1
 fi
@@ -28,19 +28,21 @@ if [[ $DATASET_ID == '' ]]; then
    exit 1
 fi
 
+echo "Running jp_load_data_wordcount with sf = $SCALING_FACTOR, dop = $NODE_COUNT, dataset_id = $DATASET_ID"
+exit
+
 # load configuration
 . ./jp_env_configure.sh
 
 # start hadoop_mr
 ./jp_hdp_mapr_start_wait.sh
 if [[ $? != 0 ]]; then
-   exit $?
-fi
-
-# start hadoop_mr
-./jp_hdp_mapr_start_wait.sh
-if [[ $? != 0 ]]; then
-   exit $?
+   # start hadoop_mr (second try)
+   ./jp_hdp_mapr_stop.sh
+   ./jp_hdp_mapr_start_wait.sh
+   if [[ $? != 0 ]]; then
+      exit $?
+   fi
 fi
 
 # generate wc data
