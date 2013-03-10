@@ -108,7 +108,6 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
          echo "Dataset '${datasetID}' already exists. Skipping data generation phase..."
       else
          echo "Lazy-loading dataset '${datasetID}'."
-         ${HDFS_BIN}/hadoop fs -mkdir ${HDFS_INPUT_PATH}/${datasetID}
          ./jp_load_data_terasort.sh ${sf} ${dop} ${datasetID}
          if [[ $? != 0 ]]; then
             exit $?
