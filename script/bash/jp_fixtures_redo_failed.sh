@@ -101,7 +101,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
 
    # re-execution step (2): lazy-load the dataset required for the job
    # terasort
-   if ! [[ "$jobID" =~ ^ts$ ]] ; then 
+   if [[ "$jobID" =~ ^ts$ ]] ; then 
       datasetID=`printf "terasort-sf%04d" ${sf}`
       # lazy-load dataset
       if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_INPUT_PATH}/${datasetID}; then
@@ -114,7 +114,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
          fi
       fi
    # wordcount
-   elif ! [[ "$jobID" =~ ^wc_jst|wc$ ]] ; then 
+   elif [[ "$jobID" =~ ^wc_jst|wc$ ]] ; then 
       datasetID=`printf "wordcount-sf%04d" ${sf}`
       # lazy-load dataset
       if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_INPUT_PATH}/${datasetID}; then

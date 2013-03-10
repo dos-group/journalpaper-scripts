@@ -28,9 +28,6 @@ if [[ $DATASET_ID == '' ]]; then
    exit 1
 fi
 
-echo "Running jp_load_data_wordcount with sf = $SCALING_FACTOR, dop = $NODE_COUNT, dataset_id = $DATASET_ID"
-exit
-
 # load configuration
 . ./jp_env_configure.sh
 
