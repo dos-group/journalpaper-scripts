@@ -83,7 +83,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
    # re-execution step (0): reconstruct input parameters for the run job script
    execSystem=$( echo $systemID | tr '[:lower:]' '[:upper:]' )
    execIDPref=$( echo "$jobExecutionID" | sed 's/-run[0-9]*$//g' )
-   jobString=$( cat "$jobLogPath" | cut -c60- )
+   jobString=$( cat "$jobLogPath" | cut -c60- | tr -d '"')
 
    # re-execution step (1): re-start the hdfs on DOP change
    if [[ $dopOld -ne $dop ]]; then
