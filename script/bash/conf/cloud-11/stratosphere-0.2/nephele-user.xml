@@ -33,12 +33,19 @@
                 <value>6002</value>
         </property>
 
+        <!-- the nuber of IPC handlers at the job manager -->
+        <property>
+                <key>jobmanager.rpc.numhandler</key>
+                <value>10</value>
+        </property>
+
         <!-- the IPC port of the task manager -->
         <property>
                 <key>taskmanager.rpc.port</key>
                 <value>6122</value>
         </property>
 
+        <!-- disable job vertex execution retries -->
         <property>
                 <key>job.execution.retries</key>
                 <value>0</value>
