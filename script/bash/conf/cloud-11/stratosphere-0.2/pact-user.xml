@@ -45,7 +45,16 @@
 		<key>pact.parallelization.maxmachines</key>
 		<value>-1</value>
 	</property>
-	
+
+	<!--  ========================================================================
+	                                       System
+	      ======================================================================== -->
+	<!-- The timeout for opening HDFS file input splits -->
+	<property>
+		<key>pact.input.file.timeout</key>
+		<value>30000</value>
+	</property>
+
 	<!--  ========================================================================
 	                                    Web Frontend
 	      ======================================================================== -->
