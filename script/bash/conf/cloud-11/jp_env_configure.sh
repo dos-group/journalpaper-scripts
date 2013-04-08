@@ -86,9 +86,9 @@ STR_PACT_JOBMANAGER_HOST=cloud-11
 ################ HIVE
 
 # Hive deployment archive
-HDP_HIVE_TAR=/share/journalpaper/systems/hive-0.10.0.tar.gz
+HDP_HIVE_TAR=/share/hadoop/journalpaper/systems/hive-0.10.0.tar.gz
 # Hive root folder
-HDP_HIVE_HOME=/share/journalpaper/systems/hive-0.10.0
+HDP_HIVE_HOME=/share/hadoop/journalpaper/systems/hive-0.10.0
 # Hive bin folder
 HDP_HIVE_BIN=${HDP_HIVE_HOME}/bin
 # Hive conf folder
