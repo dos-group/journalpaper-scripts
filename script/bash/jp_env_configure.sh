@@ -45,6 +45,11 @@ STR_PACT_STARTUP_CHECK_INTERVAL=5
 # time in seconds to wait for Stratosphere to shutdown
 STR_PACT_SHUTDOWN_WAITTIME=10
 
+################ HIVE
+
+# timeout in seconds to bring up Hadoop MapReduce (let all tasktrackers connect)
+HDP_HIVE_FOO=bar
+
 ################ HOST SPECIFIC
 
 # load host specific configuration environment

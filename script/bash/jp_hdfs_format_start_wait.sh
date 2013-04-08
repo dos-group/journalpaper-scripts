@@ -80,4 +80,18 @@ if [[ $timeoutCnt == $HDFS_STARTUP_CHECK_TIMEOUT ]]; then
    exit 1
 fi
 
+# make sure that the Hive tmp dir exists
+${HDFS_BIN}/hadoop dfs -test -e /tmp
+if ! [[ $? -eq 0 ]]; then
+   ${HDFS_BIN}/hadoop fs -mkdir /tmp
+   ${HDFS_BIN}/hadoop fs -chmod g+w /tmp
+fi
+
+# make sure that the Hive home dir exists
+${HDFS_BIN}/hadoop dfs -test -e /user/hive/warehouse
+if ! [[ $? -eq 0 ]]; then
+   ${HDFS_BIN}/hadoop fs -mkdir /user/hive/warehouse
+   ${HDFS_BIN}/hadoop fs -chmod g+w /user/hive/warehouse
+fi
+
 echo "HDFS is now ready for use (all datanodes are connected, safe mode turned off) "

@@ -82,3 +82,16 @@ STR_PACT_LOG=${STR_PACT_HOME}/log
 STR_PACT_PID=/tmp
 # Stratosphere Job Manager host name
 STR_PACT_JOBMANAGER_HOST=poodle-9
+
+################ HIVE
+
+# Hive deployment archive
+HDP_HIVE_TAR=/home/alexander/etc/hive-0.10.0.tar.gz
+# Hive root folder
+HDP_HIVE_HOME=/home/alexander/etc/hive-0.10.0
+# Hive bin folder
+HDP_HIVE_BIN=${HDP_HIVE_HOME}/bin
+# Hive conf folder
+HDP_HIVE_CONF=${HDP_HIVE_HOME}/conf
+# Stratosphere log folder
+HDP_HIVE_LOG=${HDP_HIVE_HOME}/log

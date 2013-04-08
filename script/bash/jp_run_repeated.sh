@@ -75,7 +75,7 @@ if [[ $RUNTIME_SYSTEM == 'HDP' ]]; then
       if [[ $FRONTEND_SYSTEM == 'MAPR' ]]; then
          ./jp_hdp_mapr_run_job.sh $EXP_ID "${JOB_STRING}"
       elif [[ $FRONTEND_SYSTEM == 'HIVE' ]]; then
-         echo "Skipping unsupported frontend API ${FRONTEND_SYSTEM}."
+         ./jp_hdp_hive_run_job.sh $EXP_ID "${JOB_STRING}"
       fi
    done
 
@@ -111,6 +111,9 @@ elif [[ $RUNTIME_SYSTEM == 'STR' ]]; then
        if [[ $FRONTEND_SYSTEM == 'PACT' ]]; then
           # run Stratosphere PACT job
           ./jp_str_pact_run_job.sh $EXP_ID "${JOB_STRING}"
+       elif [[ $FRONTEND_SYSTEM == 'METR' ]]; then
+          echo "Skipping unsupported frontend 'Meteor'"
+          # ./jp_hdp_metr_run_job.sh $EXP_ID "${JOB_STRING}"
        fi
        
        # stop Stratosphere
