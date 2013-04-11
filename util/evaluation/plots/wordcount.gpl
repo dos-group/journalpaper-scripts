@@ -1,8 +1,10 @@
 # labels 
-set xlabel "selectivity (s)" font "Helvetica, 22"
+set xlabel "DOP" font "Helvetica, 22"
 set ylabel "execution time (seconds)" font "Helvetica, 22"
 
 # base setup
+
+set datafile separator "," 
 set style data linespoints
 set border 3
 set xtics nomirror
@@ -18,8 +20,8 @@ set style line 6 lt 3 pt 3 lw 3 ps 2 lc rgbcolor "#0000CC"
 
 # linestyle for the frame box
 set style line 9 lt 1 pt 1 lw 1 lc rgbcolor "#cccccc"
-set logscale y 2
-set yrange [64:16384]
+#set logscale y 2
+set yrange [1:320]
 
 # key
 set key on right top Right spacing 1
@@ -33,11 +35,8 @@ set size 0.75, 0.75
 #set term png
 #set output './target/gnuplot/PJ01_results.png'
 set term postscript eps enhanced
-set output './target/gnuplot/PJ01_results.eps'
+set output './target/wordcount.eps'
 
-plot '../myriad-results/sf0304/qgen/hive7/PJ01.results' using 1:(($2+$3)/2) title "Hive (small)"  ls 1 , \
-     '../myriad-results/sf0304/qgen/jaql/PJ01.results'  using 1:(($2+$3)/2) title "Jaql (small)"  ls 2 , \
-     '../myriad-results/sf0760/qgen/hive7/PJ01.results' using 1:(($2+$3)/2) title "Hive (medium)" ls 3 , \
-     '../myriad-results/sf0760/qgen/jaql/PJ01.results'  using 1:(($2+$3)/2) title "Jaql (medium)" ls 4 , \
-     '../myriad-results/sf1520/qgen/hive7/PJ01.results' using 1:(($2+$3)/2) title "Hive (large)"  ls 5 , \
-     '../myriad-results/sf1520/qgen/jaql/PJ01.results'  using 1:(($2+$3)/2) title "Jaql (large)"  ls 6 
+plot '../csv/wc-hdp_mapr.csv' using 1:2 title "Map Reduce (Hadoop)"  ls 1 , \
+     '../csv/wc-str_pact.csv'  using 1:2 title "PACT"  ls 2 , \
+     '../csv/wc_jst-str_pact.csv' using 1:2 title "PACT (Java String)" ls 3 
