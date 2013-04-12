@@ -38,5 +38,5 @@ set term postscript eps enhanced
 set output './target/wordcount.eps'
 
 plot '../csv/wc-hdp_mapr.csv' using 1:2 title "Map Reduce (Hadoop)"  ls 1 , \
-     '../csv/wc-str_pact.csv'  using 1:2 title "PACT"  ls 2 , \
-     '../csv/wc_jst-str_pact.csv' using 1:2 title "PACT (Java String)" ls 3 
+     '../csv/wc-str_pact.csv'  using 1:2 title "PACT"  ls 3 , \
+     '../csv/wc_jst-str_pact.csv' using 1:2 title "PACT (Java String)" ls 4
