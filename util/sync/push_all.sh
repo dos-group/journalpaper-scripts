@@ -20,7 +20,7 @@ fi
 # execute rsync
 echo ""
 echo "Fetching files from remote host."
-rsync -a -v -r -e "ssh -l ${host_user}" --exclude-from="${dir}/rsync.excludes" $dir/../. ${host_name}:${host_dest}
+rsync -a -v -r -e "ssh -l ${host_user}" --exclude-from="${dir}/rsync.excludes" $dir/../../. ${host_name}:${host_dest}
 
 # make sure that all files have the given group
 echo ""

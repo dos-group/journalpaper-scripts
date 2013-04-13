@@ -20,4 +20,4 @@ fi
 # execute rsync
 echo ""
 echo "Fetching files from remote host."
-rsync -a -v -r -e "ssh -l ${host_user}" --include="log-*" --include="log-*/**" --exclude="*" ${host_name}:${host_dest}/. $dir/../
+rsync -a -v -r -e "ssh -l ${host_user}" --include="log-*" --include="log-*/**" --exclude="*" ${host_name}:${host_dest}/. $dir/../../
