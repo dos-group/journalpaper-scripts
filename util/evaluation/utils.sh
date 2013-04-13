@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # $1 is filename
 function getRuntime {
 	ARR=()
@@ -17,3 +19,4 @@ function getRuntime {
 	avg=$((total/2))
 	echo $avg #return average
 }
+
