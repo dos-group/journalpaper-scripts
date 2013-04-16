@@ -34,6 +34,15 @@ errFile=${EXP_LOG_DIR}/${EXP_ID}/run.err
 logFile=${EXP_LOG_DIR}/${EXP_ID}/run.log
 outFile=${EXP_LOG_DIR}/${EXP_ID}/run.out
 
+# make sure that the output folder is empty
+if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_OUTPUT_PATH}; then
+   echo "Removing old job output path ${HDFS_OUTPUT_PATH}"
+   ${HDFS_BIN}/hadoop fs -rmr ${HDFS_OUTPUT_PATH}
+fi
+# re-create the job output folder
+echo "Creating fresh job output path ${HDFS_OUTPUT_PATH}"
+${HDFS_BIN}/hadoop fs -mkdir ${HDFS_OUTPUT_PATH}
+
 # start job
 echo "Starting job execution for experiment ${EXP_ID}."
 startTS=`date +%s`

@@ -20,7 +20,4 @@ WHERE
 GROUP BY
     l.l_orderkey,
     o.o_orderdate,
-    o.o_shippriority
-SORT BY
-    revenue DESC,
-    o_orderdate ASC;
+    o.o_shippriority;
