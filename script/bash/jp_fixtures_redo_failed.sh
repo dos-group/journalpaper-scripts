@@ -126,7 +126,6 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
             exit $?
          fi
       fi
-   fi
    # tpch Q3
    elif [[ "$jobID" =~ ^q3$ ]] ; then 
       datasetID=`printf "tpch-sf%04d" ${sf}`
