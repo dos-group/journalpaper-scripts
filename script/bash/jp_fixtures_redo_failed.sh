@@ -48,7 +48,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
 
    # verify the input parameters, continue on error
    # jobID
-   if ! [[ "$jobID" =~ ^wc_jst|wc|ts$ ]] ; then
+   if ! [[ "$jobID" =~ ^wc_jst|wc|ts|q3$ ]] ; then
 	  echo "Bad job ID '${jobID}'. Skipping ${jobExecutionID}..."
 	  continue
    fi
@@ -122,6 +122,20 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
       else
          echo "Lazy-loading dataset '${datasetID}'."
          ./jp_load_data_wordcount.sh ${sf} ${dop} ${datasetID}
+         if [[ $? != 0 ]]; then
+            exit $?
+         fi
+      fi
+   fi
+   # tpch Q3
+   elif [[ "$jobID" =~ ^q3$ ]] ; then 
+      datasetID=`printf "tpch-sf%04d" ${sf}`
+      # lazy-load dataset
+      if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_INPUT_PATH}/${datasetID}; then
+         echo "Dataset '${datasetID}' already exists. Skipping data generation phase..."
+      else
+         echo "Lazy-loading dataset '${datasetID}'."
+         ./jp_load_data_tpch.sh ${sf} ${dop} ${datasetID}
          if [[ $? != 0 ]]; then
             exit $?
          fi
