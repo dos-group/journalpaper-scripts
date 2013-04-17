@@ -40,5 +40,25 @@
   <description>JDBC connect string for a JDBC metastore</description>
 </property>
 
+<property>
+  <name>hadoop.bin.path</name>
+  <value>/share/hadoop/journalpaper/systems/hadoop-1.0.4/bin/hadoop</value>
+</property>
+
+<property>
+  <name>hadoop.config.dir</name>
+  <value>/share/hadoop/journalpaper/systems/hadoop-1.0.4/conf</value>
+</property>
+
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://cloud-11.dima.tu-berlin.de:45010/</value>
+</property>
+
+<property>
+  <name>mapred.job.tracker</name>
+  <value>cloud-11.dima.tu-berlin.de:45030</value>
+</property>
+
 </configuration>
 
