@@ -23,6 +23,8 @@ EXP_WC_DGEN_HOME=${EXP_DGEN_HOME}/wordcount-gen
 EXP_TS_DGEN_HOME=${EXP_DGEN_HOME}/tera-gen
 # tpch-gen data generator home
 EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
+# connected components data path
+EXP_CC_DATA_HOME=/data/users/aalexandrov/twitter-icwsm2010/links-anon.txt
 
 ################ HDFS
 
@@ -70,6 +72,8 @@ HDP_MAPR_MAP_SLOTS_PER_SLAVE=4
 STR_PACT_TAR=/home/alexander/etc/stratosphere-0.2.tar.gz
 # Stratosphere deployment archive used for Meteor
 STR_PACT_TAR_METEOR=/home/alexander/etc/stratosphere-0.2-meteor.tar.gz
+# Stratosphere deployment archive for iterations
+STR_PACT_TAR_ITERATIONS=/home/alexander/etc/stratosphere-0.2-iterations.tar.gz
 # Stratosphere root folder
 STR_PACT_HOME=/home/alexander/etc/stratosphere-0.2
 # Stratosphere bin folder
@@ -95,3 +99,6 @@ HDP_HIVE_BIN=${HDP_HIVE_HOME}/bin
 HDP_HIVE_CONF=${HDP_HIVE_HOME}/conf
 # Stratosphere log folder
 HDP_HIVE_LOG=${HDP_HIVE_HOME}/log
+
+################ GIRAPH
+GIRAPH_JAR=/home/alexander/etc/giraph-TODO.jar

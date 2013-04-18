@@ -12,7 +12,7 @@ EXEC_ID_PREF=$2
 JOB_STRING=$3
 RUN_ID=$4
 
-if [[ "HDP_MAPR|HDP_HIVE|STR_PACT|STR_MET" =~ $EXEC_SYSTEM ]]; then
+if [[ "HDP_MAPR|HDP_HIVE|HDP_GRPH|STR_PACT|STR_METR" =~ $EXEC_SYSTEM ]]; then
    RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR)_(MAPR|HIVE|PACT|METR)/\1/'`
    echo "Using ${RUNTIME_SYSTEM} runtime system." # concatenate strings
    
@@ -76,6 +76,8 @@ if [[ $RUNTIME_SYSTEM == 'HDP' ]]; then
          ./jp_hdp_mapr_run_job.sh $EXP_ID "${JOB_STRING}"
       elif [[ $FRONTEND_SYSTEM == 'HIVE' ]]; then
          ./jp_hdp_hive_run_job.sh $EXP_ID "${JOB_STRING}"
+      elif [[ $FRONTEND_SYSTEM == 'GRPH' ]]; then
+         ./jp_hdp_grph_run_job.sh $EXP_ID "${JOB_STRING}"
       fi
    done
 
