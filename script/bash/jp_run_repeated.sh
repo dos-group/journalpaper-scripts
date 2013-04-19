@@ -13,13 +13,13 @@ JOB_STRING=$3
 RUN_ID=$4
 
 if [[ "HDP_MAPR|HDP_HIVE|HDP_GRPH|STR_PACT|STR_ITER|STR_METR" =~ $EXEC_SYSTEM ]]; then
-   RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR)_(MAPR|HIVE|PACT|ITER|METR)/\1/'`
+   RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR)_(MAPR|HIVE|GRPH|PACT|ITER|METR)/\1/'`
    echo "Using ${RUNTIME_SYSTEM} runtime system." # concatenate strings
    
    if [[ $RUNTIME_SYSTEM =~ "HDP" ]]; then
-      FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/HDP_(MAPR|HIVE)/\1/'`
+      FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/HDP_(MAPR|HIVE|GRPH)/\1/'`
    else # RUNTIME_SYSTEM == "STR"
-      FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/STR_(PACT|METR)/\1/'`
+      FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/STR_(PACT|METR|ITER)/\1/'`
    fi
    echo "Using ${FRONTEND_SYSTEM} programming API." # concatenate strings
 else

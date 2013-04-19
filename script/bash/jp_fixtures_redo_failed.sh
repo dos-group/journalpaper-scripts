@@ -48,12 +48,12 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
 
    # verify the input parameters, continue on error
    # jobID
-   if ! [[ "$jobID" =~ ^wc_jst|wc|ts|q3$ ]] ; then
+   if ! [[ "$jobID" =~ ^wc_jst|wc|ts|q3|cc$ ]] ; then
 	  echo "Bad job ID '${jobID}'. Skipping ${jobExecutionID}..."
 	  continue
    fi
    # systemID
-   if ! [[ "$systemID" =~ ^str_(pact|metr)|hdp_(mapr|hive)$ ]] ; then
+   if ! [[ "$systemID" =~ ^str_(pact|metr|iter)|hdp_(mapr|hive|grph)$ ]] ; then
       echo "Bad job ID '${systemID}'. Skipping ${jobExecutionID}..."
       continue
    fi
@@ -128,6 +128,19 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
       fi
    # tpch Q3
    elif [[ "$jobID" =~ ^q3$ ]] ; then 
+      datasetID=`printf "tpch-sf%04d" ${sf}`
+      # lazy-load dataset
+      if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_INPUT_PATH}/${datasetID}; then
+         echo "Dataset '${datasetID}' already exists. Skipping data generation phase..."
+      else
+         echo "Lazy-loading dataset '${datasetID}'."
+         ./jp_load_data_tpch.sh ${sf} ${dop} ${datasetID}
+         if [[ $? != 0 ]]; then
+            exit $?
+         fi
+      fi
+   # twitter
+   elif [[ "$jobID" =~ ^cc$ ]] ; then 
       datasetID=`printf "tpch-sf%04d" ${sf}`
       # lazy-load dataset
       if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_INPUT_PATH}/${datasetID}; then

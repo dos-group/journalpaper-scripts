@@ -43,10 +43,15 @@ fi
 echo "Creating fresh job output path ${HDFS_OUTPUT_PATH}"
 ${HDFS_BIN}/hadoop fs -mkdir ${HDFS_OUTPUT_PATH}
 
+# make sure that the initial solution set exists
+${HDFS_BIN}/hadoop fs -touchz ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/initialSolutionset
+${HDFS_BIN}/hadoop fs -touchz ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/graph
+
 # start job
 echo "Starting job execution for experiment ${EXP_ID}."
 startTS=`date +%s`
-java -cp ${STR_PACT_HOME}/lib/* $JOB_STRING > $outFile 2> $errFile
+pact_libs=$(find ${STR_PACT_HOME}/lib -name '*.jar' | xargs echo | tr ' ' ':')
+java -cp $pact_libs $JOB_STRING > $outFile 2> $errFile
 
 if [[ $? == 0 ]]; then
    endTS=`date +%s`

@@ -17,24 +17,13 @@ if [[ $INPUT == '' ]]; then
    exit 1
 fi
 
-if ! [[ "$OUTPUT" == '' ]]; then
+if [[ $OUTPUT == '' ]]; then
    echo "You need to specify HDFS target path. Canceling..."
    exit 1
 fi
 
 # load configuration
 . ./jp_env_configure.sh
-
-# start hadoop_mr
-./jp_hdp_mapr_start_wait.sh
-if [[ $? != 0 ]]; then
-   # start hadoop_mr (second try)
-   ./jp_hdp_mapr_stop.sh
-   ./jp_hdp_mapr_start_wait.sh
-   if [[ $? != 0 ]]; then
-      exit $?
-   fi
-fi
 
 # generate wc data
 ${HDFS_BIN}/hadoop fs -copyFromLocal $INPUT $OUTPUT
@@ -43,6 +32,3 @@ if [[ $? != 0 ]]; then
    exit $?
 fi
 echo "Connected components dataset copied to HDFS."
-
-# stop hadoop_mr
-./jp_hdp_mapr_stop.sh
