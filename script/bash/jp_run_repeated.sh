@@ -12,8 +12,8 @@ EXEC_ID_PREF=$2
 JOB_STRING=$3
 RUN_ID=$4
 
-if [[ "HDP_MAPR|HDP_HIVE|HDP_GRPH|STR_PACT|STR_METR" =~ $EXEC_SYSTEM ]]; then
-   RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR)_(MAPR|HIVE|PACT|METR)/\1/'`
+if [[ "HDP_MAPR|HDP_HIVE|HDP_GRPH|STR_PACT|STR_ITER|STR_METR" =~ $EXEC_SYSTEM ]]; then
+   RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR)_(MAPR|HIVE|PACT|ITER|METR)/\1/'`
    echo "Using ${RUNTIME_SYSTEM} runtime system." # concatenate strings
    
    if [[ $RUNTIME_SYSTEM =~ "HDP" ]]; then
@@ -113,6 +113,9 @@ elif [[ $RUNTIME_SYSTEM == 'STR' ]]; then
        if [[ $FRONTEND_SYSTEM == 'PACT' ]]; then
           # run Stratosphere PACT job
           ./jp_str_pact_run_job.sh $EXP_ID "${JOB_STRING}"
+       elif [[ $FRONTEND_SYSTEM == 'ITER' ]]; then
+          # run Stratosphere Iterations as plain Nephele job
+          ./jp_str_iter_run_job.sh $EXP_ID "${JOB_STRING}"
        elif [[ $FRONTEND_SYSTEM == 'METR' ]]; then
           echo "Skipping unsupported frontend 'Meteor'"
           # ./jp_hdp_metr_run_job.sh $EXP_ID "${JOB_STRING}"

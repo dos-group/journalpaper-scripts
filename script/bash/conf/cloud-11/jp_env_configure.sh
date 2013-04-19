@@ -101,4 +101,4 @@ HDP_HIVE_CONF=${HDP_HIVE_HOME}/conf
 HDP_HIVE_LOG=${HDP_HIVE_HOME}/log
 
 ################ GIRAPH
-GIRAPH_JAR=/share/hadoop/journalpaper/systems/giraph-TODO.jar
+GIRAPH_JAR=/share/hadoop/journalpaper/experiments/job/giraph-examples-0.2-SNAPSHOT-for-hadoop-1.0.2-jar-with-dependencies.jar

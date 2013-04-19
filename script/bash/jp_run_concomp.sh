@@ -35,8 +35,8 @@ execIdPrefix=`printf "cc-hdp_grph-sf0037-dop%04d" ${CC_NODE_COUNT}`
 ./jp_run_repeated.sh HDP_GRPH $execIdPrefix "org.apache.giraph.examples.ConnectedComponentsVertex -eif org.apache.giraph.io.formats.IntNullReverseTextEdgeInputFormat -eip ${CC_IN} -of org.apache.giraph.io.formats.IdWithValueTextOutputFormat -op ${CC_OUT} -w ${CC_NODE_COUNT} -c org.apache.giraph.combiner.MinimumIntCombiner"
 
 # repeat Stratosphere runs
-#execIdPrefix=`printf "cc-str_pact-sf0037-dop%04d" ${CC_NODE_COUNT}`
-#./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-terasort-pact.jar -a ${CC_NODE_COUNT} ${CC_IN} ${CC_OUT}"
+execIdPrefix=`printf "cc-str_iter-sf0037-dop%04d" ${CC_NODE_COUNT}`
+./jp_run_repeated.sh STR_ITER $execIdPrefix "eu.stratosphere.pact.runtime.iterative.compensatable.connectedcomponents.CompensatableConnectedComponents $[CC_NODE_COUNT*8] 8  ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/initialSolutionset ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/graph ${CC_IN} ${CC_OUT} 1280 960 640 1 300 0.5"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh
