@@ -32,7 +32,7 @@ fi
 
 # repeat Hadoop runs
 execIdPrefix=`printf "cc-hdp_grph-sf0037-dop%04d" ${CC_NODE_COUNT}`
-./jp_run_repeated.sh HDP_GRPH $execIdPrefix "org.apache.giraph.examples.ConnectedComponentsVertex -eif org.apache.giraph.io.formats.IntNullReverseTextEdgeInputFormat -eip ${CC_IN} -of org.apache.giraph.io.formats.IdWithValueTextOutputFormat -op ${CC_OUT} -w ${CC_NODE_COUNT} -c org.apache.giraph.combiner.MinimumIntCombiner"
+./jp_run_repeated.sh HDP_GRPH $execIdPrefix "org.apache.giraph.examples.ConnectedComponentsVertex -eif org.apache.giraph.io.formats.IntNullReverseTextEdgeInputFormat -eip ${CC_IN} -of org.apache.giraph.io.formats.IdWithValueTextOutputFormat -op ${CC_OUT} -w $[CC_NODE_COUNT-1] -c org.apache.giraph.combiner.MinimumIntCombiner"
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "cc-str_iter-sf0037-dop%04d" ${CC_NODE_COUNT}`
