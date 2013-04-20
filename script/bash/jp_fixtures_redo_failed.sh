@@ -141,13 +141,13 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
       fi
    # twitter
    elif [[ "$jobID" =~ ^cc$ ]] ; then 
-      datasetID=`printf "tpch-sf%04d" ${sf}`
+      twitter_dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/links-anon.txt
       # lazy-load dataset
-      if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_INPUT_PATH}/${datasetID}; then
-         echo "Dataset '${datasetID}' already exists. Skipping data generation phase..."
+      if ${HDFS_BIN}/hadoop fs -test -e ${twitter_dataset_path}; then
+         echo "Dataset 'twitter-icwsm2010' already exists. Skipping lazy-loading phase..."
       else
-         echo "Lazy-loading dataset '${datasetID}'."
-         ./jp_load_data_tpch.sh ${sf} ${dop} ${datasetID}
+         echo "Lazy-loading dataset 'twitter-icwsm2010'."
+         ./jp_load_data_twitter.sh ${EXP_CC_DATA_HOME} ${twitter_dataset_path}
          if [[ $? != 0 ]]; then
             exit $?
          fi

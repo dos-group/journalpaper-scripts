@@ -24,7 +24,7 @@ if [[ $? != 0 ]]; then
    exit $?
 fi
 
-# generate terasort input data
+# copy twitter dataset to HDFS
 ./jp_load_data_twitter.sh ${EXP_CC_DATA_HOME} ${CC_IN}
 if [[ $? != 0 ]]; then
    exit $?
