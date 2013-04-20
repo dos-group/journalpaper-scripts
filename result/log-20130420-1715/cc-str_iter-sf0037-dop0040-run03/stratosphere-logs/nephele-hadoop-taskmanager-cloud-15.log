@@ -1,0 +1,435 @@
+20:50:42,457 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+20:50:42,494 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Reading location of job manager from configuration
+20:50:42,505 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Determined address of job manager to be cloud-11.dima.tu-berlin.de/130.149.21.15:6002
+20:50:42,515 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Announcing connection information cloud-15 to job manager
+20:50:42,585 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+20:50:42,585 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6122: starting
+20:50:42,586 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6122: starting
+20:50:43,716 INFO  eu.stratosphere.nephele.taskmanager.bufferprovider.GlobalBufferPool  - Initialized global buffer pool with 32768 buffers with a size 32768 bytes each
+20:50:43,736 INFO  eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Initialized byte buffered channel manager with sender-side spilling disabled
+20:50:43,758 INFO  eu.stratosphere.nephele.instance.HardwareDescriptionFactory   - Found Tenured Gen pool (max: 27678736384, used: 0)
+20:50:43,758 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Initializing memory manager with 22528 megabytes of memory
+20:51:12,837 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (17/40)
+20:51:14,137 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (18/40)
+20:51:12,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (21/40)
+20:51:14,140 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (23/40)
+20:51:12,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (24/40)
+20:51:14,136 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (17/40)
+20:51:14,136 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (24/40)
+20:51:12,837 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (22/40)
+20:51:12,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (21/40)
+20:51:12,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (20/40)
+20:51:12,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (20/40)
+20:51:12,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (23/40)
+20:51:12,838 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (17/40)
+20:51:14,149 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (18/40)
+20:51:12,837 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (19/40)
+20:51:12,837 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (18/40)
+20:51:12,837 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Graph (19/40)
+20:51:12,837 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (18/40)
+20:51:14,151 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (20/40)
+20:51:14,150 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (23/40)
+20:51:14,147 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (21/40)
+20:51:14,146 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (23/40)
+20:51:14,145 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (17/40)
+20:51:14,140 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (24/40)
+20:51:14,139 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (22/40)
+20:51:14,138 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (21/40)
+20:51:14,137 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (20/40)
+20:51:14,137 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialWorkset (19/40)
+20:51:14,137 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (23/40)
+20:51:14,137 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task InitialSolutionset (22/40)
+20:51:14,157 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (24/40)
+20:51:14,156 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (22/40)
+20:51:14,154 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (21/40)
+20:51:14,153 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (20/40)
+20:51:14,161 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (17/40)
+20:51:14,162 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (24/40)
+20:51:14,164 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (22/40)
+20:51:14,165 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (23/40)
+20:51:14,167 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (19/40)
+20:51:14,169 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (20/40)
+20:51:14,170 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (21/40)
+20:51:14,171 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (22/40)
+20:51:14,171 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (22/40)
+20:51:14,172 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (22/40)
+20:51:14,172 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialWorkset (24/40)
+20:51:14,174 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (18/40)
+20:51:14,175 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (19/40)
+20:51:14,176 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Graph (18/40)
+20:51:14,177 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (19/40)
+20:51:14,179 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: InitialSolutionset (17/40)
+20:51:14,180 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (17/40)
+20:51:14,180 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (17/40)
+20:51:14,182 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (20/40)
+20:51:14,183 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (20/40)
+20:51:14,185 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (21/40)
+20:51:14,186 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (21/40)
+20:51:14,191 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (24/40)
+20:51:14,191 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (24/40)
+20:51:14,197 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (23/40)
+20:51:14,197 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (23/40)
+20:51:14,206 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (17/40)
+20:51:14,206 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (17/40)
+20:51:14,212 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (19/40)
+20:51:14,213 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (19/40)
+20:51:14,219 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (18/40)
+20:51:14,219 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (18/40)
+20:51:14,220 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (24/40)
+20:51:14,220 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (24/40)
+20:51:14,220 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (22/40)
+20:51:14,221 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (22/40)
+20:51:14,222 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (21/40)
+20:51:14,223 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (21/40)
+20:51:14,223 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (20/40)
+20:51:14,224 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (20/40)
+20:51:14,225 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (19/40)
+20:51:14,226 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (19/40)
+20:51:15,003 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialWorkset (18/40)
+20:51:15,003 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialWorkset (18/40)
+20:51:15,027 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (17/40)
+20:51:15,028 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (17/40)
+20:51:15,033 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (17/40)
+20:51:15,046 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: InitialSolutionset (23/40)
+20:51:15,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task InitialSolutionset (23/40)
+20:51:15,067 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (24/40)
+20:51:15,067 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (24/40)
+20:51:15,071 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (24/40)
+20:51:15,095 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (20/40)
+20:51:15,096 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (20/40)
+20:51:15,104 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (20/40)
+20:51:15,136 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (22/40)
+20:51:15,136 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (22/40)
+20:51:15,139 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (22/40)
+20:51:15,163 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (19/40)
+20:51:15,163 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (19/40)
+20:51:15,167 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (19/40)
+20:51:15,187 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (21/40)
+20:51:15,188 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (21/40)
+20:51:15,191 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (21/40)
+20:51:15,220 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (18/40)
+20:51:15,221 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (18/40)
+20:51:15,223 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (18/40)
+20:51:15,240 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Head-Repartition (23/40)
+20:51:15,241 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FinalOutput (23/40)
+20:51:15,242 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: FinalOutput (23/40)
+20:51:15,360 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (24/40)
+20:51:15,360 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (24/40)
+20:51:15,378 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-23-1366397475378[/ITERATION-LOG]
+20:51:15,379 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (24/40)
+20:51:15,380 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-23-1366397475380[/ITERATION-LOG]
+20:51:15,380 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (24/40)
+20:51:15,419 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-16-1366397475419[/ITERATION-LOG]
+20:51:15,421 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-18-1366397475421[/ITERATION-LOG]
+20:51:15,421 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (17/40)
+20:51:15,419 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-19-1366397475419[/ITERATION-LOG]
+20:51:15,421 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (19/40)
+20:51:15,424 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (20/40)
+20:51:15,424 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-16-1366397475424[/ITERATION-LOG]
+20:51:15,425 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-21-1366397475425[/ITERATION-LOG]
+20:51:15,425 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (17/40)
+20:51:15,426 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (22/40)
+20:51:15,427 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (17/40)
+20:51:15,428 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-18-1366397475428[/ITERATION-LOG]
+20:51:15,428 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (19/40)
+20:51:15,428 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (19/40)
+20:51:15,429 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-16-1366397475429[/ITERATION-LOG]
+20:51:15,429 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-19-1366397475429[/ITERATION-LOG]
+20:51:15,429 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (17/40)
+20:51:15,430 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (20/40)
+20:51:15,430 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-21-1366397475430[/ITERATION-LOG]
+20:51:15,429 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-20-1366397475429[/ITERATION-LOG]
+20:51:15,431 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (22/40)
+20:51:15,431 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (20/40)
+20:51:15,430 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-22-1366397475430[/ITERATION-LOG]
+20:51:15,432 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (22/40)
+20:51:15,432 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-23-1366397475432[/ITERATION-LOG]
+20:51:15,432 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-18-1366397475432[/ITERATION-LOG]
+20:51:15,431 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (21/40)
+20:51:15,434 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (19/40)
+20:51:15,434 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (24/40)
+20:51:15,433 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (24/40)
+20:51:15,433 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (23/40)
+20:51:15,435 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_STARTING-1-17-1366397475435[/ITERATION-LOG]
+20:51:15,436 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - starting iteration [1]: Head-Repartition (18/40)
+20:51:15,436 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-19-1366397475436[/ITERATION-LOG]
+20:51:15,437 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (20/40)
+20:51:15,437 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-21-1366397475437[/ITERATION-LOG]
+20:51:15,437 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (22/40)
+20:51:15,438 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-17-1366397475438[/ITERATION-LOG]
+20:51:15,438 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (18/40)
+20:51:15,438 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-20-1366397475438[/ITERATION-LOG]
+20:51:15,439 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-23-1366397475439[/ITERATION-LOG]
+20:51:15,439 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (21/40)
+20:51:15,439 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (24/40)
+20:51:15,439 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (21/40)
+20:51:15,439 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_STARTING-1-22-1366397475439[/ITERATION-LOG]
+20:51:15,440 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (24/40)
+20:51:15,440 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Head-Repartition (23/40)
+20:51:15,443 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-20-1366397475443[/ITERATION-LOG]
+20:51:15,443 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (21/40)
+20:51:15,444 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-23-1366397475444[/ITERATION-LOG]
+20:51:15,444 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (24/40)
+20:51:15,508 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (18/40)
+20:51:15,510 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-17-1366397475510[/ITERATION-LOG]
+20:51:15,510 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (18/40)
+20:51:15,595 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (18/40)
+20:51:15,595 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (18/40)
+20:51:15,601 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-17-1366397475601[/ITERATION-LOG]
+20:51:15,602 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (18/40)
+20:51:15,604 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-17-1366397475604[/ITERATION-LOG]
+20:51:15,604 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (18/40)
+20:51:15,617 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (18/40)
+20:51:15,640 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (17/40)
+20:51:15,640 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (17/40)
+20:51:15,645 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-16-1366397475645[/ITERATION-LOG]
+20:51:15,645 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (17/40)
+20:51:15,647 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-16-1366397475647[/ITERATION-LOG]
+20:51:15,647 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (17/40)
+20:51:15,659 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (17/40)
+20:51:15,702 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (22/40)
+20:51:15,702 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (22/40)
+20:51:15,704 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-21-1366397475704[/ITERATION-LOG]
+20:51:15,704 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (22/40)
+20:51:15,705 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-21-1366397475705[/ITERATION-LOG]
+20:51:15,705 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (22/40)
+20:51:15,707 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Head-Repartition (23/40)
+20:51:15,709 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-HEAD_PACT_FINISHED-1-22-1366397475709[/ITERATION-LOG]
+20:51:15,709 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationHeadPactTask  - sending EndOfSuperstepEvent to all iteration outputs: Head-Repartition (23/40)
+20:51:15,716 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (22/40)
+20:51:15,722 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (20/40)
+20:51:15,722 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (20/40)
+20:51:15,727 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-19-1366397475727[/ITERATION-LOG]
+20:51:15,727 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (20/40)
+20:51:15,729 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-19-1366397475729[/ITERATION-LOG]
+20:51:15,729 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (20/40)
+20:51:15,742 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (20/40)
+20:51:15,798 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (19/40)
+20:51:15,798 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (19/40)
+20:51:15,803 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-18-1366397475803[/ITERATION-LOG]
+20:51:15,803 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (19/40)
+20:51:15,805 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-18-1366397475805[/ITERATION-LOG]
+20:51:15,805 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (19/40)
+20:51:15,820 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (19/40)
+20:51:16,089 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (21/40)
+20:51:16,089 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (21/40)
+20:51:16,094 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-20-1366397476094[/ITERATION-LOG]
+20:51:16,094 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (21/40)
+20:51:16,096 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-20-1366397476096[/ITERATION-LOG]
+20:51:16,097 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (21/40)
+20:51:16,110 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Tail-NeighborsComponentIDToWorkset (23/40)
+20:51:16,110 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task FakeTailOutput (23/40)
+20:51:16,111 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (21/40)
+20:51:16,116 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_STARTING-1-22-1366397476116[/ITERATION-LOG]
+20:51:16,117 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationTailPactTask  - starting iteration [1]: Tail-NeighborsComponentIDToWorkset (23/40)
+20:51:16,120 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-TAIL_PACT_STARTING-1-22-1366397476120[/ITERATION-LOG]
+20:51:16,120 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Tail-NeighborsComponentIDToWorkset (23/40)
+20:51:16,136 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Tail-NeighborsComponentIDToWorkset (23/40)
+20:51:16,256 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (17/40)
+20:51:16,268 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-16-1366397476268[/ITERATION-LOG]
+20:51:16,269 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (17/40)
+20:51:16,271 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-16-1366397476270[/ITERATION-LOG]
+20:51:16,271 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (17/40)
+20:51:16,271 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (17/40)
+20:51:16,282 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (18/40)
+20:51:16,286 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-17-1366397476286[/ITERATION-LOG]
+20:51:16,286 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (18/40)
+20:51:16,288 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-17-1366397476288[/ITERATION-LOG]
+20:51:16,289 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (18/40)
+20:51:16,289 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (18/40)
+20:51:16,330 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (19/40)
+20:51:16,333 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-18-1366397476333[/ITERATION-LOG]
+20:51:16,333 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (19/40)
+20:51:16,335 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-18-1366397476335[/ITERATION-LOG]
+20:51:16,335 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (19/40)
+20:51:16,335 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (19/40)
+20:51:16,349 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (20/40)
+20:51:16,351 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-19-1366397476351[/ITERATION-LOG]
+20:51:16,351 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (20/40)
+20:51:16,352 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-19-1366397476352[/ITERATION-LOG]
+20:51:16,352 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (20/40)
+20:51:16,352 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (20/40)
+20:51:16,369 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (21/40)
+20:51:16,372 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-20-1366397476372[/ITERATION-LOG]
+20:51:16,372 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (21/40)
+20:51:16,374 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-20-1366397476374[/ITERATION-LOG]
+20:51:16,374 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (21/40)
+20:51:16,375 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (21/40)
+20:51:16,420 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (22/40)
+20:51:16,422 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-21-1366397476422[/ITERATION-LOG]
+20:51:16,423 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (22/40)
+20:51:16,425 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-21-1366397476424[/ITERATION-LOG]
+20:51:16,425 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (22/40)
+20:51:16,425 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (22/40)
+20:51:16,444 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (23/40)
+20:51:16,447 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-22-1366397476447[/ITERATION-LOG]
+20:51:16,447 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (23/40)
+20:51:16,449 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-22-1366397476449[/ITERATION-LOG]
+20:51:16,449 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (23/40)
+20:51:16,450 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (23/40)
+20:51:16,470 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-MinimumComponentID (24/40)
+20:51:16,472 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-1-23-1366397476472[/ITERATION-LOG]
+20:51:16,472 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [1]: Intermediate-MinimumComponentID (24/40)
+20:51:16,473 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-1-23-1366397476473[/ITERATION-LOG]
+20:51:16,473 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (24/40)
+20:51:16,473 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [40] event(s): Intermediate-MinimumComponentID (24/40)
+20:51:16,524 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (17/40)
+20:51:16,526 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (17/40)
+20:51:16,526 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (17/40)
+20:51:16,528 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (17/40)
+20:51:16,575 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (18/40)
+20:51:16,578 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (18/40)
+20:51:16,579 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (18/40)
+20:51:16,580 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (18/40)
+20:51:16,604 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (19/40)
+20:51:16,607 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (19/40)
+20:51:16,607 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (19/40)
+20:51:16,608 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (19/40)
+20:51:16,635 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (20/40)
+20:51:16,638 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (20/40)
+20:51:16,639 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (20/40)
+20:51:16,639 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (20/40)
+20:51:16,673 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (21/40)
+20:51:16,674 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (21/40)
+20:51:16,675 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (21/40)
+20:51:16,675 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (21/40)
+20:51:16,690 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (22/40)
+20:51:16,692 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (22/40)
+20:51:16,692 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (22/40)
+20:51:16,692 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (22/40)
+20:51:16,730 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (23/40)
+20:51:16,733 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (23/40)
+20:51:16,733 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (23/40)
+20:51:16,734 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (23/40)
+20:51:16,757 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Intermediate-UpdateComponentID (24/40)
+20:51:16,759 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [1]: Intermediate-UpdateComponentID (24/40)
+20:51:16,760 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (24/40)
+20:51:16,760 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - wrapping input [0] with an interrupting iterator that waits for [1] event(s): Intermediate-UpdateComponentID (24/40)
+20:51:17,594 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (17/40)
+20:51:17,595 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-16-1366397477595[/ITERATION-LOG]
+20:51:17,595 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (17/40)
+20:51:17,595 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (17/40)
+20:51:17,598 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-16-1366397477597[/ITERATION-LOG]
+20:51:17,598 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-16-1366397477598[/ITERATION-LOG]
+20:51:17,598 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (17/40)
+20:51:17,599 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-16-1366397477599[/ITERATION-LOG]
+20:51:17,599 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (17/40)
+20:51:17,656 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (18/40)
+20:51:17,657 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-17-1366397477657[/ITERATION-LOG]
+20:51:17,657 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (18/40)
+20:51:17,657 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (18/40)
+20:51:17,659 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (19/40)
+20:51:17,659 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-17-1366397477659[/ITERATION-LOG]
+20:51:17,661 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-17-1366397477661[/ITERATION-LOG]
+20:51:17,662 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-18-1366397477662[/ITERATION-LOG]
+20:51:17,662 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (19/40)
+20:51:17,663 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (19/40)
+20:51:17,663 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (20/40)
+20:51:17,664 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-19-1366397477664[/ITERATION-LOG]
+20:51:17,664 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (20/40)
+20:51:17,661 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (18/40)
+20:51:17,664 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (20/40)
+20:51:17,665 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-17-1366397477665[/ITERATION-LOG]
+20:51:17,666 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (18/40)
+20:51:17,669 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-19-1366397477669[/ITERATION-LOG]
+20:51:17,671 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-19-1366397477671[/ITERATION-LOG]
+20:51:17,671 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (20/40)
+20:51:17,673 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-19-1366397477673[/ITERATION-LOG]
+20:51:17,673 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (20/40)
+20:51:17,673 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-18-1366397477673[/ITERATION-LOG]
+20:51:17,676 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-18-1366397477676[/ITERATION-LOG]
+20:51:17,676 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (19/40)
+20:51:17,678 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-18-1366397477678[/ITERATION-LOG]
+20:51:17,678 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (19/40)
+20:51:17,756 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (22/40)
+20:51:17,757 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-21-1366397477757[/ITERATION-LOG]
+20:51:17,757 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (22/40)
+20:51:17,757 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (22/40)
+20:51:17,759 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-21-1366397477759[/ITERATION-LOG]
+20:51:17,760 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-21-1366397477760[/ITERATION-LOG]
+20:51:17,760 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (22/40)
+20:51:17,761 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-21-1366397477761[/ITERATION-LOG]
+20:51:17,761 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (22/40)
+20:51:17,763 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (21/40)
+20:51:17,765 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-20-1366397477765[/ITERATION-LOG]
+20:51:17,766 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (21/40)
+20:51:17,766 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (21/40)
+20:51:17,771 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-20-1366397477771[/ITERATION-LOG]
+20:51:17,774 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-20-1366397477774[/ITERATION-LOG]
+20:51:17,774 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (21/40)
+20:51:17,777 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-20-1366397477777[/ITERATION-LOG]
+20:51:17,777 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (21/40)
+20:51:17,828 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (24/40)
+20:51:17,829 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-23-1366397477829[/ITERATION-LOG]
+20:51:17,834 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (24/40)
+20:51:17,835 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (24/40)
+20:51:17,835 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-MinimumComponentID (23/40)
+20:51:17,836 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_FINISHED-1-22-1366397477836[/ITERATION-LOG]
+20:51:17,836 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - finishing iteration [1]: Intermediate-MinimumComponentID (23/40)
+20:51:17,837 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - propagating EndOfSuperstepEvent: Intermediate-MinimumComponentID (23/40)
+20:51:17,839 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-23-1366397477839[/ITERATION-LOG]
+20:51:17,840 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_FINISHED-2-22-1366397477840[/ITERATION-LOG]
+20:51:17,841 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-23-1366397477841[/ITERATION-LOG]
+20:51:17,841 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (24/40)
+20:51:17,842 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_STARTING-2-22-1366397477842[/ITERATION-LOG]
+20:51:17,842 INFO  eu.stratosphere.pact.runtime.iterative.task.IterationIntermediatePactTask  - starting iteration [2]: Intermediate-MinimumComponentID (23/40)
+20:51:17,843 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-23-1366397477843[/ITERATION-LOG]
+20:51:17,844 INFO  eu.stratosphere.pact.runtime.iterative.task.AbstractIterativePactTask  - [ITERATION-LOG]0a2dc1209b05680007f1824b5c33f800-INTERMEDIATE_PACT_STARTING-2-22-1366397477843[/ITERATION-LOG]
+20:51:17,844 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (24/40)
+20:51:17,846 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-MinimumComponentID (23/40)
+20:51:18,316 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:18,325 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [16], possible updates [0]
+20:51:18,325 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (17/40)
+20:51:18,325 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (17/40)
+20:51:18,326 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (17/40)
+20:51:18,326 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (17/40)
+20:51:18,326 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (17/40)
+20:51:18,882 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:18,885 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [17], possible updates [0]
+20:51:18,885 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (18/40)
+20:51:18,885 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (18/40)
+20:51:18,885 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (18/40)
+20:51:18,885 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (18/40)
+20:51:18,885 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (18/40)
+20:51:18,888 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:18,889 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [18], possible updates [0]
+20:51:18,891 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (19/40)
+20:51:18,891 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (19/40)
+20:51:18,891 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (19/40)
+20:51:18,891 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (19/40)
+20:51:18,892 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (19/40)
+20:51:18,963 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:18,963 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [19], possible updates [0]
+20:51:18,963 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (20/40)
+20:51:18,963 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (20/40)
+20:51:18,964 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (20/40)
+20:51:18,964 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (20/40)
+20:51:18,964 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (20/40)
+20:51:19,485 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:19,486 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [20], possible updates [0]
+20:51:19,486 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (21/40)
+20:51:19,486 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (21/40)
+20:51:19,486 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (21/40)
+20:51:19,486 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (21/40)
+20:51:19,486 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (21/40)
+20:51:19,500 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:19,501 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [21], possible updates [0]
+20:51:19,501 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (22/40)
+20:51:19,501 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (22/40)
+20:51:19,501 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (22/40)
+20:51:19,502 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (22/40)
+20:51:19,502 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (22/40)
+20:51:19,512 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:19,512 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [22], possible updates [0]
+20:51:19,512 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (23/40)
+20:51:19,513 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (23/40)
+20:51:19,513 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (23/40)
+20:51:19,513 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (23/40)
+20:51:19,513 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (23/40)
+20:51:19,521 INFO  eu.stratosphere.pact.runtime.hash.MutableHashTable            - inserted 0 records into build side of HybridHashJoin
+20:51:19,522 INFO  eu.stratosphere.pact.runtime.iterative.driver.SolutionsetMatchDriver  - [0] elements updated in the solutionset partition of worker [23], possible updates [0]
+20:51:19,523 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Intermediate-UpdateComponentID (24/40)
+20:51:19,523 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - finishing iteration [1]: Intermediate-UpdateComponentID (24/40)
+20:51:19,523 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - propagating EndOfSuperstepEvent: Intermediate-UpdateComponentID (24/40)
+20:51:19,523 INFO  eu.stratosphere.pact.runtime.iterative.task.WorksetIterationSolutionsetJoinTask  - starting iteration [2]: Intermediate-UpdateComponentID (24/40)
+20:51:19,524 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Intermediate-UpdateComponentID (24/40)

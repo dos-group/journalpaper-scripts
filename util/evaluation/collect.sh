@@ -3,9 +3,8 @@
 . ./utils.sh
 
 DIR_RESULTS=../../result/final
-SCALE_FACTOR="0010 0020 0030 0040 0050"
-DOP="0040 0080 0120 0160 0200"
-EXPERIMENT="wc-str_pact wc_jst-str_pact wc-hdp_mapr ts-hdp_mapr ts-str_pact q3-hdp_hive q3-str_pact"
+DOP="40 80 120 160 200"
+EXPERIMENT="wc-str_pact wc_jst-str_pact wc-hdp_mapr ts-hdp_mapr ts-str_pact q3-hdp_hive q3-str_pact cc-hdp_grph cc-str_iter"
 
 for exp in $EXPERIMENT; do
 	OUTPUT_FILE="csv/$exp.csv"
@@ -15,15 +14,19 @@ for exp in $EXPERIMENT; do
 	##
 
 	> $OUTPUT_FILE
-	for sf in $SCALE_FACTOR; do 
-		for dop in $DOP; do
-			dir="$exp-sf$sf-dop$dop";
-			runtime=`getRuntime $dir`
-			if [ $runtime ]; then # check that we have a result
-				echo "$dop,$runtime" >> $OUTPUT_FILE
-			fi
-		done # dop
-	done # scale factor
+	for dop in $DOP; do
+		if [[ $exp =~ ^cc-hdp_grph|cc-str_iter$ ]] ; then
+			sf=37
+		else
+			sf=$[dop/4]
+		fi
+		dir="$exp-sf$sf-dop$dop";
+		dir=`printf "%s-sf%04d-dop%04d" ${exp} ${sf} ${dop}`
+		runtime=`getRuntime $dir`
+		if [ $runtime ]; then # check that we have a result
+			echo "$dop,$runtime" >> $OUTPUT_FILE
+		fi
+	done # dop
 done # experiment
 
 
