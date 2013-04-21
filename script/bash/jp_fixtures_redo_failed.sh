@@ -48,7 +48,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
 
    # verify the input parameters, continue on error
    # jobID
-   if ! [[ "$jobID" =~ ^wc_jst|wc|ts|q3|cc$ ]] ; then
+   if ! [[ "$jobID" =~ ^wc_jst|wc|ts|q3|cc|te$ ]] ; then
 	  echo "Bad job ID '${jobID}'. Skipping ${jobExecutionID}..."
 	  continue
    fi
@@ -140,7 +140,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
          fi
       fi
    # twitter
-   elif [[ "$jobID" =~ ^cc$ ]] ; then 
+   elif [[ "$jobID" =~ ^cc|te$ ]] ; then 
       twitter_dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/links-anon.txt
       # lazy-load dataset
       if ${HDFS_BIN}/hadoop fs -test -e ${twitter_dataset_path}; then
