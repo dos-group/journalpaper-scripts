@@ -32,11 +32,11 @@ fi
 
 # repeat Hadoop runs
 #execIdPrefix=`printf "te-hdp_mapr-sf0037-dop%04d" ${TE_NODE_COUNT}`
-#./jp_run_repeated.sh HDP_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-trienum-hadoop.jar -a ${TS_NODE_COUNT} ${TS_IN} ${TS_OUT}"
+#./jp_run_repeated.sh HDP_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-trienum-hadoop.jar -a ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "te-str_pact-sf0037-dop%04d" ${TE_NODE_COUNT}`
-./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-trienum-pact.jar -a ${TS_NODE_COUNT} ${TS_IN} ${TS_OUT}"
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-trienum-pact.jar -a ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh
