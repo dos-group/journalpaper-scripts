@@ -25,7 +25,7 @@ if [[ $? != 0 ]]; then
 fi
 
 # copy twitter dataset to HDFS
-./jp_load_data_twitter.sh ${EXP_CC_DATA_HOME} ${CC_IN}
+./jp_load_data_twitter.sh ${EXP_TWITTER_DATA_LOCAL} ${CC_IN}
 if [[ $? != 0 ]]; then
    exit $?
 fi

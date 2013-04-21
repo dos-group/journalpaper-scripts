@@ -24,7 +24,7 @@ EXP_TS_DGEN_HOME=${EXP_DGEN_HOME}/tera-gen
 # tpch-gen data generator home
 EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
 # connected components data path
-EXP_CC_DATA_HOME=/data/users/aalexandrov/twitter-icwsm2010/links-anon.txt
+EXP_TWITTER_DATA_LOCAL=/data/users/aalexandrov/twitter-icwsm2010/links-anon.txt
 
 ################ HDFS
 

@@ -147,7 +147,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
          echo "Dataset 'twitter-icwsm2010' already exists. Skipping lazy-loading phase..."
       else
          echo "Lazy-loading dataset 'twitter-icwsm2010'."
-         ./jp_load_data_twitter.sh ${EXP_CC_DATA_HOME} ${twitter_dataset_path}
+         ./jp_load_data_twitter.sh ${EXP_TWITTER_DATA_LOCAL} ${twitter_dataset_path}
          if [[ $? != 0 ]]; then
             exit $?
          fi
