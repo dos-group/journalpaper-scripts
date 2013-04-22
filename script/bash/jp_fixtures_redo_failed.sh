@@ -8,7 +8,7 @@
 ./jp_sut_deploy.sh ${STR_PACT_TAR_ITERATIONS} ${STR_PACT_HOME}
 
 # set initial dop
-dopOld=5
+dopOld=2
 # adapt number of slaves
 ./jp_env_adapt_slave_cnt.sh $dopOld
 # format and start HDFS
