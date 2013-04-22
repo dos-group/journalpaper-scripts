@@ -8,7 +8,7 @@
 ./jp_sut_deploy.sh ${STR_PACT_TAR_ITERATIONS} ${STR_PACT_HOME}
 
 # set initial dop
-dopOld=2
+dopOld=5
 # adapt number of slaves
 ./jp_env_adapt_slave_cnt.sh $dopOld
 # format and start HDFS
@@ -152,7 +152,6 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
             exit $?
          fi
       fi
-   fi
    # orkut
    elif [[ "$jobID" =~ ^te_orkut$ ]] ; then 
       dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/$(basename ${EXP_ORKUT_DATA_LOCAL})
@@ -166,7 +165,6 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
             exit $?
          fi
       fi
-   fi
    # pokec
    elif [[ "$jobID" =~ ^te_pokec$ ]] ; then 
       dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/$(basename ${EXP_POKEC_DATA_LOCAL})

@@ -37,7 +37,7 @@ execIdPrefix=`printf "cc-hdp_grph-sf0037-dop%04d" ${CC_NODE_COUNT}`
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "cc-str_iter-sf0037-dop%04d" ${CC_NODE_COUNT}`
-./jp_run_repeated.sh STR_ITER $execIdPrefix "eu.stratosphere.pact.runtime.iterative.compensatable.connectedcomponents.CompensatableConnectedComponents ${CC_NODE_COUNT} ${HDP_MAPR_MAP_SLOTS_PER_SLAVE} ${CC_IN}/initialWorkset ${CC_IN}/vertices ${CC_IN}/adjacency ${CC_OUT} ${STR_PACT_CONF} 1280 960 640 1 300 0.5"
+./jp_run_repeated.sh STR_ITER $execIdPrefix "eu.stratosphere.pact.runtime.iterative.compensatable.connectedcomponents.CompensatableConnectedComponents ${CC_NODE_COUNT} ${HDP_MAPR_MAP_SLOTS_PER_SLAVE} ${CC_IN}/vertices/ ${CC_IN}/initialWorkset/ ${CC_IN}/adjacency/ ${CC_OUT} ${STR_PACT_CONF} 1280 960 640 1 300 0.5"
 
 # stop HDFS
-#./jp_hdfs_clean_stop.sh
+./jp_hdfs_clean_stop.sh
