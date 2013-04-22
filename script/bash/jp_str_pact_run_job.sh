@@ -40,8 +40,8 @@ if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_OUTPUT_PATH}; then
    ${HDFS_BIN}/hadoop fs -rmr ${HDFS_OUTPUT_PATH}
 fi
 # re-create the job output folder
-echo "Creating fresh job output path ${HDFS_OUTPUT_PATH}"
-${HDFS_BIN}/hadoop fs -mkdir ${HDFS_OUTPUT_PATH}
+# echo "Creating fresh job output path ${HDFS_OUTPUT_PATH}"
+# ${HDFS_BIN}/hadoop fs -mkdir ${HDFS_OUTPUT_PATH}
 
 # start job
 echo "Starting job execution for experiment ${EXP_ID}."
@@ -63,7 +63,3 @@ fi
 # copy Stratosphere log files
 mkdir -p ${EXP_LOG_DIR}/${EXP_ID}/stratosphere-logs
 cp ${STR_PACT_LOG}/* ${EXP_LOG_DIR}/${EXP_ID}/stratosphere-logs
-
-# clean result dir
-echo "Removing job output path ${HDFS_OUTPUT_PATH}"
-${HDFS_BIN}/hadoop fs -rmr ${HDFS_OUTPUT_PATH}
