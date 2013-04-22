@@ -23,8 +23,12 @@ EXP_WC_DGEN_HOME=${EXP_DGEN_HOME}/wordcount-gen
 EXP_TS_DGEN_HOME=${EXP_DGEN_HOME}/tera-gen
 # tpch-gen data generator home
 EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
-# connected components data path
+# Twitter ICWSM'2010 dataset local path
 EXP_TWITTER_DATA_LOCAL=/data/users/aalexandrov/twitter-icwsm2010/links-anon.txt
+# SNAP Orkut graph local path
+EXP_ORKUT_DATA_LOCAL=/data/users/aalexandrov/com-orkut.ungraph.txt
+# SNAP Pokec graph local path
+EXP_POKEC_DATA_LOCAL=/data/users/aalexandrov/soc-pokec-relationships.txt
 
 ################ HDFS
 

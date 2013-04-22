@@ -11,9 +11,10 @@ fi
 # load config
 . ./jp_env_configure.sh
 
+CC_DATASET_LOCAL=${EXP_TWITTER_DATA_LOCAL}
 CC_NODE_COUNT=$((${HDP_MAPR_MAP_SLOTS_PER_SLAVE} * ${NUM_SLAVES}))
-CC_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/links-anon.txt
-CC_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}/twitter-concomp_result
+CC_IN=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/$(basename ${CC_DATASET_LOCAL})
+CC_OUT=${HDFS_ADDRESS}${HDFS_OUTPUT_PATH}/concomp_result
 
 # adapt number of slaves
 ./jp_env_adapt_slave_cnt.sh $NUM_SLAVES
@@ -25,7 +26,7 @@ if [[ $? != 0 ]]; then
 fi
 
 # copy twitter dataset to HDFS
-./jp_load_data_twitter.sh ${EXP_TWITTER_DATA_LOCAL} ${CC_IN}
+./jp_load_data_local.sh ${CC_DATASET_LOCAL} ${CC_IN}
 if [[ $? != 0 ]]; then
    exit $?
 fi

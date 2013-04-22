@@ -48,7 +48,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
 
    # verify the input parameters, continue on error
    # jobID
-   if ! [[ "$jobID" =~ ^wc_jst|wc|ts|q3|cc|te$ ]] ; then
+   if ! [[ "$jobID" =~ ^wc_jst|wc|ts|q3|cc|te_pokec|te_orkut$ ]] ; then
 	  echo "Bad job ID '${jobID}'. Skipping ${jobExecutionID}..."
 	  continue
    fi
@@ -140,14 +140,42 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
          fi
       fi
    # twitter
-   elif [[ "$jobID" =~ ^cc|te$ ]] ; then 
-      twitter_dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/links-anon.txt
+   elif [[ "$jobID" =~ ^cc$ ]] ; then 
+      dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/$(basename ${EXP_TWITTER_DATA_LOCAL})
       # lazy-load dataset
-      if ${HDFS_BIN}/hadoop fs -test -e ${twitter_dataset_path}; then
+      if ${HDFS_BIN}/hadoop fs -test -e ${dataset_path}; then
          echo "Dataset 'twitter-icwsm2010' already exists. Skipping lazy-loading phase..."
       else
          echo "Lazy-loading dataset 'twitter-icwsm2010'."
-         ./jp_load_data_twitter.sh ${EXP_TWITTER_DATA_LOCAL} ${twitter_dataset_path}
+         ./jp_load_data_local.sh ${EXP_TWITTER_DATA_LOCAL} ${dataset_path}
+         if [[ $? != 0 ]]; then
+            exit $?
+         fi
+      fi
+   fi
+   # orkut
+   elif [[ "$jobID" =~ ^te_orkut$ ]] ; then 
+      dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/$(basename ${EXP_ORKUT_DATA_LOCAL})
+      # lazy-load dataset
+      if ${HDFS_BIN}/hadoop fs -test -e ${dataset_path}; then
+         echo "Dataset 'Orkut' already exists. Skipping lazy-loading phase..."
+      else
+         echo "Lazy-loading dataset 'Orkut'."
+         ./jp_load_data_local.sh ${EXP_ORKUT_DATA_LOCAL} ${dataset_path}
+         if [[ $? != 0 ]]; then
+            exit $?
+         fi
+      fi
+   fi
+   # pokec
+   elif [[ "$jobID" =~ ^te_pokec$ ]] ; then 
+      dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/$(basename ${EXP_POKEC_DATA_LOCAL})
+      # lazy-load dataset
+      if ${HDFS_BIN}/hadoop fs -test -e ${dataset_path}; then
+         echo "Dataset 'Pokec' already exists. Skipping lazy-loading phase..."
+      else
+         echo "Lazy-loading dataset 'Pokec'."
+         ./jp_load_data_local.sh ${EXP_POKEC_DATA_LOCAL} ${dataset_path}
          if [[ $? != 0 ]]; then
             exit $?
          fi
