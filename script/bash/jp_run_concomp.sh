@@ -33,11 +33,11 @@ fi
 
 # repeat Hadoop runs
 execIdPrefix=`printf "cc-hdp_grph-sf0037-dop%04d" ${CC_NODE_COUNT}`
-./jp_run_repeated.sh HDP_GRPH $execIdPrefix "org.apache.giraph.examples.ConnectedComponentsVertex -eif org.apache.giraph.io.formats.IntNullReverseTextEdgeInputFormat -eip ${CC_IN} -of org.apache.giraph.io.formats.IdWithValueTextOutputFormat -op ${CC_OUT} -w $[CC_NODE_COUNT-1] -c org.apache.giraph.combiner.MinimumIntCombiner"
+./jp_run_repeated.sh HDP_GRPH $execIdPrefix "org.apache.giraph.examples.ConnectedComponentsVertex -vif org.apache.giraph.io.formats.IntIntNullTextInputFormat -vip ${CC_IN}/adjacency -of org.apache.giraph.io.formats.IdWithValueTextOutputFormat -op ${CC_OUT} -w $[CC_NODE_COUNT-1] -c org.apache.giraph.combiner.MinimumIntCombiner"
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "cc-str_iter-sf0037-dop%04d" ${CC_NODE_COUNT}`
-./jp_run_repeated.sh STR_ITER $execIdPrefix "eu.stratosphere.pact.runtime.iterative.compensatable.connectedcomponents.CompensatableConnectedComponents ${CC_NODE_COUNT} ${HDP_MAPR_MAP_SLOTS_PER_SLAVE} ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/initialSolutionset ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/graph ${CC_IN} ${CC_OUT} ${STR_PACT_CONF} 1280 960 640 1 300 0.5"
+./jp_run_repeated.sh STR_ITER $execIdPrefix "eu.stratosphere.pact.runtime.iterative.compensatable.connectedcomponents.CompensatableConnectedComponents ${CC_NODE_COUNT} ${HDP_MAPR_MAP_SLOTS_PER_SLAVE} ${CC_IN}/initialWorkset ${CC_IN}/vertices ${CC_IN}/adjacency ${CC_OUT} ${STR_PACT_CONF} 1280 960 640 1 300 0.5"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh

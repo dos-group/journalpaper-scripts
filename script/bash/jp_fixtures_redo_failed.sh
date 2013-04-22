@@ -144,9 +144,9 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
       dataset_path=${HDFS_ADDRESS}${HDFS_INPUT_PATH}/$(basename ${EXP_TWITTER_DATA_LOCAL})
       # lazy-load dataset
       if ${HDFS_BIN}/hadoop fs -test -e ${dataset_path}; then
-         echo "Dataset 'twitter-icwsm2010' already exists. Skipping lazy-loading phase..."
+         echo "Dataset 'twitter-icwsm' already exists. Skipping lazy-loading phase..."
       else
-         echo "Lazy-loading dataset 'twitter-icwsm2010'."
+         echo "Lazy-loading dataset 'twitter-icwsm'."
          ./jp_load_data_local.sh ${EXP_TWITTER_DATA_LOCAL} ${dataset_path}
          if [[ $? != 0 ]]; then
             exit $?

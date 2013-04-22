@@ -24,7 +24,7 @@ EXP_TS_DGEN_HOME=${EXP_DGEN_HOME}/tera-gen
 # tpch-gen data generator home
 EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
 # Twitter ICWSM'2010 dataset local path
-EXP_TWITTER_DATA_LOCAL=/data/users/aalexandrov/twitter-icwsm2010/links-anon.txt
+EXP_TWITTER_DATA_LOCAL=/data/users/aalexandrov/twitter-icwsm
 # SNAP Orkut graph local path
 EXP_ORKUT_DATA_LOCAL=/data/users/aalexandrov/com-orkut.ungraph.txt
 # SNAP Pokec graph local path

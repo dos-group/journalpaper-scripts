@@ -44,8 +44,8 @@ echo "Creating fresh job output path ${HDFS_OUTPUT_PATH}"
 ${HDFS_BIN}/hadoop fs -mkdir ${HDFS_OUTPUT_PATH}
 
 # make sure that the initial solution set exists
-${HDFS_BIN}/hadoop fs -touchz ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/initialSolutionset
-${HDFS_BIN}/hadoop fs -touchz ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm2010/graph
+${HDFS_BIN}/hadoop fs -touchz ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm/initialSolutionset
+${HDFS_BIN}/hadoop fs -touchz ${HDFS_ADDRESS}${HDFS_INPUT_PATH}/twitter-icwsm/graph
 
 # start job
 echo "Starting job execution for experiment ${EXP_ID}."
