@@ -1,0 +1,50 @@
+03:53:33,560 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+03:57:14,034 ERROR eu.stratosphere.nephele.visualization.swt.SWTVisualizationGUI  - java.io.IOException: Call to cloud-11.dima.tu-berlin.de/130.149.21.15:6002 failed on local exception: java.io.EOFException
+	at eu.stratosphere.nephele.ipc.Client.wrapException(Client.java:738)
+	at eu.stratosphere.nephele.ipc.Client.call(Client.java:707)
+	at eu.stratosphere.nephele.ipc.RPC$Invoker.invoke(RPC.java:251)
+	at com.sun.proxy.$Proxy0.getRecentJobs(Unknown Source)
+	at eu.stratosphere.nephele.visualization.swt.SWTVisualizationGUI.run(SWTVisualizationGUI.java:509)
+	at org.eclipse.swt.widgets.Display.timerProc(Display.java:3766)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1487)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2969)
+	at eu.stratosphere.nephele.visualization.swt.SWTVisualization.main(SWTVisualization.java:97)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at eu.stratosphere.nephele.ipc.Client$Connection.receiveResponse(Client.java:499)
+	at eu.stratosphere.nephele.ipc.Client$Connection.run(Client.java:445)
+
+03:57:18,039 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 0 time(s).
+03:57:19,039 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 1 time(s).
+03:57:20,040 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 2 time(s).
+03:57:21,040 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 3 time(s).
+03:57:22,040 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 4 time(s).
+03:57:23,041 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 5 time(s).
+03:57:24,041 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 6 time(s).
+04:00:28,632 ERROR eu.stratosphere.nephele.visualization.swt.SWTVisualizationGUI  - java.io.IOException: Call to cloud-11.dima.tu-berlin.de/130.149.21.15:6002 failed on local exception: java.io.EOFException
+	at eu.stratosphere.nephele.ipc.Client.wrapException(Client.java:738)
+	at eu.stratosphere.nephele.ipc.Client.call(Client.java:707)
+	at eu.stratosphere.nephele.ipc.RPC$Invoker.invoke(RPC.java:251)
+	at com.sun.proxy.$Proxy0.getRecentJobs(Unknown Source)
+	at eu.stratosphere.nephele.visualization.swt.SWTVisualizationGUI.run(SWTVisualizationGUI.java:509)
+	at org.eclipse.swt.widgets.Display.timerProc(Display.java:3766)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1487)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2969)
+	at eu.stratosphere.nephele.visualization.swt.SWTVisualization.main(SWTVisualization.java:97)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at eu.stratosphere.nephele.ipc.Client$Connection.receiveResponse(Client.java:499)
+	at eu.stratosphere.nephele.ipc.Client$Connection.run(Client.java:445)
+
+04:00:32,636 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 0 time(s).
+04:00:33,636 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 1 time(s).
+04:00:34,637 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 2 time(s).
+04:00:35,637 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 3 time(s).
+04:00:36,638 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 4 time(s).
+04:00:37,638 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 5 time(s).
+04:00:38,638 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 6 time(s).
+04:00:39,639 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 7 time(s).
+04:00:40,639 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 8 time(s).
+04:00:41,640 INFO  eu.stratosphere.nephele.ipc.Client                            - Retrying connect to server: cloud-11.dima.tu-berlin.de/130.149.21.15:6002. Already tried 9 time(s).

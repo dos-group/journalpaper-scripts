@@ -1,0 +1,68 @@
+13/04/22 23:06:13 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+13/04/22 23:06:13 WARN job.GiraphConfigurationValidator: Output format vertex index type is not known
+13/04/22 23:06:13 WARN job.GiraphConfigurationValidator: Output format vertex value type is not known
+13/04/22 23:06:13 WARN job.GiraphConfigurationValidator: Output format edge value type is not known
+13/04/22 23:06:13 INFO job.GiraphJob: run: Since checkpointing is disabled (default), do not allow any task retries (setting mapred.map.max.attempts = 0, old value = 3)
+13/04/22 23:06:14 INFO mapred.JobClient: Running job: job_201304222302_0002
+13/04/22 23:06:15 INFO mapred.JobClient:  map 0% reduce 0%
+13/04/22 23:06:39 INFO mapred.JobClient:  map 23% reduce 0%
+13/04/22 23:06:40 INFO mapred.JobClient:  map 25% reduce 0%
+13/04/22 23:06:42 INFO mapred.JobClient:  map 36% reduce 0%
+13/04/22 23:06:43 INFO mapred.JobClient:  map 37% reduce 0%
+13/04/22 23:06:45 INFO mapred.JobClient:  map 49% reduce 0%
+13/04/22 23:06:48 INFO mapred.JobClient:  map 61% reduce 0%
+13/04/22 23:06:49 INFO mapred.JobClient:  map 62% reduce 0%
+13/04/22 23:06:51 INFO mapred.JobClient:  map 74% reduce 0%
+13/04/22 23:06:54 INFO mapred.JobClient:  map 86% reduce 0%
+13/04/22 23:06:55 INFO mapred.JobClient:  map 87% reduce 0%
+13/04/22 23:06:57 INFO mapred.JobClient:  map 99% reduce 0%
+13/04/22 23:09:17 INFO mapred.JobClient:  map 100% reduce 0%
+13/04/22 23:09:22 INFO mapred.JobClient: Job complete: job_201304222302_0002
+13/04/22 23:09:22 INFO mapred.JobClient: Counters: 40
+13/04/22 23:09:22 INFO mapred.JobClient:   Job Counters 
+13/04/22 23:09:22 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=18186574
+13/04/22 23:09:22 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+13/04/22 23:09:22 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+13/04/22 23:09:22 INFO mapred.JobClient:     Launched map tasks=120
+13/04/22 23:09:22 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+13/04/22 23:09:22 INFO mapred.JobClient:   Giraph Timers
+13/04/22 23:09:22 INFO mapred.JobClient:     Total (milliseconds)=156118
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 3 (milliseconds)=7391
+13/04/22 23:09:22 INFO mapred.JobClient:     Setup (milliseconds)=20299
+13/04/22 23:09:22 INFO mapred.JobClient:     Shutdown (milliseconds)=3552
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 7 (milliseconds)=1409
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 9 (milliseconds)=1334
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 8 (milliseconds)=1407
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 0 (milliseconds)=27554
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 4 (milliseconds)=2277
+13/04/22 23:09:22 INFO mapred.JobClient:     Input superstep (milliseconds)=42702
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 6 (milliseconds)=1537
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 5 (milliseconds)=1610
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 2 (milliseconds)=15917
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep 1 (milliseconds)=29120
+13/04/22 23:09:22 INFO mapred.JobClient:   Giraph Stats
+13/04/22 23:09:22 INFO mapred.JobClient:     Aggregate edges=3227854900
+13/04/22 23:09:22 INFO mapred.JobClient:     Superstep=10
+13/04/22 23:09:22 INFO mapred.JobClient:     Last checkpointed superstep=0
+13/04/22 23:09:22 INFO mapred.JobClient:     Current workers=119
+13/04/22 23:09:22 INFO mapred.JobClient:     Current master task partition=0
+13/04/22 23:09:22 INFO mapred.JobClient:     Sent messages=0
+13/04/22 23:09:22 INFO mapred.JobClient:     Aggregate finished vertices=51217936
+13/04/22 23:09:22 INFO mapred.JobClient:     Aggregate vertices=51217936
+13/04/22 23:09:22 INFO mapred.JobClient:   File Output Format Counters 
+13/04/22 23:09:22 INFO mapred.JobClient:     Bytes Written=0
+13/04/22 23:09:22 INFO mapred.JobClient:   FileSystemCounters
+13/04/22 23:09:22 INFO mapred.JobClient:     HDFS_BYTES_READ=32603142780
+13/04/22 23:09:22 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=2785850
+13/04/22 23:09:22 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=609365786
+13/04/22 23:09:22 INFO mapred.JobClient:   File Input Format Counters 
+13/04/22 23:09:22 INFO mapred.JobClient:     Bytes Read=0
+13/04/22 23:09:22 INFO mapred.JobClient:   Map-Reduce Framework
+13/04/22 23:09:22 INFO mapred.JobClient:     Map input records=120
+13/04/22 23:09:22 INFO mapred.JobClient:     Physical memory (bytes) snapshot=199548436480
+13/04/22 23:09:22 INFO mapred.JobClient:     Spilled Records=0
+13/04/22 23:09:22 INFO mapred.JobClient:     CPU time spent (ms)=19001280
+13/04/22 23:09:22 INFO mapred.JobClient:     Total committed heap usage (bytes)=172057296896
+13/04/22 23:09:22 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=306663899136
+13/04/22 23:09:22 INFO mapred.JobClient:     Map output records=0
+13/04/22 23:09:22 INFO mapred.JobClient:     SPLIT_RAW_BYTES=5280
