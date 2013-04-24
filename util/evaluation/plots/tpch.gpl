@@ -37,5 +37,5 @@ set size 0.75, 0.75
 set term postscript eps enhanced
 set output './target/tpch.eps'
 
-plot '../csv/q3-hdp_hive.csv' using 1:2 title "Hive"  ls 1 , \
-     '../csv/q3-str_pact.csv'  using 1:2 title "PACT"  ls 3
+plot '../csv/q3-hdp_hive.csv' using 1:2 title "Hive" ls 1 , \
+     '../csv/q3-str_pact.csv' using 1:2 title "PACT" ls 3

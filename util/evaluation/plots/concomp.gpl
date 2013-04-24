@@ -35,7 +35,7 @@ set size 0.75, 0.75
 #set term png
 #set output './target/gnuplot/PJ01_results.png'
 set term postscript eps enhanced
-set output './target/conncomp.eps'
+set output './target/concomp.eps'
 
-plot '../csv/cc-hdp_grph.csv' using 1:2 title "Giraph (Hadoop)"  ls 1 , \
-     '../csv/cc-str_iter.csv' using 1:2 title "PACT"  ls 3
+plot '../csv/cc-hdp_grph.csv' using 1:2 title "Giraph" ls 1 , \
+     '../csv/cc-str_iter.csv' using 1:2 title "PACT" ls 3
