@@ -11,31 +11,34 @@ set xtics nomirror
 set ytics nomirror
 
 # custom linestyles
-set style line 1 lt 1 pt 5 lw 3 ps 2 lc rgbcolor "#009900"
-set style line 2 lt 3 pt 5 lw 3 ps 2 lc rgbcolor "#009900"
-set style line 3 lt 1 pt 6 lw 3 ps 2 lc rgbcolor "#FF6600"
-set style line 4 lt 3 pt 6 lw 3 ps 2 lc rgbcolor "#FF6600"
-set style line 5 lt 1 pt 3 lw 3 ps 2 lc rgbcolor "#0000CC"
-set style line 6 lt 3 pt 3 lw 3 ps 2 lc rgbcolor "#0000CC"
-
+set style line 1 lt 1 pt 5 lw 2 ps 2 lc rgbcolor "#FFA100"
+set style line 2 lt 3 pt 5 lw 2 ps 2 lc rgbcolor "#FFA100"
+set style line 3 lt 1 pt 6 lw 2 ps 2 lc rgbcolor "#0F4DA8"
+set style line 4 lt 3 pt 6 lw 2 ps 2 lc rgbcolor "#0F4DA8"
+set style line 5 lt 1 pt 3 lw 2 ps 2 lc rgbcolor "#EC0033"
+set style line 6 lt 3 pt 3 lw 2 ps 2 lc rgbcolor "#EC0033"
+set style line 7 lt 1 pt 3 lw 2 ps 2 lc rgbcolor "#FFA100"
+set style line 8 lt 3 pt 3 lw 2 ps 2 lc rgbcolor "#FFA100"
 # linestyle for the frame box
-set style line 9 lt 1 pt 1 lw 1 lc rgbcolor "#cccccc"
+set style line 9 lt 1 pt 1 lw 1 ps 1 lc rgbcolor "#cccccc"
+
+# set scales and ranges for the x and y axis
 #set logscale y 2
-set yrange [1:320]
+set yrange [1:400]
 
 # key
 set key on right top Right spacing 1
+set key font ",18"
+set key spacing 1.2
 
 set tmargin 1
-set bmargin 4
+set bmargin 3
 
 set size 0.75, 0.75
 
 # output format
-#set term png
-#set output './target/gnuplot/PJ01_results.png'
 set term postscript eps enhanced
 set output './target/tpch.eps'
 
-plot '../csv/q3-hdp_hive.csv' using 1:2 title "Hive" ls 1 , \
-     '../csv/q3-str_pact.csv' using 1:2 title "PACT" ls 3
+plot '../csv/q3-str_pact.csv'  using 1:2 title "Stratosphere PACT"  ls 3, \
+     '../csv/q3-hdp_hive.csv' using 1:2 title "Hive"  ls 1
