@@ -1,0 +1,346 @@
+-------------------- PACT Execution Plan ---------------------
+{
+	"nodes": [
+
+	{
+		"id": 5,
+		"type": "source",
+		"contents": "hdfs://cloud-11.dima.tu-berlin.de:45010/benchmarks/input/tpch-sf0030/orders.tbl",
+		"parallelism": "120",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "[[0]]" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "[[0]]" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "44.62 M" },
+			{ "name": "Est. Cardinality/fields", "value": "[[0]->44620040]" },
+			{ "name": "Est. Output Size", "value": "713.92 MB" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "4.20 GB" },
+			{ "name": "Cumulative Network", "value": "0 B" },
+			{ "name": "Cumulative Disk I/O", "value": "4.20 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0]->1.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "16.0" }		]
+	},
+	{
+		"id": 4,
+		"type": "pact",
+		"pact": "Map",
+		"contents": "FilterO",
+		"parallelism": "120",
+		"predecessors": [
+			{"id": 5, "shippingStrategy": "Local Forward", "channelType": "memory"}		],
+		"global_properties": [
+			{ "name": "Partitioning", "value": "ANY" },
+			{ "name": "Partitioned on", "value": "[0]" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "[[0]]" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "[[0]]" },
+			{ "name": "Grouping", "value": "grouped" },
+			{ "name": "Grouped on", "value": "[0]" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "2.23 M" },
+			{ "name": "Est. Cardinality/fields", "value": "[[0]->2231002]" },
+			{ "name": "Est. Output Size", "value": "35.69 MB" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "0 B" },
+			{ "name": "Cumulative Network", "value": "0 B" },
+			{ "name": "Cumulative Disk I/O", "value": "4.20 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "0.05" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0]->1.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "16.0" }		]
+	},
+	{
+		"id": 7,
+		"type": "source",
+		"contents": "hdfs://cloud-11.dima.tu-berlin.de:45010/benchmarks/input/tpch-sf0030/customer.tbl",
+		"parallelism": "120",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "4.41 M" },
+			{ "name": "Est. Cardinality/fields", "value": "[[0]->4412910]" },
+			{ "name": "Est. Output Size", "value": "88.25 MB" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "604.07 MB" },
+			{ "name": "Cumulative Network", "value": "0 B" },
+			{ "name": "Cumulative Disk I/O", "value": "604.07 MB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0]->1.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "20.0" }		]
+	},
+	{
+		"id": 6,
+		"type": "pact",
+		"pact": "Map",
+		"contents": "FilterC",
+		"parallelism": "120",
+		"predecessors": [
+			{"id": 7, "shippingStrategy": "Local Forward", "channelType": "memory"}		],
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "220.64 K" },
+			{ "name": "Est. Cardinality/fields", "value": "[[0]->220645]" },
+			{ "name": "Est. Output Size", "value": "4.41 MB" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "0 B" },
+			{ "name": "Cumulative Network", "value": "0 B" },
+			{ "name": "Cumulative Disk I/O", "value": "604.07 MB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "0.05" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0]->1.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "20.0" }		]
+	},
+	{
+		"id": 3,
+		"type": "pact",
+		"pact": "Match",
+		"contents": "JoinOC",
+		"parallelism": "120",
+		"predecessors": [
+			{"id": 4, "side": "first", "shippingStrategy": "Partition on [1]", "channelType": "network"},
+			{"id": 6, "side": "second", "shippingStrategy": "Partition on [0]", "channelType": "network"}		],
+		"local_strategy": "Hybrid Hash (build: FilterC)",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "HASH_PARTITIONED" },
+			{ "name": "Partitioned on", "value": "[1]" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "220.64 K" },
+			{ "name": "Est. Cardinality/fields", "value": "[[1]->220645][[0, 1]->220645]" },
+			{ "name": "Est. Output Size", "value": "6.17 MB" }		],
+		"costs": [
+			{ "name": "Network", "value": "40.10 MB" },
+			{ "name": "Disk I/O", "value": "44.52 MB" },
+			{ "name": "Cumulative Network", "value": "40.10 MB" },
+			{ "name": "Cumulative Disk I/O", "value": "4.85 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0, 1]->1.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "28.0" }		]
+	},
+	{
+		"id": 9,
+		"type": "source",
+		"contents": "hdfs://cloud-11.dima.tu-berlin.de:45010/benchmarks/input/tpch-sf0030/lineitem.tbl",
+		"parallelism": "120",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "182.94 M" },
+			{ "name": "Est. Cardinality/fields", "value": "[[0]->45737436]" },
+			{ "name": "Est. Output Size", "value": "3.65 GB" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "21.56 GB" },
+			{ "name": "Cumulative Network", "value": "0 B" },
+			{ "name": "Cumulative Disk I/O", "value": "21.56 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0]->4.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "20.0" }		]
+	},
+	{
+		"id": 8,
+		"type": "pact",
+		"pact": "Map",
+		"contents": "FilterL",
+		"parallelism": "120",
+		"predecessors": [
+			{"id": 9, "shippingStrategy": "Local Forward", "channelType": "memory"}		],
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "9.14 M" },
+			{ "name": "Est. Cardinality/fields", "value": "[[0]->9147487]" },
+			{ "name": "Est. Output Size", "value": "182.94 MB" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "0 B" },
+			{ "name": "Cumulative Network", "value": "0 B" },
+			{ "name": "Cumulative Disk I/O", "value": "21.56 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "0.05" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0]->1.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "20.0" }		]
+	},
+	{
+		"id": 2,
+		"type": "pact",
+		"pact": "Match",
+		"contents": "JoinOLi",
+		"parallelism": "120",
+		"predecessors": [
+			{"id": 3, "side": "first", "shippingStrategy": "Partition on [0]", "channelType": "network"},
+			{"id": 8, "side": "second", "shippingStrategy": "Partition on [0]", "channelType": "network"}		],
+		"local_strategy": "Hybrid Hash (build: JoinOC)",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "HASH_PARTITIONED" },
+			{ "name": "Partitioned on", "value": "[0]" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "9.14 M" },
+			{ "name": "Est. Cardinality/fields", "value": "[[0]->9147487][[0, 1]->2286871]" },
+			{ "name": "Est. Output Size", "value": "329.30 MB" }		],
+		"costs": [
+			{ "name": "Network", "value": "189.12 MB" },
+			{ "name": "Disk I/O", "value": "195.30 MB" },
+			{ "name": "Cumulative Network", "value": "229.23 MB" },
+			{ "name": "Cumulative Disk I/O", "value": "26.62 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0, 1]->4.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "36.0" }		]
+	},
+	{
+		"id": 1,
+		"type": "pact",
+		"pact": "Reduce",
+		"contents": "AggLio",
+		"parallelism": "120",
+		"predecessors": [
+			{"id": 2, "shippingStrategy": "Local Forward", "channelType": "memory"}		],
+		"local_strategy": "Sort with Combiner",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "(unknown)" },
+			{ "name": "Est. Cardinality/fields", "value": "(unknown)" },
+			{ "name": "Est. Output Size", "value": "(unknown)" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "658.61 MB" },
+			{ "name": "Cumulative Network", "value": "229.23 MB" },
+			{ "name": "Cumulative Disk I/O", "value": "27.27 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "1.0" },
+			{ "name": "Avg. Values/Distinct fields", "value": "[[0, 1, 2]->1.0]" },
+			{ "name": "Avg. Width (bytes)", "value": "30.0" }		]
+	},
+	{
+		"id": 0,
+		"type": "sink",
+		"contents": "hdfs://cloud-11.dima.tu-berlin.de:45010/benchmarks/output/tpch/q3/result.tbl",
+		"parallelism": "120",
+		"predecessors": [
+			{"id": 1, "shippingStrategy": "Local Forward", "channelType": "memory"}		],
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "(unknown)" },
+			{ "name": "Est. Cardinality/fields", "value": "(unknown)" },
+			{ "name": "Est. Output Size", "value": "(unknown)" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "0 B" },
+			{ "name": "Cumulative Network", "value": "229.23 MB" },
+			{ "name": "Cumulative Disk I/O", "value": "27.27 GB" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "(none)" },
+			{ "name": "Avg. Width (bytes)", "value": "(none)" }		]
+	}
+	]
+}
+--------------------------------------------------------------

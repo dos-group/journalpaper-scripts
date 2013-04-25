@@ -1,0 +1,221 @@
+ABSTRACT SYNTAX TREE:
+  (TOK_QUERY (TOK_FROM (TOK_JOIN (TOK_JOIN (TOK_TABREF (TOK_TABNAME customer) c) (TOK_TABREF (TOK_TABNAME orders) o) (= (. (TOK_TABLE_OR_COL c) c_custkey) (. (TOK_TABLE_OR_COL o) o_custkey))) (TOK_TABREF (TOK_TABNAME lineitem) l) (= (. (TOK_TABLE_OR_COL l) l_orderkey) (. (TOK_TABLE_OR_COL o) o_orderkey)))) (TOK_INSERT (TOK_DESTINATION (TOK_DIR '/benchmarks/output')) (TOK_SELECT (TOK_SELEXPR (. (TOK_TABLE_OR_COL l) l_orderkey)) (TOK_SELEXPR (TOK_FUNCTION SUM (* (. (TOK_TABLE_OR_COL l) l_extendedprice) (- 1 (. (TOK_TABLE_OR_COL l) l_discount)))) revenue) (TOK_SELEXPR (. (TOK_TABLE_OR_COL o) o_orderdate)) (TOK_SELEXPR (. (TOK_TABLE_OR_COL o) o_shippriority))) (TOK_WHERE (AND (AND (= (. (TOK_TABLE_OR_COL c) c_mktsegment) 'HOUSEHOLD') (< (. (TOK_TABLE_OR_COL o) o_orderdate) '1995-03-15')) (> (. (TOK_TABLE_OR_COL l) l_shipdate) '1995-03-15'))) (TOK_GROUPBY (. (TOK_TABLE_OR_COL l) l_orderkey) (. (TOK_TABLE_OR_COL o) o_orderdate) (. (TOK_TABLE_OR_COL o) o_shippriority))))
+
+STAGE DEPENDENCIES:
+  Stage-1 is a root stage
+  Stage-2 depends on stages: Stage-1
+  Stage-3 depends on stages: Stage-2
+  Stage-0 depends on stages: Stage-3
+
+STAGE PLANS:
+  Stage: Stage-1
+    Map Reduce
+      Alias -> Map Operator Tree:
+        c 
+          TableScan
+            alias: c
+            Filter Operator
+              predicate:
+                  expr: (c_mktsegment = 'HOUSEHOLD')
+                  type: boolean
+              Reduce Output Operator
+                key expressions:
+                      expr: c_custkey
+                      type: bigint
+                sort order: +
+                Map-reduce partition columns:
+                      expr: c_custkey
+                      type: bigint
+                tag: 0
+                value expressions:
+                      expr: c_mktsegment
+                      type: string
+        o 
+          TableScan
+            alias: o
+            Filter Operator
+              predicate:
+                  expr: (o_orderdate < '1995-03-15')
+                  type: boolean
+              Reduce Output Operator
+                key expressions:
+                      expr: o_custkey
+                      type: bigint
+                sort order: +
+                Map-reduce partition columns:
+                      expr: o_custkey
+                      type: bigint
+                tag: 1
+                value expressions:
+                      expr: o_orderkey
+                      type: bigint
+                      expr: o_orderdate
+                      type: string
+                      expr: o_shippriority
+                      type: int
+      Reduce Operator Tree:
+        Join Operator
+          condition map:
+               Inner Join 0 to 1
+          condition expressions:
+            0 {VALUE._col6}
+            1 {VALUE._col0} {VALUE._col4} {VALUE._col7}
+          handleSkewJoin: false
+          outputColumnNames: _col6, _col10, _col14, _col17
+          File Output Operator
+            compressed: false
+            GlobalTableId: 0
+            table:
+                input format: org.apache.hadoop.mapred.SequenceFileInputFormat
+                output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
+
+  Stage: Stage-2
+    Map Reduce
+      Alias -> Map Operator Tree:
+        $INTNAME 
+            Reduce Output Operator
+              key expressions:
+                    expr: _col10
+                    type: bigint
+              sort order: +
+              Map-reduce partition columns:
+                    expr: _col10
+                    type: bigint
+              tag: 0
+              value expressions:
+                    expr: _col6
+                    type: string
+                    expr: _col14
+                    type: string
+                    expr: _col17
+                    type: int
+        l 
+          TableScan
+            alias: l
+            Filter Operator
+              predicate:
+                  expr: (l_shipdate > '1995-03-15')
+                  type: boolean
+              Reduce Output Operator
+                key expressions:
+                      expr: l_orderkey
+                      type: bigint
+                sort order: +
+                Map-reduce partition columns:
+                      expr: l_orderkey
+                      type: bigint
+                tag: 1
+                value expressions:
+                      expr: l_orderkey
+                      type: bigint
+                      expr: l_extendedprice
+                      type: float
+                      expr: l_discount
+                      type: float
+                      expr: l_shipdate
+                      type: string
+      Reduce Operator Tree:
+        Join Operator
+          condition map:
+               Inner Join 0 to 1
+          condition expressions:
+            0 {VALUE._col6} {VALUE._col14} {VALUE._col17}
+            1 {VALUE._col0} {VALUE._col5} {VALUE._col6} {VALUE._col10}
+          handleSkewJoin: false
+          outputColumnNames: _col6, _col14, _col17, _col21, _col26, _col27, _col31
+          Select Operator
+            expressions:
+                  expr: _col21
+                  type: bigint
+                  expr: _col14
+                  type: string
+                  expr: _col17
+                  type: int
+                  expr: _col26
+                  type: float
+                  expr: _col27
+                  type: float
+            outputColumnNames: _col21, _col14, _col17, _col26, _col27
+            Group By Operator
+              aggregations:
+                    expr: sum((_col26 * (1 - _col27)))
+              bucketGroup: false
+              keys:
+                    expr: _col21
+                    type: bigint
+                    expr: _col14
+                    type: string
+                    expr: _col17
+                    type: int
+              mode: hash
+              outputColumnNames: _col0, _col1, _col2, _col3
+              File Output Operator
+                compressed: false
+                GlobalTableId: 0
+                table:
+                    input format: org.apache.hadoop.mapred.SequenceFileInputFormat
+                    output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
+
+  Stage: Stage-3
+    Map Reduce
+      Alias -> Map Operator Tree:
+        hdfs://cloud-11.dima.tu-berlin.de:45010/tmp/hive-hadoop/hive_2013-04-25_19-56-09_250_2501539683468878467/-mr-10002 
+            Reduce Output Operator
+              key expressions:
+                    expr: _col0
+                    type: bigint
+                    expr: _col1
+                    type: string
+                    expr: _col2
+                    type: int
+              sort order: +++
+              Map-reduce partition columns:
+                    expr: _col0
+                    type: bigint
+                    expr: _col1
+                    type: string
+                    expr: _col2
+                    type: int
+              tag: -1
+              value expressions:
+                    expr: _col3
+                    type: double
+      Reduce Operator Tree:
+        Group By Operator
+          aggregations:
+                expr: sum(VALUE._col0)
+          bucketGroup: false
+          keys:
+                expr: KEY._col0
+                type: bigint
+                expr: KEY._col1
+                type: string
+                expr: KEY._col2
+                type: int
+          mode: mergepartial
+          outputColumnNames: _col0, _col1, _col2, _col3
+          Select Operator
+            expressions:
+                  expr: _col0
+                  type: bigint
+                  expr: _col3
+                  type: double
+                  expr: _col1
+                  type: string
+                  expr: _col2
+                  type: int
+            outputColumnNames: _col0, _col1, _col2, _col3
+            File Output Operator
+              compressed: false
+              GlobalTableId: 1
+              table:
+                  input format: org.apache.hadoop.mapred.TextInputFormat
+                  output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+
+  Stage: Stage-0
+    Move Operator
+      files:
+          hdfs directory: true
+          destination: /benchmarks/output
+
+
