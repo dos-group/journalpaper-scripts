@@ -1,6 +1,6 @@
 # labels 
-set xlabel "DOP" font "Helvetica, 22"
-set ylabel "execution time (seconds)" font "Helvetica, 22"
+set xlabel "DOP" font "Helvetica, 20"
+set ylabel "execution time (seconds)" font "Helvetica, 20"
 
 # base setup
 
@@ -34,11 +34,11 @@ set key spacing 1.2
 set tmargin 1
 set bmargin 3
 
-set size 0.75, 0.75
-
 # output format
 set term postscript eps enhanced
 set output './target/concomp.eps'
+
+set size 0.75, 0.75
 
 plot '../csv/cc-str_iter.csv' using 1:2 title "Stratosphere PACT" ls 3, \
      '../csv/cc-hdp_grph.csv' using 1:2 title "Giraph" ls 1
