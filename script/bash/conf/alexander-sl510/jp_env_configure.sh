@@ -24,11 +24,13 @@ EXP_TS_DGEN_HOME=${EXP_DGEN_HOME}/tera-gen
 # tpch-gen data generator home
 EXP_TPCH_DGEN_HOME=${EXP_DGEN_HOME}/tpch-gen
 # Twitter ICWSM'2010 dataset local path
-EXP_TWITTER_DATA_LOCAL=/data/users/aalexandrov/twitter-icwsm
+EXP_TWITTER_DATA_LOCAL=/data/real/twitter-icwsm
 # SNAP Orkut graph local path
-EXP_ORKUT_DATA_LOCAL=/data/users/aalexandrov/com-orkut.ungraph.txt
+EXP_ORKUT_DATA_LOCAL=/data/real/com-orkut.ungraph.txt
 # SNAP Pokec graph local path
-EXP_POKEC_DATA_LOCAL=/data/users/aalexandrov/soc-pokec-relationships.txt
+EXP_POKEC_DATA_LOCAL=/data/real/soc-pokec-relationships.ungraph.txt
+# SNAP Youtube graph local path
+EXP_YOUTUBE_DATA_LOCAL=/data/real/com-youtube.ungraph.txt
 
 ################ HDFS
 

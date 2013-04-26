@@ -28,7 +28,9 @@ EXP_TWITTER_DATA_LOCAL=/data/users/aalexandrov/twitter-icwsm
 # SNAP Orkut graph local path
 EXP_ORKUT_DATA_LOCAL=/data/users/aalexandrov/com-orkut.ungraph.txt
 # SNAP Pokec graph local path
-EXP_POKEC_DATA_LOCAL=/data/users/aalexandrov/soc-pokec-relationships.txt
+EXP_POKEC_DATA_LOCAL=/data/users/aalexandrov/soc-pokec-relationships.ungraph.txt
+# SNAP Youtube graph local path
+EXP_YOUTUBE_DATA_LOCAL=/data/users/aalexandrov/com-youtube.ungraph.txt
 
 ################ HDFS
 
