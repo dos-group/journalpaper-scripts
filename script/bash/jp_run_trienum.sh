@@ -32,8 +32,8 @@ if [[ $? != 0 ]]; then
 fi
 
 # repeat Hadoop runs
-#execIdPrefix=`printf "te_pokec-hdp_mapr-sf0037-dop%04d" ${TE_NODE_COUNT}`
-#./jp_run_repeated.sh HDP_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-trienum-hadoop.jar -a ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
+execIdPrefix=`printf "te_pokec-hdp_mapr-sf0037-dop%04d" ${TE_NODE_COUNT}`
+./jp_run_repeated.sh HDP_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-trienum-hadoop.jar -a ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "te_pokec-str_pact-sf0037-dop%04d" ${TE_NODE_COUNT}`
