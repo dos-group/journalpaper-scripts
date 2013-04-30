@@ -70,7 +70,7 @@ HDP_MAPR_PID=/tmp
 # host name of the Hadoop MapReduce jobtracker
 HDP_MAPR_JOBTRACKER_HOST=alexander-sl510
 # number of map slots per tasktracker
-HDP_MAPR_MAP_SLOTS_PER_SLAVE=2
+HDP_MAPR_MAP_SLOTS_PER_SLAVE=4
 
 ################ STRATOSPHERE
 

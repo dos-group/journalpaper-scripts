@@ -8,10 +8,10 @@
 ./jp_sut_deploy.sh ${STR_PACT_TAR_ITERATIONS} ${STR_PACT_HOME}
 
 # 10 nodes
-./jp_run_concomp.sh 10
+./jp_run_cc.sh 10
 # 15 nodes
-./jp_run_concomp.sh 15
+./jp_run_cc.sh 15
 # 20 nodes
-./jp_run_concomp.sh 20
+./jp_run_cc.sh 20
 # 25 nodes
-./jp_run_concomp.sh 25
+./jp_run_cc.sh 25

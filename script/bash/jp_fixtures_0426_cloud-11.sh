@@ -8,12 +8,12 @@
 ./jp_sut_deploy.sh ${STR_PACT_TAR} ${STR_PACT_HOME}
 
 #  25 nodes
-./jp_run_trienum.sh 25
+./jp_run_te.sh 25
 # 20 nodes
-./jp_run_trienum.sh 20
+./jp_run_te.sh 20
 # 15 nodes
-./jp_run_trienum.sh 15
+./jp_run_te.sh 15
 # 10 nodes
-./jp_run_trienum.sh 10
+./jp_run_te.sh 10
 #  5 nodes
-./jp_run_trienum.sh  5
+./jp_run_te.sh  5

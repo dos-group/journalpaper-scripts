@@ -33,6 +33,7 @@ mkdir -p ${EXP_LOG_DIR}/${EXP_ID}
 errFile=${EXP_LOG_DIR}/${EXP_ID}/run.err
 outFile=${EXP_LOG_DIR}/${EXP_ID}/run.out
 logFile=${EXP_LOG_DIR}/${EXP_ID}/run.log
+plnFile=${EXP_LOG_DIR}/${EXP_ID}/run.pln
 
 # make sure that the output folder is empty
 if ${HDFS_BIN}/hadoop fs -test -e ${HDFS_OUTPUT_PATH}; then
@@ -46,6 +47,7 @@ fi
 # start job
 echo "Starting job execution for experiment ${EXP_ID}."
 startTS=`date +%s`
+${STR_PACT_BIN}/pact-client.sh info -p -j $JOB_STRING > $plnFile 2> $plnFile
 ${STR_PACT_BIN}/pact-client.sh run -w -j $JOB_STRING > $outFile 2> $errFile
 
 if [[ $? == 0 ]]; then

@@ -49,7 +49,7 @@ execIdPrefix=`printf "q3-hdp_hive-sf%04d-dop%04d" ${TPCH_SCALING_FACTOR} ${TPCH_
 
 # repeat PACT runs
 execIdPrefix=`printf "q3-str_pact-sf%04d-dop%04d" ${TPCH_SCALING_FACTOR} ${TPCH_NODE_COUNT}`
-./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-tpch_Q3-pact.jar -a ${TPCH_NODE_COUNT} ${TPCH_IN} ${TPCH_OUT}"
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-tpch_q3-str_pact.jar -a ${TPCH_NODE_COUNT} ${TPCH_IN} ${TPCH_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh

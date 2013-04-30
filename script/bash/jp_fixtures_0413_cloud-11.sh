@@ -15,10 +15,10 @@
 #./jp_run_terasort.sh  10
 # 15 nodes
 #./jp_run_wordcount.sh 15
-./jp_run_terasort.sh  15
+./jp_run_ts.sh  15
 # 20 nodes
-#./jp_run_wordcount.sh 20
-#./jp_run_terasort.sh  20
+#./jp_run_wc.sh 20
+#./jp_run_ts.sh  20
 # 25 nodes
-#./jp_run_wordcount.sh 25
-#./jp_run_terasort.sh  25
+#./jp_run_wc.sh 25
+#./jp_run_ts.sh  25

@@ -27,21 +27,21 @@ if [[ $? != 0 ]]; then
 fi
 
 # generate wordcount input data
-./jp_load_data_wordcount.sh ${WC_SCALING_FACTOR} ${WC_NODE_COUNT} ${WC_DGEN_ID}
+./jp_load_data_wc.sh ${WC_SCALING_FACTOR} ${WC_NODE_COUNT} ${WC_DGEN_ID}
 if [[ $? != 0 ]]; then
    exit $?
 fi
 
 # repeat Hadoop runs
 execIdPrefix=`printf "wc-hdp_mapr-sf%04d-dop%04d" ${WC_SCALING_FACTOR} ${WC_NODE_COUNT}`
-./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-hadoop.jar ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
+./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wc-hdp_mapr.jar ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
 
 # repeat Stratosphere runs
 execIdPrefix=`printf "wc-str_pact-sf%04d-dop%04d" ${WC_SCALING_FACTOR} ${WC_NODE_COUNT}`
-./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wc-str_pact.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
 # variant using Java StringTokenizer 
 execIdPrefix=`printf "wc_jst-str_pact-sf%04d-dop%04d" ${WC_SCALING_FACTOR} ${WC_NODE_COUNT}`
-./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wordcount-pact-jst.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-wc_jst-str_pact.jar -a ${WC_NODE_COUNT} ${WC_IN} ${WC_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh
