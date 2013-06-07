@@ -30,8 +30,8 @@ execIdPrefix=`printf "ts_otf-hdp_mapr-sf%04d-dop%04d" ${TS_SCALING_FACTOR} ${TS_
 ./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-ts_otf-hdp_mapr.jar ${TS_NODE_COUNT} ${TS_NUM_ROWS} ${TS_OUT}"
 
 # repeat Stratosphere runs
-#execIdPrefix=`printf "ts_otf-str_pact-sf%04d-dop%04d" ${TS_SCALING_FACTOR} ${TS_NODE_COUNT}`
-#./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-ts_otf-str_pact.jar -a ${TS_NODE_COUNT} ${TS_NUM_ROWS} ${TS_OUT}"
+execIdPrefix=`printf "ts_otf-str_pact-sf%04d-dop%04d" ${TS_SCALING_FACTOR} ${TS_NODE_COUNT}`
+./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-ts_otf-str_pact.jar -a ${TS_NODE_COUNT} ${TS_NUM_ROWS} ${TS_OUT}"
 
 # stop HDFS
-#./jp_hdfs_clean_stop.sh
+./jp_hdfs_clean_stop.sh
