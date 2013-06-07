@@ -1,0 +1,267 @@
+22:46:09,407 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+22:46:09,444 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Reading location of job manager from configuration
+22:46:09,454 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Determined address of job manager to be cloud-11.dima.tu-berlin.de/130.149.21.15:6002
+22:46:09,462 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Announcing connection information cloud-18 to job manager
+22:46:09,526 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+22:46:09,527 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6122: starting
+22:46:09,528 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6122: starting
+22:46:10,640 INFO  eu.stratosphere.nephele.taskmanager.bufferprovider.GlobalBufferPool  - Initialized global buffer pool with 32768 buffers with a size 32768 bytes each
+22:46:10,660 INFO  eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Initialized byte buffered channel manager with sender-side spilling disabled
+22:46:10,669 INFO  eu.stratosphere.nephele.instance.HardwareDescriptionFactory   - Found Tenured Gen pool (max: 24051843072, used: 0)
+22:46:10,670 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Initializing memory manager with 22528 megabytes of memory
+22:46:41,988 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (51/200)
+22:46:41,988 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (151/200)
+22:46:41,988 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (176/200)
+22:46:41,988 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Canonize edges (1/25)
+22:46:41,988 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (1/200)
+22:46:41,988 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (26/200)
+22:46:41,989 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (76/200)
+22:46:41,989 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (101/200)
+22:46:41,988 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (126/200)
+22:46:41,995 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (176/200)
+22:46:41,993 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (151/200)
+22:46:41,992 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (51/200)
+22:46:41,997 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (76/200)
+22:46:41,998 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (26/200)
+22:46:42,000 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (1/200)
+22:46:42,001 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Canonize edges (1/25)
+22:46:42,003 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (126/200)
+22:46:42,005 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (101/200)
+22:46:46,259 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (1/25)
+22:46:46,261 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (1/25)
+22:46:47,174 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (151/200)
+22:46:47,174 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (151/200)
+22:46:47,204 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (76/200)
+22:46:47,204 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (76/200)
+22:46:47,223 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (26/200)
+22:46:47,223 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (26/200)
+22:46:47,279 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (176/200)
+22:46:47,279 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (176/200)
+22:46:47,293 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (126/200)
+22:46:47,294 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (126/200)
+22:46:47,818 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (8/200)
+22:46:47,818 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (8/200)
+22:46:47,820 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (8/200)
+22:46:47,822 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (8/200)
+22:46:49,758 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (1/200)
+22:46:49,758 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (1/200)
+22:46:49,760 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (1/200)
+22:46:49,761 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (1/200)
+22:46:49,784 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (51/200)
+22:46:49,784 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (51/200)
+22:46:49,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (6/200)
+22:46:49,809 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (6/200)
+22:46:49,811 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (6/200)
+22:46:49,813 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (6/200)
+22:46:49,821 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (101/200)
+22:46:49,822 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (101/200)
+22:46:49,841 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (3/200)
+22:46:49,842 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (3/200)
+22:46:49,844 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (3/200)
+22:46:49,845 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (3/200)
+22:46:50,303 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (2/200)
+22:46:50,304 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (2/200)
+22:46:50,305 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (2/200)
+22:46:50,306 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (2/200)
+22:46:50,389 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (4/200)
+22:46:50,390 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (4/200)
+22:46:50,391 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (4/200)
+22:46:50,392 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (4/200)
+22:46:50,427 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (1/200)
+22:46:50,427 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (1/200)
+22:46:50,993 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (5/200)
+22:46:50,994 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (5/200)
+22:46:50,995 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (5/200)
+22:46:50,996 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (5/200)
+22:46:51,649 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (7/200)
+22:46:51,649 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (7/200)
+22:46:51,651 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (7/200)
+22:46:51,652 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (7/200)
+22:46:56,387 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Canonize edges (1/25)
+22:46:56,387 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Canonize edges (1/25)
+22:46:56,401 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (51/200)
+22:46:56,419 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (26/200)
+22:46:56,419 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (76/200)
+22:46:56,420 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (126/200)
+22:46:56,420 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (151/200)
+22:46:56,420 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (176/200)
+22:46:56,440 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (1/200)
+22:46:56,450 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to FINISHED for task Input Edges (101/200)
+22:47:19,698 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (1/25)
+22:47:19,698 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (1/25)
+22:49:29,187 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_8991099252815121705_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37113 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:49:29,195 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_8991099252815121705_1722 bad datanode[0] 130.149.21.22:45020
+22:49:29,196 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_8991099252815121705_1722 in pipeline 130.149.21.22:45020, 130.149.21.28:45020, 130.149.21.21:45020: bad datanode 130.149.21.22:45020
+22:49:47,631 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-4623707104945711752_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37118 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:49:47,632 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4623707104945711752_1722 bad datanode[0] 130.149.21.22:45020
+22:49:47,633 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4623707104945711752_1722 in pipeline 130.149.21.22:45020, 130.149.21.23:45020, 130.149.21.64:45020: bad datanode 130.149.21.22:45020
+22:49:57,918 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_6892121072164552144_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37100 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:49:57,919 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6892121072164552144_1722 bad datanode[0] 130.149.21.22:45020
+22:49:57,920 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6892121072164552144_1722 in pipeline 130.149.21.22:45020, 130.149.21.30:45020, 130.149.21.23:45020: bad datanode 130.149.21.22:45020
+22:50:02,893 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_2785804090650998830_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37116 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:50:02,894 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_2785804090650998830_1722 bad datanode[0] 130.149.21.22:45020
+22:50:02,895 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_2785804090650998830_1722 in pipeline 130.149.21.22:45020, 130.149.21.2:45020, 130.149.21.26:45020: bad datanode 130.149.21.22:45020
+22:50:04,800 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-5020180001036868946_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37106 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:50:04,801 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-5020180001036868946_1722 bad datanode[0] 130.149.21.22:45020
+22:50:04,802 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-5020180001036868946_1722 in pipeline 130.149.21.22:45020, 130.149.21.27:45020, 130.149.21.17:45020: bad datanode 130.149.21.22:45020
+22:50:06,823 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-9113761953717570774_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37123 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:50:06,825 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-9113761953717570774_1722 bad datanode[0] 130.149.21.22:45020
+22:50:06,826 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-9113761953717570774_1722 in pipeline 130.149.21.22:45020, 130.149.21.25:45020, 130.149.21.64:45020: bad datanode 130.149.21.22:45020
+22:50:11,932 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_6198274108389002975_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37104 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:50:11,934 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6198274108389002975_1722 bad datanode[0] 130.149.21.22:45020
+22:50:11,935 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6198274108389002975_1722 in pipeline 130.149.21.22:45020, 130.149.21.64:45020, 130.149.21.30:45020: bad datanode 130.149.21.22:45020
+22:50:12,139 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-4958588110420588518_1722java.net.SocketTimeoutException: 69000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:37110 remote=/130.149.21.22:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:50:12,140 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4958588110420588518_1722 bad datanode[0] 130.149.21.22:45020
+22:50:12,142 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4958588110420588518_1722 in pipeline 130.149.21.22:45020, 130.149.21.18:45020, 130.149.21.66:45020: bad datanode 130.149.21.22:45020
+22:50:35,302 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_8991099252815121705_1762java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:49514 remote=/130.149.21.28:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:50:35,303 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_8991099252815121705_1762 bad datanode[0] 130.149.21.28:45020
+22:50:35,304 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_8991099252815121705_1762 in pipeline 130.149.21.28:45020, 130.149.21.21:45020: bad datanode 130.149.21.28:45020
+22:50:53,727 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-4623707104945711752_1798java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:42907 remote=/130.149.21.23:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:50:53,728 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4623707104945711752_1798 bad datanode[0] 130.149.21.23:45020
+22:50:53,728 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4623707104945711752_1798 in pipeline 130.149.21.23:45020, 130.149.21.64:45020: bad datanode 130.149.21.23:45020
+22:51:03,987 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_6892121072164552144_1817java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:60387 remote=/130.149.21.30:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:51:03,988 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6892121072164552144_1817 bad datanode[0] 130.149.21.30:45020
+22:51:03,988 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6892121072164552144_1817 in pipeline 130.149.21.30:45020, 130.149.21.23:45020: bad datanode 130.149.21.30:45020
+22:51:08,990 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_2785804090650998830_1824java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:36728 remote=/130.149.21.2:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:51:08,991 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_2785804090650998830_1824 bad datanode[0] 130.149.21.2:45020
+22:51:08,992 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_2785804090650998830_1824 in pipeline 130.149.21.2:45020, 130.149.21.26:45020: bad datanode 130.149.21.2:45020
+22:51:10,899 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-5020180001036868946_1831java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:38703 remote=/130.149.21.27:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:51:10,900 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-5020180001036868946_1831 bad datanode[0] 130.149.21.27:45020
+22:51:10,900 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-5020180001036868946_1831 in pipeline 130.149.21.27:45020, 130.149.21.17:45020: bad datanode 130.149.21.27:45020
+22:51:12,871 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-9113761953717570774_1841java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:54185 remote=/130.149.21.25:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:51:12,872 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-9113761953717570774_1841 bad datanode[0] 130.149.21.25:45020
+22:51:12,873 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-9113761953717570774_1841 in pipeline 130.149.21.25:45020, 130.149.21.64:45020: bad datanode 130.149.21.25:45020
+22:51:18,067 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_6198274108389002975_1865java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:38776 remote=/130.149.21.64:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:51:18,069 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6198274108389002975_1865 bad datanode[0] 130.149.21.64:45020
+22:51:18,069 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_6198274108389002975_1865 in pipeline 130.149.21.64:45020, 130.149.21.30:45020: bad datanode 130.149.21.64:45020
+22:51:18,238 WARN  org.apache.hadoop.hdfs.DFSClient                              - DFSOutputStream ResponseProcessor exception  for block blk_-4958588110420588518_1866java.net.SocketTimeoutException: 66000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/130.149.21.22:43748 remote=/130.149.21.18:45020]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:155)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:128)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readLong(DataInputStream.java:416)
+	at org.apache.hadoop.hdfs.protocol.DataTransferProtocol$PipelineAck.readFields(DataTransferProtocol.java:124)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$ResponseProcessor.run(DFSClient.java:2582)
+
+22:51:18,239 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4958588110420588518_1866 bad datanode[0] 130.149.21.18:45020
+22:51:18,239 WARN  org.apache.hadoop.hdfs.DFSClient                              - Error Recovery for block blk_-4958588110420588518_1866 in pipeline 130.149.21.18:45020, 130.149.21.66:45020: bad datanode 130.149.21.18:45020

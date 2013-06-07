@@ -4,7 +4,8 @@
 
 DIR_RESULTS=../../result/final
 DOP="40 80 120 160 200"
-EXPERIMENT="wc-str_pact wc_jst-str_pact wc-hdp_mapr ts-hdp_mapr ts-str_pact q3-hdp_hive q3-str_pact cc-hdp_grph cc-str_iter"
+#EXPERIMENT="wc-str_pact wc_jst-str_pact wc-hdp_mapr ts-hdp_mapr ts-str_pact q3-hdp_hive q3-str_pact cc-hdp_grph cc-str_iter"
+EXPERIMENT="ts_otf-hdp_mapr ts_otf-str_pact"
 
 for exp in $EXPERIMENT; do
 	OUTPUT_FILE="csv/$exp.csv"

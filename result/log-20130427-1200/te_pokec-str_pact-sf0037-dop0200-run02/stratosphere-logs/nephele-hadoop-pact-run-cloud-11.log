@@ -1,0 +1,26 @@
+22:45:21,064 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+22:45:21,160 INFO  eu.stratosphere.pact.compiler.PactCompiler                    - No default parallelism specified. Using default parallelism of 25 (One task per instance)
+22:45:51,721 INFO  eu.stratosphere.nephele.client.JobClient                      - java.net.ConnectException: Call to /130.149.21.30:6122 failed on connection exception: java.net.ConnectException: Connection refused
+	at eu.stratosphere.nephele.ipc.Client.wrapException(Client.java:732)
+	at eu.stratosphere.nephele.ipc.Client.call(Client.java:707)
+	at eu.stratosphere.nephele.ipc.RPC$Invoker.invoke(RPC.java:251)
+	at com.sun.proxy.$Proxy2.submitTasks(Unknown Source)
+	at eu.stratosphere.nephele.instance.AbstractInstance.submitTasks(AbstractInstance.java:232)
+	at eu.stratosphere.nephele.jobmanager.JobManager$8.run(JobManager.java:1239)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at eu.stratosphere.nephele.net.NetUtils.connect(NetUtils.java:284)
+	at eu.stratosphere.nephele.ipc.Client$Connection.setupIOstreams(Client.java:309)
+	at eu.stratosphere.nephele.ipc.Client$Connection.access$1200(Client.java:170)
+	at eu.stratosphere.nephele.ipc.Client.getConnection(Client.java:774)
+	at eu.stratosphere.nephele.ipc.Client.call(Client.java:692)
+	... 7 more
+

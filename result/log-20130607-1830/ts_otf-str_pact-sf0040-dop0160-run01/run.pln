@@ -1,0 +1,73 @@
+-------------------- PACT Execution Plan ---------------------
+{
+	"nodes": [
+
+	{
+		"id": 1,
+		"type": "source",
+		"contents": "Terasort generator",
+		"parallelism": "160",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "NONE" },
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "(none)" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "(unknown)" },
+			{ "name": "Est. Cardinality/fields", "value": "(unknown)" },
+			{ "name": "Est. Output Size", "value": "(unknown)" }		],
+		"costs": [
+			{ "name": "Network", "value": "0 B" },
+			{ "name": "Disk I/O", "value": "(unknown)" },
+			{ "name": "Cumulative Network", "value": "0 B" },
+			{ "name": "Cumulative Disk I/O", "value": "(unknown)" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "(none)" },
+			{ "name": "Avg. Width (bytes)", "value": "(none)" }		]
+	},
+	{
+		"id": 0,
+		"type": "sink",
+		"contents": "Data Sink",
+		"parallelism": "160",
+		"predecessors": [
+			{"id": 1, "shippingStrategy": "Partition (range) on [0]", "channelType": "network"}		],
+		"local_strategy": "Sort",
+		"global_properties": [
+			{ "name": "Partitioning", "value": "RANGE_PARTITIONED" },
+			{ "name": "Partitioned on", "value": "[0]" },
+			{ "name": "Order", "value": "[0:eu.stratosphere.journalpaper.terasort.pact.otf.TeraKey:ASCENDING]" },
+			{ "name": "Uniqueness", "value": "not unique" }
+		],
+		"local_properties": [
+			{ "name": "Order", "value": "[0:eu.stratosphere.journalpaper.terasort.pact.otf.TeraKey:ASCENDING]" },
+			{ "name": "Uniqueness", "value": "not unique" },
+			{ "name": "Grouping", "value": "not grouped" }
+		],
+		"properties": [
+			{ "name": "Est. Cardinality", "value": "(unknown)" },
+			{ "name": "Est. Cardinality/fields", "value": "(unknown)" },
+			{ "name": "Est. Output Size", "value": "(unknown)" }		],
+		"costs": [
+			{ "name": "Network", "value": "(unknown)" },
+			{ "name": "Disk I/O", "value": "(unknown)" },
+			{ "name": "Cumulative Network", "value": "(unknown)" },
+			{ "name": "Cumulative Disk I/O", "value": "(unknown)" }
+		],
+		"compiler_hints": [
+			{ "name": "Cardinality", "value": "(none)" },
+			{ "name": "Avg. Records/StubCall", "value": "(none)" },
+			{ "name": "Avg. Values/Distinct fields", "value": "(none)" },
+			{ "name": "Avg. Width (bytes)", "value": "(none)" }		]
+	}
+	]
+}
+--------------------------------------------------------------

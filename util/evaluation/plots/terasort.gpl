@@ -41,4 +41,6 @@ set output './target/terasort.eps'
 set size 0.75, 0.75
 
 plot '../csv/ts-str_pact.csv'  using 1:2 title "Stratosphere PACT" ls 3, \
-     '../csv/ts-hdp_mapr.csv' using 1:2 title "Hadoop MapReduce" ls 1
+     '../csv/ts-hdp_mapr.csv' using 1:2 title "Hadoop MapReduce" ls 1, \
+     '../csv/ts_otf-str_pact.csv'  using 1:2 title "Stratosphere PACT (on-the-fly generation)" ls 4, \
+     '../csv/ts_otf-hdp_mapr.csv' using 1:2 title "Hadoop MapReduce (on-the-fly generation)" ls 2

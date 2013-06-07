@@ -1,0 +1,7 @@
+23:30:12,577 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+23:30:12,670 INFO  eu.stratosphere.pact.compiler.PactCompiler                    - No default parallelism specified. Using default parallelism of 20 (One task per instance)
+23:37:13,059 INFO  eu.stratosphere.nephele.client.JobClient                      - java.io.IOException: All datanodes 130.149.21.30:45020 are bad. Aborting...
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream.processDatanodeError(DFSClient.java:2711)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream.access$1600(DFSClient.java:2255)
+	at org.apache.hadoop.hdfs.DFSClient$DFSOutputStream$DataStreamer.run(DFSClient.java:2423)
+

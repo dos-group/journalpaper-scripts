@@ -1,0 +1,21 @@
+23:28:28,112 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+23:28:28,149 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Reading location of job manager from configuration
+23:28:28,159 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Determined address of job manager to be cloud-11.dima.tu-berlin.de/130.149.21.15:6002
+23:28:28,166 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Announcing connection information cloud-27 to job manager
+23:28:28,232 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6122: starting
+23:28:28,232 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+23:28:28,233 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6122: starting
+23:28:29,352 INFO  eu.stratosphere.nephele.taskmanager.bufferprovider.GlobalBufferPool  - Initialized global buffer pool with 32768 buffers with a size 32768 bytes each
+23:28:29,371 INFO  eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Initialized byte buffered channel manager with sender-side spilling disabled
+23:28:29,381 INFO  eu.stratosphere.nephele.instance.HardwareDescriptionFactory   - Found Tenured Gen pool (max: 24051843072, used: 0)
+23:28:29,381 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Initializing memory manager with 22528 megabytes of memory
+23:28:32,309 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 71cc917c91d32c005478ba65123d1400
+23:28:32,319 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 71cc917c91d32c005478ba65123d1400
+23:28:36,054 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.IncomingConnection  - java.io.IOException: Deserilization error: Expected to read 286129987 more bytes from stream!
+	at eu.stratosphere.nephele.io.channels.DefaultDeserializer.readData(DefaultDeserializer.java:153)
+	at eu.stratosphere.nephele.taskmanager.transferenvelope.AbstractDeserializer.readID(AbstractDeserializer.java:176)
+	at eu.stratosphere.nephele.taskmanager.transferenvelope.AbstractDeserializer.read(AbstractDeserializer.java:88)
+	at eu.stratosphere.nephele.taskmanager.bytebuffered.IncomingConnection.read(IncomingConnection.java:93)
+	at eu.stratosphere.nephele.taskmanager.bytebuffered.IncomingConnectionThread.doRead(IncomingConnectionThread.java:187)
+	at eu.stratosphere.nephele.taskmanager.bytebuffered.IncomingConnectionThread.run(IncomingConnectionThread.java:126)
+
