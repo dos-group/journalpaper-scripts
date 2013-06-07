@@ -8,7 +8,7 @@
 ./jp_sut_deploy.sh ${STR_PACT_TAR} ${STR_PACT_HOME}
 
 #  5 nodes
-#./jp_run_ts_otf.sh  5
+./jp_run_ts_otf.sh  5
 # 10 nodes
 ./jp_run_ts_otf.sh  10
 # 15 nodes
