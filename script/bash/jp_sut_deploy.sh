@@ -32,7 +32,8 @@ systemConf=${EXP_SCRIPT_DIR}/script/bash/conf/${HOSTNAME}/$( basename $SYSTEM_HO
 if [[ -d "$systemConf" ]]; then
    echo "Using SUT config from '${systemConf}' at '${SYSTEM_HOME}/conf'."
    rm -Rf ${SYSTEM_HOME}/conf > /dev/null
-   cp -R ${systemConf} ${SYSTEM_HOME}/conf > /dev/null
+   mkdir ${SYSTEM_HOME}/conf > /dev/null
+   cp -R ${systemConf}/* ${SYSTEM_HOME}/conf/. > /dev/null
 else
    echo "Using bundled SUT config at '${SYSTEM_HOME}/conf'."
 fi

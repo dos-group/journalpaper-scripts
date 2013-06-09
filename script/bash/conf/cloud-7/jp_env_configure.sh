@@ -93,6 +93,23 @@ STR_PACT_PID=/var/hadoop_varscale/pids
 # Stratosphere Job Manager host name
 STR_PACT_JOBMANAGER_HOST=cloud-7
 
+################ OZONE
+
+# Stratosphere deployment archive
+OZN_PACT_TAR=/share/journalpaper/systems/stratosphere-0.2-ozone.tar.gz
+# Stratosphere root folder
+OZN_PACT_HOME=/share/journalpaper/systems/stratosphere-0.2-ozone
+# Stratosphere bin folder
+OZN_PACT_BIN=${OZN_PACT_HOME}/bin
+# Stratosphere conf folder
+OZN_PACT_CONF=${OZN_PACT_HOME}/conf
+# Stratosphere log folder
+OZN_PACT_LOG=${OZN_PACT_HOME}/log
+# Stratosphere PIDs folder
+OZN_PACT_PID=/var/hadoop_varscale/pids
+# Stratosphere Job Manager host name
+OZN_PACT_JOBMANAGER_HOST=cloud-7
+
 ################ HIVE
 
 # Hive deployment archive

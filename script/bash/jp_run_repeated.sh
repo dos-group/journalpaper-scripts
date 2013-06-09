@@ -13,13 +13,15 @@ JOB_STRING=$3
 RUN_ID=$4
 
 if [[ "HDP_MAPR|HDP_HIVE|HDP_GRPH|STR_PACT|STR_ITER|STR_METR" =~ $EXEC_SYSTEM ]]; then
-   RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR)_(MAPR|HIVE|GRPH|PACT|ITER|METR)/\1/'`
+   RUNTIME_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/(HDP|STR|OZN)_(MAPR|HIVE|GRPH|PACT|ITER|METR)/\1/'`
    echo "Using ${RUNTIME_SYSTEM} runtime system." # concatenate strings
    
    if [[ $RUNTIME_SYSTEM =~ "HDP" ]]; then
       FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/HDP_(MAPR|HIVE|GRPH)/\1/'`
-   else # RUNTIME_SYSTEM == "STR"
+   elif [[ $RUNTIME_SYSTEM =~ "STR" ]]; then
       FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/STR_(PACT|METR|ITER)/\1/'`
+   elif [[ $RUNTIME_SYSTEM =~ "OZN" ]]; then
+      FRONTEND_SYSTEM=`echo $EXEC_SYSTEM | sed -E 's/OZN_(PACT)/\1/'`
    fi
    echo "Using ${FRONTEND_SYSTEM} programming API." # concatenate strings
 else
@@ -87,6 +89,7 @@ if [[ $RUNTIME_SYSTEM == 'HDP' ]]; then
       exit $?
    fi
 
+
 elif [[ $RUNTIME_SYSTEM == 'STR' ]]; then
 
     # Start run loop
@@ -123,6 +126,42 @@ elif [[ $RUNTIME_SYSTEM == 'STR' ]]; then
        
        # stop Stratosphere
        ./jp_str_pact_stop.sh
+       if [[ $? != 0 ]]; then
+          exit $?
+       fi
+    
+    done
+
+elif [[ $RUNTIME_SYSTEM == 'OZN' ]]; then
+
+    # Start run loop
+    for (( i=${RUN_FROM}; i<=${RUN_TO}; i++ )); do
+       # start Ozone
+       ./jp_ozn_pact_start_wait.sh
+       if [[ $? != 0 ]]; then
+          # start Ozone (2nd try)
+          ./jp_ozn_pact_stop.sh
+          ./jp_ozn_pact_start_wait.sh
+          if [[ $? != 0 ]]; then
+              # start Ozone (3nd try)
+              ./jp_ozn_pact_stop.sh
+              ./jp_ozn_pact_start_wait.sh
+              if [[ $? != 0 ]]; then
+                  exit $?
+              fi
+          fi
+       fi
+
+       # compute experiment ID for this job run
+       EXP_ID=`printf "%s-run%02d" ${EXEC_ID_PREF} ${i}`
+       # run job
+       if [[ $FRONTEND_SYSTEM == 'PACT' ]]; then
+          # run Ozone PACT job
+          ./jp_ozn_pact_run_job.sh $EXP_ID "${JOB_STRING}"
+       fi
+       
+       # stop Stratosphere
+       ./jp_ozn_pact_stop.sh
        if [[ $? != 0 ]]; then
           exit $?
        fi
