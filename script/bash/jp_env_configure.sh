@@ -45,6 +45,15 @@ STR_PACT_STARTUP_CHECK_INTERVAL=5
 # time in seconds to wait for Stratosphere to shutdown
 STR_PACT_SHUTDOWN_WAITTIME=10
 
+################ OZONE
+
+# timeout in seconds to bring up Stratosphere (let all taskmanagers connect)
+OZN_PACT_STARTUP_CHECK_TIMEOUT=180
+# interval in seconds to check whether Stratosphere is ready
+OZN_PACT_STARTUP_CHECK_INTERVAL=5
+# time in seconds to wait for Stratosphere to shutdown
+OZN_PACT_SHUTDOWN_WAITTIME=10
+
 ################ HIVE
 
 # timeout in seconds to bring up Hadoop MapReduce (let all tasktrackers connect)
