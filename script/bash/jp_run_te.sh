@@ -31,13 +31,17 @@ if [[ $? != 0 ]]; then
    exit $?
 fi
 
+# repeat Ozone runs
+execIdPrefix=`printf "te_pokec-ozn_pact-sf0037-dop%04d" ${TE_NODE_COUNT}`
+./jp_run_repeated.sh OZN_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-te-ozn_pact.jar -a ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
+
 # repeat Stratosphere runs
-execIdPrefix=`printf "te_pokec-str_pact-sf0037-dop%04d" ${TE_NODE_COUNT}`
-./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-te-str_pact.jar -a ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
+#execIdPrefix=`printf "te_pokec-str_pact-sf0037-dop%04d" ${TE_NODE_COUNT}`
+#./jp_run_repeated.sh STR_PACT $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-te-str_pact.jar -a ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
 
 # repeat Hadoop runs
-execIdPrefix=`printf "te_pokec-hdp_mapr-sf0037-dop%04d" ${TE_NODE_COUNT}`
-./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-te-hdp_mapr.jar ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
+#execIdPrefix=`printf "te_pokec-hdp_mapr-sf0037-dop%04d" ${TE_NODE_COUNT}`
+#./jp_run_repeated.sh HDP_MAPR $execIdPrefix "${EXP_JOBS_HOME}/journalpaper-jobs-1.0.0-te-hdp_mapr.jar ${TE_NODE_COUNT} ${TE_IN} ${TE_OUT}"
 
 # stop HDFS
 ./jp_hdfs_clean_stop.sh
