@@ -1,0 +1,307 @@
+18:39:35,600 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+18:39:35,639 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Reading location of job manager from configuration
+18:39:35,649 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Determined address of job manager to be cloud-11.dima.tu-berlin.de/130.149.21.15:6002
+18:39:35,657 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Announcing connection information cloud-19 to job manager
+18:39:35,719 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6122: starting
+18:39:35,719 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+18:39:35,720 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6122: starting
+18:39:36,836 INFO  eu.stratosphere.nephele.taskmanager.bufferprovider.GlobalBufferPool  - Initialized global buffer pool with 32768 buffers with a size 32768 bytes each
+18:39:36,855 INFO  eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Initialized byte buffered channel manager with sender-side spilling disabled
+18:39:36,863 INFO  eu.stratosphere.nephele.instance.HardwareDescriptionFactory   - Found Tenured Gen pool (max: 27678736384, used: 0)
+18:39:36,863 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Initializing memory manager with 22528 megabytes of memory
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (13/120)
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (11/120)
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (15/120)
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (10/120)
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (12/120)
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (9/120)
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (16/120)
+18:40:07,047 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (14/120)
+18:40:07,052 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (13/120)
+18:40:07,054 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (13/120)
+18:40:07,054 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (12/120)
+18:40:07,055 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (12/120)
+18:40:07,057 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (10/120)
+18:40:07,057 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (10/120)
+18:40:07,059 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (15/120)
+18:40:07,059 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (15/120)
+18:40:07,061 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (11/120)
+18:40:07,061 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (11/120)
+18:40:07,062 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (14/120)
+18:40:07,063 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (14/120)
+18:40:07,065 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (16/120)
+18:40:07,065 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (16/120)
+18:40:07,066 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (9/120)
+18:40:07,067 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (9/120)
+18:40:09,206 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,212 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,209 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,206 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,206 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,221 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,218 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,215 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:40:09,710 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (12/120)
+18:40:09,712 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (12/120)
+18:40:09,760 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (9/120)
+18:40:09,762 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (9/120)
+18:40:09,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (11/120)
+18:40:09,809 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (11/120)
+18:40:09,833 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (14/120)
+18:40:09,834 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (14/120)
+18:40:09,859 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (16/120)
+18:40:09,862 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (16/120)
+18:40:10,007 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (10/120)
+18:40:10,010 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (10/120)
+18:40:10,056 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (13/120)
+18:40:10,059 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (13/120)
+18:40:10,172 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (15/120)
+18:40:10,175 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (15/120)
+18:40:10,539 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (14/120)
+18:40:10,539 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (14/120)
+18:40:10,539 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (14/120)
+18:40:10,545 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (15/120)
+18:40:10,545 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (15/120)
+18:40:10,545 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (15/120)
+18:40:10,586 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (13/120)
+18:40:10,587 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (13/120)
+18:40:10,587 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (13/120)
+18:40:10,597 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (9/120)
+18:40:10,597 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (9/120)
+18:40:10,597 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (9/120)
+18:40:10,633 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (14/120)
+18:40:10,635 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (14/120)
+18:40:11,048 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (12/120)
+18:40:11,049 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (12/120)
+18:40:11,049 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (12/120)
+18:40:11,070 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (11/120)
+18:40:11,070 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (11/120)
+18:40:11,070 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (11/120)
+18:40:11,257 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (16/120)
+18:40:11,257 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (16/120)
+18:40:11,257 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (16/120)
+18:40:11,269 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (10/120)
+18:40:11,269 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (10/120)
+18:40:11,270 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (10/120)
+18:40:11,907 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (9/120)
+18:40:11,909 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (9/120)
+18:40:11,941 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (10/120)
+18:40:11,943 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (10/120)
+18:40:11,963 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (11/120)
+18:40:11,966 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (11/120)
+18:40:11,996 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (12/120)
+18:40:11,998 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (12/120)
+18:40:12,039 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (13/120)
+18:40:12,041 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (13/120)
+18:40:12,073 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (15/120)
+18:40:12,075 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (15/120)
+18:40:12,103 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (16/120)
+18:40:12,105 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (16/120)
+18:40:17,905 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (13/120)
+18:40:17,907 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (13/120)
+18:40:17,933 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (9/120)
+18:40:17,936 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (9/120)
+18:40:18,001 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (14/120)
+18:40:18,003 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (14/120)
+18:40:18,030 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (15/120)
+18:40:18,032 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (15/120)
+18:40:18,036 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (16/120)
+18:40:18,041 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (16/120)
+18:40:18,053 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (12/120)
+18:40:18,056 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (12/120)
+18:40:18,065 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (11/120)
+18:40:18,068 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (11/120)
+18:40:18,086 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (10/120)
+18:40:18,088 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (10/120)
+18:40:18,548 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,550 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-514993354040286154_1241
+18:40:18,606 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,608 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-3624492370421172809_1241
+18:40:18,652 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,656 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-28559659895507564_1241
+18:40:18,666 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,668 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-7897909673627208226_1241
+18:40:18,678 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,681 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-5735331901312041662_1241
+18:40:18,709 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,710 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-2289043710902022385_1241
+18:40:18,715 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,715 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-6258464891732897176_1241
+18:40:18,723 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:18,724 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-4544815293809386814_1241
+18:40:24,554 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,554 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-8188226370069892191_1241
+18:40:24,612 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,612 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_5273486033802373541_1241
+18:40:24,661 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,661 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_7590957464224911586_1241
+18:40:24,672 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,672 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-7588890679395685200_1241
+18:40:24,685 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,685 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-5673466864050160244_1241
+18:40:24,714 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,714 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-4095528354884734564_1241
+18:40:24,719 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,720 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-7206169292820287651_1241
+18:40:24,729 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:24,729 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_1108911161632851180_1241
+18:40:30,559 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,559 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_1250085511984343169_1241
+18:40:30,616 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,617 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-6367103677224141112_1241
+18:40:30,666 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,666 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-8404970664535288249_1241
+18:40:30,677 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,677 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_6202172358118032737_1241
+18:40:30,689 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,690 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-2996100861039265392_1241
+18:40:30,718 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,719 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_7292601238099899388_1241
+18:40:30,724 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,724 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-2087639081036937594_1241
+18:40:30,735 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:30,735 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-4053347317955519242_1241
+18:40:36,564 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,565 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-5786074465650458233_1241
+18:40:36,621 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,621 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_3392305552600601785_1241
+18:40:36,671 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,671 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-7010417517926727644_1241
+18:40:36,681 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,681 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_2124578379017362715_1241
+18:40:36,694 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,694 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_5167322218495686855_1241
+18:40:36,723 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,723 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-4244900202364689501_1241
+18:40:36,728 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,729 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_2956113278946830739_1241
+18:40:36,739 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.net.ConnectException: Connection refused
+18:40:36,739 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_2185666544975003295_1241

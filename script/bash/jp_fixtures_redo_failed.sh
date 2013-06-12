@@ -53,7 +53,7 @@ for jobPath in $( find "$EXP_SCRIPT_DIR/log" -mindepth 1 -maxdepth 1 -type d | s
 	  continue
    fi
    # systemID
-   if ! [[ "$systemID" =~ ^str_(pact|metr|iter)|hdp_(mapr|hive|grph)$ ]] ; then
+   if ! [[ "$systemID" =~ ^ozn_(pact)|str_(pact|metr|iter)|hdp_(mapr|hive|grph)$ ]] ; then
       echo "Bad job ID '${systemID}'. Skipping ${jobExecutionID}..."
       continue
    fi

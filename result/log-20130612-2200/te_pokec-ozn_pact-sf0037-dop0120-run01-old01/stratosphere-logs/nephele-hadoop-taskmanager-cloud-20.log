@@ -1,0 +1,62 @@
+18:34:50,682 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+18:34:50,721 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Reading location of job manager from configuration
+18:34:50,731 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Determined address of job manager to be cloud-11.dima.tu-berlin.de/130.149.21.15:6002
+18:34:50,738 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Announcing connection information cloud-20 to job manager
+18:34:50,800 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+18:34:50,800 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6122: starting
+18:34:50,802 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6122: starting
+18:34:51,915 INFO  eu.stratosphere.nephele.taskmanager.bufferprovider.GlobalBufferPool  - Initialized global buffer pool with 32768 buffers with a size 32768 bytes each
+18:34:51,933 INFO  eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Initialized byte buffered channel manager with sender-side spilling disabled
+18:34:51,941 INFO  eu.stratosphere.nephele.instance.HardwareDescriptionFactory   - Found Tenured Gen pool (max: 27678736384, used: 0)
+18:34:51,941 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Initializing memory manager with 22528 megabytes of memory
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (112/120)
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (105/120)
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (110/120)
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (109/120)
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (107/120)
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (111/120)
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (106/120)
+18:35:20,866 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (108/120)
+18:35:20,871 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (112/120)
+18:35:20,873 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (107/120)
+18:35:20,873 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (112/120)
+18:35:20,874 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (107/120)
+18:35:20,874 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (108/120)
+18:35:20,875 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (108/120)
+18:35:20,876 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (109/120)
+18:35:20,877 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (109/120)
+18:35:20,878 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (110/120)
+18:35:20,879 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (110/120)
+18:35:20,883 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (105/120)
+18:35:20,883 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (105/120)
+18:35:20,884 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (106/120)
+18:35:20,885 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (106/120)
+18:35:20,887 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (111/120)
+18:35:20,888 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (111/120)
+18:35:22,833 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:35:23,462 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (111/120)
+18:35:23,463 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (111/120)
+18:35:23,552 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (112/120)
+18:35:23,555 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (112/120)
+18:35:23,581 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (106/120)
+18:35:23,583 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (106/120)
+18:35:23,603 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (107/120)
+18:35:23,604 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (107/120)
+18:35:23,699 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (108/120)
+18:35:23,701 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (108/120)

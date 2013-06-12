@@ -1,0 +1,484 @@
+18:34:50,035 WARN  eu.stratosphere.nephele.configuration.GlobalConfiguration     - Cannot load configuration: unknown element plugins
+18:34:50,074 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Reading location of job manager from configuration
+18:34:50,084 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Determined address of job manager to be cloud-11.dima.tu-berlin.de/130.149.21.15:6002
+18:34:50,092 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Announcing connection information cloud-17 to job manager
+18:34:50,155 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server Responder: starting
+18:34:50,155 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server listener on 6122: starting
+18:34:50,156 INFO  eu.stratosphere.nephele.ipc.Server                            - IPC Server handler 0 on 6122: starting
+18:34:51,255 INFO  eu.stratosphere.nephele.taskmanager.bufferprovider.GlobalBufferPool  - Initialized global buffer pool with 32768 buffers with a size 32768 bytes each
+18:34:51,273 INFO  eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Initialized byte buffered channel manager with sender-side spilling disabled
+18:34:51,280 INFO  eu.stratosphere.nephele.instance.HardwareDescriptionFactory   - Found Tenured Gen pool (max: 27678736384, used: 0)
+18:34:51,281 INFO  eu.stratosphere.nephele.taskmanager.TaskManager               - Initializing memory manager with 22528 megabytes of memory
+18:35:20,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (25/120)
+18:35:20,875 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (32/120)
+18:35:20,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (31/120)
+18:35:20,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (26/120)
+18:35:20,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (28/120)
+18:35:20,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (27/120)
+18:35:20,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (30/120)
+18:35:20,874 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Input Edges (29/120)
+18:35:20,877 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (25/120)
+18:35:20,881 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (25/120)
+18:35:20,882 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (26/120)
+18:35:20,882 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (26/120)
+18:35:20,883 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (29/120)
+18:35:20,884 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (29/120)
+18:35:20,886 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (30/120)
+18:35:20,887 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (30/120)
+18:35:20,888 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (27/120)
+18:35:20,889 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (27/120)
+18:35:20,891 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (28/120)
+18:35:20,892 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (28/120)
+18:35:20,893 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (31/120)
+18:35:20,893 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (31/120)
+18:35:20,896 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Start PACT code: Input Edges (32/120)
+18:35:20,896 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code: Canonize edges (32/120)
+18:35:23,241 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.22:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:35:23,254 INFO  org.apache.hadoop.hdfs.DFSClient                              - Failed to connect to /130.149.21.23:45020, add to deadNodes and continue
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:406)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:1757)
+	at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:1899)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at eu.stratosphere.nephele.fs.hdfs.DistributedDataInputStream.read(DistributedDataInputStream.java:63)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.fillBuffer(DelimitedInputFormat.java:492)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.readLine(DelimitedInputFormat.java:412)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:351)
+	at eu.stratosphere.pact.common.io.DelimitedInputFormat.open(DelimitedInputFormat.java:41)
+	at eu.stratosphere.pact.runtime.task.DataSourceTask.invoke(DataSourceTask.java:134)
+	at eu.stratosphere.nephele.execution.RuntimeEnvironment.run(RuntimeEnvironment.java:364)
+	at java.lang.Thread.run(Thread.java:722)
+18:35:23,457 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (27/120)
+18:35:23,460 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (27/120)
+18:35:23,495 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (32/120)
+18:35:23,497 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (32/120)
+18:35:23,787 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (26/120)
+18:35:23,789 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (26/120)
+18:35:23,860 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (31/120)
+18:35:23,860 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (31/120)
+18:35:23,860 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (31/120)
+18:35:23,863 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (25/120)
+18:35:23,863 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (25/120)
+18:35:23,863 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (25/120)
+18:35:23,912 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (28/120)
+18:35:23,913 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (28/120)
+18:35:23,913 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (28/120)
+18:35:23,918 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (32/120)
+18:35:23,918 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (32/120)
+18:35:23,918 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (32/120)
+18:35:23,919 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (27/120)
+18:35:23,919 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (27/120)
+18:35:23,919 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (27/120)
+18:35:23,965 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (29/120)
+18:35:23,967 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (29/120)
+18:35:23,987 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (28/120)
+18:35:23,989 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (28/120)
+18:35:24,013 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (25/120)
+18:35:24,016 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (25/120)
+18:35:24,077 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (30/120)
+18:35:24,079 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (30/120)
+18:35:24,111 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Build Triads (31/120)
+18:35:24,113 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Build Triads (31/120)
+18:35:24,428 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (26/120)
+18:35:24,428 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (26/120)
+18:35:24,429 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (26/120)
+18:35:24,468 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (29/120)
+18:35:24,468 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (29/120)
+18:35:24,468 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (29/120)
+18:35:24,482 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code: Canonize edges (30/120)
+18:35:24,483 INFO  eu.stratosphere.pact.runtime.task.DataSourceTask              - Finished PACT code: Input Edges (30/120)
+18:35:24,483 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Input Edges (30/120)
+18:35:26,123 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (25/120)
+18:35:26,125 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (25/120)
+18:35:26,145 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (26/120)
+18:35:26,147 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (26/120)
+18:35:26,180 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (27/120)
+18:35:26,181 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (27/120)
+18:35:26,208 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (28/120)
+18:35:26,210 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (28/120)
+18:35:26,233 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (29/120)
+18:35:26,235 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (29/120)
+18:35:26,252 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (30/120)
+18:35:26,253 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (30/120)
+18:35:26,283 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (31/120)
+18:35:26,285 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (31/120)
+18:35:26,311 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Close Triads (32/120)
+18:35:26,315 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Start PACT code.: Close Triads (32/120)
+18:35:31,330 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (26/120)
+18:35:31,332 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (26/120)
+18:35:31,344 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (32/120)
+18:35:31,346 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (32/120)
+18:35:31,359 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (31/120)
+18:35:31,361 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (31/120)
+18:35:31,369 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (29/120)
+18:35:31,370 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (29/120)
+18:35:31,422 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (30/120)
+18:35:31,425 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (30/120)
+18:35:31,428 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (27/120)
+18:35:31,430 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (27/120)
+18:35:31,456 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (25/120)
+18:35:31,458 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (25/120)
+18:35:31,474 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from STARTING to RUNNING for task Triangles (28/120)
+18:35:31,476 INFO  eu.stratosphere.pact.runtime.task.DataSinkTask                - Start PACT code: Triangles (28/120)
+18:35:32,017 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.io.IOException: Bad connect ack with firstBadLink as 130.149.21.23:45020
+18:35:32,020 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_5573706628492666044_1112
+18:35:32,067 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.io.IOException: Bad connect ack with firstBadLink as 130.149.21.22:45020
+18:35:32,069 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_7152787589146325753_1119
+18:35:38,032 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.io.IOException: Bad connect ack with firstBadLink as 130.149.21.23:45020
+18:35:38,033 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_1428051456883568647_1121
+18:35:44,049 INFO  org.apache.hadoop.hdfs.DFSClient                              - Exception in createBlockOutputStream java.io.IOException: Bad connect ack with firstBadLink as 130.149.21.22:45020
+18:35:44,049 INFO  org.apache.hadoop.hdfs.DFSClient                              - Abandoning block blk_-4834140038227968482_1121
+18:35:55,647 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (25/120)
+18:35:55,648 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (25/120)
+18:35:55,648 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (25/120)
+18:35:55,650 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (25/120)
+18:35:55,650 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (25/120)
+18:35:55,652 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (25/120)
+18:35:55,655 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (26/120)
+18:35:55,656 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (26/120)
+18:35:55,656 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (26/120)
+18:35:55,695 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (26/120)
+18:35:55,726 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (26/120)
+18:35:55,726 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (26/120)
+18:35:55,729 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (27/120)
+18:35:55,730 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (27/120)
+18:35:55,730 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (27/120)
+18:35:55,731 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (27/120)
+18:35:55,735 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (27/120)
+18:35:55,737 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (28/120)
+18:35:55,738 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (28/120)
+18:35:55,738 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (28/120)
+18:35:55,739 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (28/120)
+18:35:55,740 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (28/120)
+18:35:55,744 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (31/120)
+18:35:55,744 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (29/120)
+18:35:55,744 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (31/120)
+18:35:55,745 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (29/120)
+18:35:55,746 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (29/120)
+18:35:55,746 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (29/120)
+18:35:55,747 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (29/120)
+18:35:55,750 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (30/120)
+18:35:55,751 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (30/120)
+18:35:55,751 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (30/120)
+18:35:55,752 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (30/120)
+18:35:55,753 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (30/120)
+18:35:55,756 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (31/120)
+18:35:55,757 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (31/120)
+18:35:55,757 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (31/120)
+18:35:55,758 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (31/120)
+18:35:55,764 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (26/120)
+18:35:55,762 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Close Triads (32/120)
+18:35:55,767 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (26/120)
+18:35:55,765 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (31/120)
+18:35:55,768 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (26/120)
+18:35:55,767 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Close Triads (32/120)
+18:35:55,771 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (27/120)
+18:35:55,770 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Triangles (32/120)
+18:35:55,771 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Close Triads (32/120)
+18:35:55,772 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Triangles (32/120)
+18:35:55,771 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (29/120)
+18:35:55,771 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (27/120)
+18:35:55,774 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (27/120)
+18:35:55,774 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (29/120)
+18:35:55,776 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (29/120)
+18:35:55,777 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (28/120)
+18:35:55,778 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (28/120)
+18:35:55,778 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (28/120)
+18:35:55,787 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (30/120)
+18:35:55,788 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (30/120)
+18:35:55,788 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (30/120)
+18:35:55,794 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (31/120)
+18:35:55,794 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (31/120)
+18:35:55,795 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (31/120)
+18:35:55,835 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (32/120)
+18:35:55,836 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (32/120)
+18:35:55,836 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (32/120)
+18:35:55,871 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - PACT code cancelled.: Close Triads (27/120)
+18:35:55,871 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (27/120)
+18:35:55,882 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - Cancelling PACT code: Triangles (25/120)
+18:35:55,883 WARN  eu.stratosphere.pact.runtime.task.DataSinkTask                - PACT code cancelled: Triangles (25/120)
+18:35:55,883 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Triangles (25/120)
+18:35:55,886 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (32/120)
+18:35:55,897 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (31/120)
+18:35:55,914 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (30/120)
+18:35:55,914 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (29/120)
+18:35:55,915 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Close Triads (28/120)
+18:35:56,008 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (26/120)
+18:35:56,008 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (26/120)
+18:35:56,157 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (25/120)
+18:35:56,157 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (25/120)
+18:35:56,321 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (30/120)
+18:35:56,322 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (30/120)
+18:35:56,403 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (28/120)
+18:35:56,403 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (28/120)
+18:35:56,490 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (32/120)
+18:35:56,491 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (32/120)
+18:35:56,768 INFO  eu.stratosphere.pact.runtime.task.RegularPactTask             - Finished PACT code.: Build Triads (27/120)
+18:35:56,769 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to FINISHING for task Build Triads (27/120)
+18:35:56,807 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (25/120)
+18:35:56,808 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Build Triads (25/120)
+18:35:56,808 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (25/120)
+18:35:56,810 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (26/120)
+18:35:56,810 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (25/120)
+18:35:56,811 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Build Triads (26/120)
+18:35:56,811 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (27/120)
+18:35:56,811 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (26/120)
+18:35:56,812 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Build Triads (27/120)
+18:35:56,812 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (28/120)
+18:35:56,813 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (29/120)
+18:35:56,813 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (27/120)
+18:35:56,813 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from RUNNING to CANCELING for task Build Triads (29/120)
+18:35:56,813 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (26/120)
+18:35:56,813 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Build Triads (28/120)
+18:35:56,815 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (30/120)
+18:35:56,816 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (31/120)
+18:35:56,814 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (27/120)
+18:35:56,814 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (29/120)
+18:35:56,817 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Build Triads (32/120)
+18:35:56,817 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (28/120)
+18:35:56,816 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Build Triads (31/120)
+18:35:56,816 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Build Triads (30/120)
+18:35:56,815 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (28/120)
+18:35:56,818 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (30/120)
+18:35:56,818 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (31/120)
+18:35:56,817 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Build Triads (32/120)
+18:35:56,821 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (30/120)
+18:35:56,822 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (31/120)
+18:35:56,821 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - Cancelling PACT code: Build Triads (32/120)
+18:35:56,822 WARN  eu.stratosphere.pact.runtime.task.RegularPactTask             - PACT code cancelled.: Build Triads (29/120)
+18:35:56,824 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (32/120)
+18:35:56,824 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Build Triads (29/120)
+18:35:56,969 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (25/120)
+18:35:56,969 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (25/120)
+18:35:56,970 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (25/120)
+18:35:56,971 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (25/120)
+18:35:56,971 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (26/120)
+18:35:56,971 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (26/120)
+18:35:56,971 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (26/120)
+18:35:56,972 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (27/120)
+18:35:56,972 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (26/120)
+18:35:56,973 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (27/120)
+18:35:56,973 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (27/120)
+18:35:56,973 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (28/120)
+18:35:56,974 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (28/120)
+18:35:56,974 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (28/120)
+18:35:56,974 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (27/120)
+18:35:56,975 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (29/120)
+18:35:56,975 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (28/120)
+18:35:56,975 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (29/120)
+18:35:56,976 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (29/120)
+18:35:56,976 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (30/120)
+18:35:56,976 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (30/120)
+18:35:56,977 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (30/120)
+18:35:56,977 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (29/120)
+18:35:56,977 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (31/120)
+18:35:56,977 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (31/120)
+18:35:56,978 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (31/120)
+18:35:56,978 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (30/120)
+18:35:56,978 INFO  eu.stratosphere.nephele.taskmanager.runtime.RuntimeTask       - Canceling Input Edges (32/120)
+18:35:56,979 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from FINISHING to CANCELING for task Input Edges (32/120)
+18:35:56,979 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (31/120)
+18:35:56,979 WARN  eu.stratosphere.pact.runtime.task.DataSourceTask              - Cancelling PACT code: Input Edges (32/120)
+18:35:56,980 INFO  eu.stratosphere.nephele.execution.ExecutionStateTransition    - TM: ExecutionState set from CANCELING to CANCELED for task Input Edges (32/120)
+18:35:57,501 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 35ad85261708780032a8dd3e81a69800
+18:35:57,505 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 47351313037eec0015971a99785e1800
+18:35:57,508 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5aba677f6caa040073ce0af189e21800
+18:35:57,512 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2732066a83d60c003e26dc260418ac00
+18:35:57,516 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1d6a8a999105cc0042150b2aa4b80400
+18:35:57,520 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4717ada6ad9150001030ae7a5171bc00
+18:35:57,523 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1ab0deab937c48004783c24e1cc4bc00
+18:35:57,527 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 14a50ae24c31340018e1bc55947a1800
+18:35:57,531 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2e561688cb33d8007e4565a6dbe8dc00
+18:35:57,534 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6816b4a24100080036c51495865c6400
+18:35:57,538 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5ce6588e6936040047a329ac0b964c00
+18:35:57,542 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3d144be6d1f250005779ca85b8d9b000
+18:35:57,545 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 16d43e44c0215c003d23bd9d93cc0800
+18:35:57,549 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 419ef881af9194004a32a2cf434c0800
+18:35:57,553 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 254d4bac8e3388003f883da28de32c00
+18:35:57,556 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 14ed9020c20a84002a297cdef3ade400
+18:35:57,560 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 44420414581ae0007ee38dccdf13b000
+18:35:57,563 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2e38b46b64c9ac0008fd11c37c064000
+18:35:57,567 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 253752e6ddf9e4007c05328cdae9d000
+18:35:57,571 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5f8d1859d1f6640033ac2a9d88ff0800
+18:35:57,574 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2e5f64700074bc0075550aae416d2000
+18:35:57,578 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 01829cb13591440011bfa34054c72400
+18:35:57,582 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 595624e6a047d800164e069465e1e000
+18:35:57,585 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 118696e39a514c007ad14e1542fe6800
+18:35:57,589 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 407132368f2d64005a7308a236995400
+18:35:57,593 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0a9fd788b89334002e7ee84f5cde3800
+18:35:57,596 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5b21a802c345b80019d1356a26603000
+18:35:57,600 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7231d61fb9687800341a438a474bd000
+18:35:57,604 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 24874d884b9eec000784ae805b4c9000
+18:35:57,608 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6a62511260f2280052b2917ecdcd5c00
+18:35:57,611 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 43997ada9c1bec000ce9472bd17cc400
+18:35:57,615 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 16cdc77704a710005c0add082b3e9c00
+18:35:57,619 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 159ae414b90a440073422b3c67a70400
+18:35:57,622 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0914f1afeea1500017a93e33cb97c800
+18:35:57,626 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7e835312ef4498001f01a0b8ad47c000
+18:35:57,630 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2d634889c44948002ee3761a15a9d800
+18:35:57,633 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 55f2762a37c058006d2de2b86ecdfc00
+18:35:57,637 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 70e987b4bb227800220c8302beaa5c00
+18:35:57,641 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 465cc8101ea27800270b8825e8692400
+18:35:57,645 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1f9a26f84236140052796e80bd08e400
+18:35:57,648 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0a263e7d2711a0005b01318d756e9c00
+18:35:57,652 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2708f2b121338c006696993362beac00
+18:35:57,656 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 43299e9e5c67280052fdcaa50b971000
+18:35:57,660 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4ec44b3496ace8004127c60844483c00
+18:35:57,663 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6dbff9fcf8a62c003206ce82ebb01000
+18:35:57,667 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1e59642dba6c380075717df6b5ebd800
+18:35:57,670 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5e49119309df6c007c7cac8384704400
+18:35:57,674 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 311ddac6f9ac34003e537e69c9c49400
+18:35:57,678 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 507791e8eab5b40078720f119d913000
+18:35:57,681 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1d95bee644fe8c007f676f77dacb0800
+18:35:57,685 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 716d620cd1663c002568419e1c2bf000
+18:35:57,688 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3e9386797ea11c00134c48797ed1e000
+18:35:57,692 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 268aed68c482e40075f8d0be5956e000
+18:35:57,695 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 46fa1ab19a264c004f410382639bc400
+18:35:57,699 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7ed542b940511c003b7aa4ec6250ec00
+18:35:57,703 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0a91eef56192800036ac04852ea9a400
+18:35:57,706 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 01fb90eea6da08002d7e65c727086000
+18:35:57,710 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4d5716840bd57c0028240aeef5ea9800
+18:35:57,713 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5c0288802cac1c00344b32924b164800
+18:35:57,717 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0293a59542a1cc00506bdc064f0c3c00
+18:35:57,720 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7cca1068cceab8001d8e591fa4476c00
+18:35:57,724 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 754dd445277540005128253c31785800
+18:35:57,727 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 63db53550d2530006df71cc65129f800
+18:35:57,731 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 00da51cb166b68002d0a02d0b9cf7c00
+18:35:57,734 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 29b13108c0dbd000517a012e70434800
+18:35:57,738 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6729be8b282a680009d3c57a3d4a9000
+18:35:57,741 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3663f14a04a09800126aea4cf5f22c00
+18:35:57,745 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5783202cee99580041423fcac5218800
+18:35:57,748 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4ae41ceab96a70002fc8671c1287b400
+18:35:57,752 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 39e0fb9ae7b560005de4d134007ef400
+18:35:57,756 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 520471586138a4007c29bb97731ef800
+18:35:57,759 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0039198e1dc97000031cd1a79cede000
+18:35:57,762 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 37731abdd4e5940025fccbb612315000
+18:35:57,766 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 54b63d75d77ec800436e848654162000
+18:35:57,770 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5a535e0579036c001f5c47d27fa75c00
+18:35:57,773 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2696f55ec941640015e4833799b9ac00
+18:35:57,777 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 01856de83db468003799074091e3c000
+18:35:57,780 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7da8dee48bced80000a96badd05f4000
+18:35:57,784 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0f956280768294005eebf150af6ec800
+18:35:57,787 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3e943a5cf766dc007daf13ea4ad37000
+18:35:57,791 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 65833a6a8ecb240034849e64b6bcc800
+18:35:57,794 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 46be203461de14001c52e7110c3d7400
+18:35:57,798 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1f468c16054de0004e057ccb630ef000
+18:35:57,801 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1d2d78d0db23580034c8b6ab3cfdbc00
+18:35:57,805 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7da647d2a9a0b4001b5081df1763ec00
+18:35:57,808 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7106e03b4cefc0007120d714d8f7a400
+18:35:57,812 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4be6825b094e0c0070d3363fb79c2c00
+18:35:57,815 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 46459dc16b4b08005cb56fa479c63c00
+18:35:57,819 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 41a4a8d4daed6c002a54f988ca6d7800
+18:35:57,822 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 12e164c563d6dc0076e0be3ba029f800
+18:35:57,826 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 67a8c9ac5b8c08004e59731847b51000
+18:35:57,829 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 50954fe1af7de000636a7cd02ba48c00
+18:35:57,832 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5c3daa9cd0f734001daba88c52e95c00
+18:35:57,836 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 65681a5b127ef0004635f55a8908bc00
+18:35:57,840 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 42ae84913c964000107d7333ce999800
+18:35:57,844 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 79f5b2c8943b7c004bd2d35888b8e800
+18:35:57,848 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1b02f5e6d4f8e80019dfc0601b13c800
+18:35:57,852 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 48bf877b4c6d6400004f672c25916400
+18:35:57,856 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 06d8cc636c8d8c000754ab08784f6000
+18:35:57,860 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 53a7c43281d71400535995a1d0809c00
+18:35:57,863 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3f9367c5a93e40000dc08ad5173d2c00
+18:35:57,866 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5d1240a675beac00430eafe09d8b4000
+18:35:57,869 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 12c9de2f04bbe8001cba87747748d800
+18:35:57,873 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1f3abdefe305200065d62fd4c979c400
+18:35:57,876 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 32526c25a337200024f50693b4bf3c00
+18:35:57,880 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 28b91b7b02b6b4000217778cf35d8800
+18:35:57,883 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 299eb7d1e3717c000866e6eac00bf800
+18:35:57,887 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 43910c68072ebc005ff10dfb5681cc00
+18:35:57,891 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6f02bb4a832f4c002c24e64eecae8800
+18:35:57,894 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 315bf430d7a3880035415b9cb415d800
+18:35:57,898 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5d4f7f1d7328540029299a1384e26400
+18:35:57,901 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3227fbcdf80504001da5a6c21bb79800
+18:35:57,904 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1f5a01e82c35a000379fa08cfc326800
+18:35:57,908 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1da4a6abd090f8004a4b0743d2352800
+18:35:57,911 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 67ed0dad06ac080079b1ba8db89cf000
+18:35:57,915 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 24eff873ecb590000ff1b80177f31000
+18:35:57,918 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7ce02ab9c726fc007a483d29cee31800
+18:35:57,921 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6e63a57ba2e06000447c2d9035c79800
+18:35:57,924 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7780af388e7cac003c39ae4a12346c00
+18:35:57,928 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 212e1f3abc2bc8001a7cdcd79d208800
+18:35:57,931 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1044d62c47554c002566d94a749e4000
+18:35:57,935 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 74aa3f466a945c0029378d0baf453000
+18:35:57,938 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 1b81f4c77065c8006289dcf98ce6c000
+18:35:57,941 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6e900721cb4a740074aecafc4c8a5400
+18:35:57,944 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3893d7cd8d9e9c0078680149c43fd000
+18:35:57,947 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 70d11f04b38b980068f8c1bffc6a6c00
+18:35:57,950 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6754674560a70400117e4a26d528bc00
+18:35:57,953 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4529c059d2e94800293cff1fc2fee400
+18:35:57,956 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 28339adc81c3f4001b9ef688b3eab400
+18:35:57,959 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 44abbbaf85fc3800350534da6f427400
+18:35:57,963 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 02434037673808003569603035e33800
+18:35:57,966 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 638bb6f05c0f7400176da44005146c00
+18:35:57,969 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 08cfaf7eb968f800575e00f5d4aebc00
+18:35:57,972 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5755b2cff016d0000d5d3ea05e91b400
+18:35:57,975 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 549cfe95de68f000672e1a23b4927000
+18:35:57,978 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3d26907f9ba1d0004f81563b9c4cb000
+18:35:57,981 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 61cb1dd3c94990003d0b8a1116284800
+18:35:57,984 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3293f01dd2902c00042364d524117800
+18:35:57,987 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5a3317a628a6a8007aeb480e56b91800
+18:35:57,990 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 63bc0fbd4f394400192a3caacc89f000
+18:35:57,993 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 536d383a6353f8000abb04b8c848c400
+18:35:57,997 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 15a21df79574c00058c4ff0a4d4b8000
+18:35:58,000 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 64940fc415ecb8006638632abf6e2800
+18:35:58,003 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 20d27f23f3699c0054e75d6d8baa2800
+18:35:58,006 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4543101c17af1c0029022e19cef42800
+18:35:58,009 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 67bf7ec32144c4004e8efb8b93647800
+18:35:58,013 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3f976b2a9fa0a8002b508637de2c6000
+18:35:58,016 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 60e82c26c24b68004f9ee50791b3e400
+18:35:58,019 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6614626cb4f078005bc440a021c23000
+18:35:58,022 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7daddad4caedcc006910e6546ed1bc00
+18:35:58,025 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 238607020064b4001601454b9016bc00
+18:35:58,028 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 66a2dcc5c66794007f966255d9eb8800
+18:35:58,031 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 328c6b136b3a700071ea9e2613c19400
+18:35:58,034 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5d7b4ccf7236bc00079eb52216671400
+18:35:58,037 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 375c6903bd9aec00165d66a2c90b5800
+18:35:58,042 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 757da94dbd91e00025ca809b22607c00
+18:35:58,045 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0f3d312fed34d000525abfad80933400
+18:35:58,048 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 51487c614771c4004cc3b6a56a3d1c00
+18:35:58,051 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 5385a99e44f0f8004f422f4dec045800
+18:35:58,054 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 402e6e69d4b5ac0071cb0823849be000
+18:35:58,057 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 12b9b197fc881000561a2fadc06cb800
+18:35:58,059 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6ac0d961c3c7640007666a47ec52bc00
+18:35:58,063 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 60fae24d5dfeb00043d2e8f219a83400
+18:35:58,065 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2ac6bd53de1cf0005f5ee75ffd1b6000
+18:35:58,068 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 20b81827a56420007bbe517d18c35000
+18:35:58,071 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3471c32dd8000c000d25cfa7090aa800
+18:35:58,074 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 733e4f4c23e420000658a0ec21daac00
+18:35:58,077 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 4270f63203bda80026404a87cfec0400
+18:35:58,080 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 52d9b22ede27bc006a4dc37ea5e91c00
+18:35:58,083 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 41f3fc34e065e000132b47b3575be000
+18:35:58,086 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7efb40d173dcec003cfce895ce943400
+18:35:58,089 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 6e6aa993ef35240058a520f34b85e800
+18:35:58,092 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 66534cd9763100005eabc661340f5800
+18:35:58,094 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 058e3f82faacc0007259dfeabf4dc000
+18:35:58,098 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 0c9fa9d2af45a400650d4dfa01c56000
+18:35:58,101 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7fc3af14e184f000016acbde3a660c00
+18:35:58,104 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 786bfbdea84ac8002ff3b673a9e39800
+18:35:58,106 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 2b382b3d9239f400032f77e8d4d87c00
+18:35:58,109 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 29fce049092964006f3e774dc6a07c00
+18:35:58,112 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 466d4490e5c3600013fdf942bc47e000
+18:35:58,115 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 7ab79bf0b49750000dad99e9e0d3b800
+18:35:58,119 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 570c0730346c3c0025ea67b68e976c00
+18:35:58,122 ERROR eu.stratosphere.nephele.taskmanager.bytebuffered.ByteBufferedChannelManager  - Cannot find task(s) waiting for data from source channel with ID 3e58535605a300004dcce661ac258000
