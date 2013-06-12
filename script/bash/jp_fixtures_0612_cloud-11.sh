@@ -9,12 +9,12 @@
 ./jp_sut_deploy.sh ${OZN_PACT_TAR} ${OZN_PACT_HOME}
 
 #  5 nodes
-./jp_run_te.sh  5
+./jp_run_te.sh  25
 # 10 nodes
-./jp_run_te.sh  10
+./jp_run_te.sh  20
 # 15 nodes
 ./jp_run_te.sh  15
 # 20 nodes
-./jp_run_te.sh  20
+./jp_run_te.sh  10
 # 25 nodes
-./jp_run_te.sh  25
+./jp_run_te.sh  5
