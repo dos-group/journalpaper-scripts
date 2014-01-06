@@ -10,13 +10,14 @@ function getRuntime {
 		fi
 		ARR+=(`cat $FULL_PATH | tr -s [:space:] | cut --delimiter=' ' -f 2`)
 	done
-	#find maximum
+	#find maximum and minimum
 	max=0
+	min=100000000000
 	for n in "${ARR[@]}" ; do
     	((n > max)) && max=$n
+    	((n < min)) && min=$n
 	done
-	total=$((${ARR[0]}+${ARR[1]}+${ARR[2]}-$max)) 
-	avg=$((total/2))
-	echo $avg #return average
+	median=$((${ARR[0]}+${ARR[1]}+${ARR[2]}-$max-$min)) 
+	echo $median #return average
 }
 
